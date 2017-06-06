@@ -41,3 +41,7 @@
  3. Commit to it. Use the local development instructions above for testing, etc.
  
  4. Push
+ 
+# License
+
+### GNU General Public License v3.0
