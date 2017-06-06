@@ -48,6 +48,12 @@
  
  6. Push it!
  
+# Stuff that needs doing
+
+ - Cleaning up the .less files a bit
+ 
+ - Being able to write posts
+ 
 # License
 
 ### GNU General Public License v3.0
