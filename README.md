@@ -1,5 +1,3 @@
-# Cordial
-
 ![Cordial](cordial-onred.png)
 
 **Note that bold fonts in Cordial look quite significantly better on browsers which aren't called Firefox, since it uses fonts directly from Google fonts, and when Firefox renders these in bold, it doesn't look so good. It's bareable, but I would suggest using Opera or Chrome**
@@ -33,6 +31,8 @@
  1. [Click on this text](http://cordial.jacobgarby.co.uk).
  
  2. That's it.
+ 
+![Cordial](cordial-screen1.png)
  
 # How to contribute
 
