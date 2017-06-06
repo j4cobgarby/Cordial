@@ -42,11 +42,11 @@
  
  3. Commit to it. Use the local development instructions above for testing, etc.
  
- 4. Push it
+ 4. ~Twist it~
  
- 5. Bop it
+ 5. ~Bop it~
  
- 6. Twist it
+ 6. Push it!
  
 # License
 
