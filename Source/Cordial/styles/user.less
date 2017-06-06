@@ -1,0 +1,64 @@
+//out: user.css
+
+div.user-panel {
+  min-height: 80px;
+  border-bottom: 3px solid #d9d9d9;
+  position: relative;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
+
+  div.user-panel-top {
+    height: 40px;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: white;
+
+    span {
+      display: inline-block;
+      height: 100%;
+      line-height: 40px;
+      margin-right: 10px;
+      margin-left: 10px;
+
+      img {
+        margin-left: 20px;
+        height: 15px;
+      }
+    }
+  }
+
+  div.bio {
+    margin: 30px 20%;
+    margin-left: 40px;
+    border-left: 3px solid #6f6f6f;
+    padding: 5px 20px;
+  }
+
+  div.user-panel-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+    background-color: white;
+
+    span.user-panel-bottom-likes {
+      position: absolute;
+      display: inline-block;
+      height: 100%;
+      line-height: 50px;
+
+      img {
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        height: 20px;
+      }
+
+      span {
+        position: absolute;
+        left: 60px;
+      }
+    }
+  }
+}

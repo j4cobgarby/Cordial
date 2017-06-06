@@ -10,7 +10,6 @@ body {
 div.header-wrapper {
   height: 45px;
   background-color: #cb3c3c;
-  border-bottom: 3px solid #b33030;
   line-height: 45px;
   color: white;
   overflow: hidden;
@@ -56,9 +55,10 @@ div.header-wrapper span.compose {
   line-height: 45px;
   font-weight: bold;
   font-family: 'Overpass Mono';
-  border-left: 3px solid #972828;
-  border-bottom: 3px solid #972828;
+  border-left: 1px solid #972828;
+  border-bottom: 1px solid #972828;
   position: fixed;
+  box-sizing: border-box;
   right: 0;
   top: 0;
 }

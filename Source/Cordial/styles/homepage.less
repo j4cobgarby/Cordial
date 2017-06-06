@@ -16,7 +16,6 @@ html, body {
 div.header-wrapper {
   height: 45px;
   background-color: @main;
-  border-bottom: 3px solid darken(@main, 7%);
   line-height: 45px;
   color: white;
   overflow: hidden;
@@ -67,9 +66,10 @@ div.header-wrapper {
     line-height: 45px;
     font-weight: bold;
     font-family: 'Overpass Mono';
-    border-left: 3px solid darken(@main, 14%);
-    border-bottom: 3px solid darken(@main, 14%);
+    border-left: 1px solid darken(@main, 14%);
+    border-bottom: 1px solid darken(@main, 14%);
     position: fixed;
+    box-sizing: border-box;
     right: 0;
     top: 0;
   }
