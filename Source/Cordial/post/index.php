@@ -12,7 +12,7 @@
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
-      $sql = 'SELECT post_id, date_posted, category, title, content, likes, views, username, is_admin
+      $sql = 'SELECT user_id, post_id, date_posted, category, title, content, likes, views, username, is_admin
       FROM `posts` NATURAL JOIN `users` WHERE post_id = '.$_GET["id"];
 
       $result = mysqli_query($connect, $sql);
@@ -27,6 +27,7 @@
         $views      = $row["views"];
         $username   = $row["username"];
         $is_admin   = $row["is_admin"];
+        $user_id    = $row["user_id"];
       }
     ?>
 
@@ -75,7 +76,7 @@
     <div class="post-panel">
       <div class="post-panel-top">
         <?php echo ($is_admin == 1 ? '<img src="../assets/admin-icon.png" />' : '<img src="../assets/user-icon.png" />') ?>
-        <span><b><?php echo $username; ?></b></span>
+        <span class="hoverpointer" onclick="location.href='../user?id= <?php echo $user_id ?> '"><b><?php echo $username; ?></b></span>
         <span><?php echo $date_posted; ?></span>
       </div>
 

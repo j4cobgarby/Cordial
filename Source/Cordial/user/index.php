@@ -67,8 +67,8 @@
 
     <div class="user-panel">
       <div class="user-panel-top">
-        <span><?php echo $username; ?> <img src="../assets/admin-icon.png" /></span>
-        <span><?php echo $date_joined; ?></span>
+        <span><b><?php echo $username; ?> <img src="../assets/admin-icon.png" /></b></span>
+        <span><?php echo 'Joined '.$date_joined; ?></span>
       </div>
       <div class="bio">
         <?php echo $bio; ?>
