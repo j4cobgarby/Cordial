@@ -32,7 +32,7 @@
  
  2. That's it.
  
-![Cordial](cordial-screen1.png)
+![Cordial](cordial-screen2.png)
  
 # How to contribute
 
