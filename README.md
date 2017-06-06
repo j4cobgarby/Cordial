@@ -11,7 +11,7 @@
  
  2. Navigate to 'htdocs' the directory in which XAMPP is installed. On Windows, this is by default 'C:\xampp'. On MacOS, it seems that there is no *default* location, but I don't have a Mac to test it on.
  
- 3. From 'Source', copy 'Cordial' into 'htdocs'. Do not copy 'cordial.sql'.
+ 3. Clone the repository into 'htdocs'.
  
  4. Now, open up the XAMPP Control Panel, and press 'Start' next to both the Apache and MySQL modules.
  
@@ -21,7 +21,7 @@
  
  7. Click on the '+' symbol next to the newly created database named 'cordial' on the left hand side of the browser, to open up the tables. You should see a table names 'posts' and a table named 'users'. They both have some records in them - some fake users and posts. Notice it's a relational database - one user to many posts. If you want, you can delete these records.
  
- 8. Create a new tab in your web browser and go [here](http://localhost/Cordial/) (localhost/Cordial.)
+ 8. Create a new tab in your web browser and go [here](http://localhost/Cordial/Source/Cordial/) (localhost/Cordial/Source/Cordial.)
  
  9. **Done!**
  
