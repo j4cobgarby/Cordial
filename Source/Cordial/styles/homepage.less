@@ -1,0 +1,236 @@
+//out: homepage.css
+
+
+* {
+  font-family: Roboto;
+}
+
+@main: #cb3c3c;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+div.header-wrapper {
+  height: 45px;
+  background-color: @main;
+  border-bottom: 3px solid darken(@main, 7%);
+  line-height: 45px;
+  color: white;
+  overflow: hidden;
+  user-select: none;
+
+  img.logo {
+    margin-left: 2px;
+    height: 45px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+  }
+
+  img.logo:hover {
+    cursor: pointer;
+  }
+
+  span.label {
+    font-family: 'Roboto Condensed';
+    background-color: white;
+    font-weight: bold;
+    padding: 0px 6px;
+    width: 80px;
+    text-align: center;
+    color: @main;
+    float: left;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  span.label:hover {
+    cursor: pointer;
+    background-color: lighten(@main, 45%);
+  }
+
+  span.label:active {
+    background-color: lighten(@main, 35%);
+  }
+
+  span.compose {
+    background-color: white;
+    color: @main;
+    display: block;
+    text-align: center;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    font-family: 'Overpass Mono';
+    border-left: 3px solid darken(@main, 14%);
+    border-bottom: 3px solid darken(@main, 14%);
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  span.compose:hover {
+    cursor: pointer;
+  }
+
+  div.scroller-wrapper {
+    background-color: darken(@main, 6%);
+    height: 45px;
+    margin-left: 0px;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0 10px;
+    border-left: 3px solid darken(@main, 10%);
+    border-right: 3px solid darken(@main, 10%);
+  }
+
+  div.scroller-panel {
+    height: 90px;
+    line-height: 45px;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+    margin-top: 1px;
+
+    a {
+      font-family: 'Roboto Condensed';
+      background-color: white;
+      color: @main;
+      padding: 5px 8px;
+      border-radius: 4px;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+
+    a:hover {
+      background-color: lighten(@main, 7%);
+      color: white;
+    }
+
+    a.all {
+      background-color: lighten(@main, 10%);
+      color: white;
+    }
+
+    a.all:hover {
+      background-color: white;
+      color: lighten(@main, 7%);
+    }
+  }
+
+  @keyframes scroll-down {
+    100% {transform: translateY(-45px);}
+  }
+  @keyframes scroll-up {
+    from {transform: translateY(-45px);}
+    100% {transform: translateY(0px);}
+  }
+
+  .scrolldown {animation-name: scroll-down;}
+  .scrollup   {animation-name: scroll-up;}
+}
+
+div.postview {
+  padding-top: 5px;
+}
+
+div.post {
+  overflow: hidden;
+  height: 40px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  line-height: 40px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+  margin-bottom: 3px;
+  background-color: white;
+
+  span.title {
+    font-family: 'Roboto Condensed';
+    width: 100% - 320px;
+    display: inline-block;
+  }
+
+  div.post-user {
+    font-weight: normal;
+    width: 160px;
+    height: 100%;
+    border-right: 4px solid @main;
+    float: left;
+    margin-right: 8px;
+    line-height: 19px;
+    font-size: 14px;
+
+    img {
+      float: left;
+      height: 25px;
+      width: 25px;
+      margin-top: 7.5px;
+      margin-left: 7.5px;
+      margin-right: 40px;
+    }
+
+    div.user-info {
+      float: left;
+      text-align: right;
+
+      span.date-posted {
+        color: #afafaf;
+      }
+      span.username {
+      }
+    }
+  }
+  div.post-status {
+    height: 100%;
+    width: 160px;
+    border-left: 4px solid @main;
+    float: right;
+    padding-left: 15px;
+    font-size: 15px;
+
+    span {
+      vertical-align: middle;
+      margin-right: 15px;
+      img {
+        height: 15px;
+        margin-right: 3px;
+        margin-left: 3px;
+        vertical-align: middle;
+      }
+
+      img.likes:hover {
+        cursor: pointer;
+      }
+
+      display: inline-block;
+    }
+
+    span.img {
+      float: left;
+    }
+
+    span.views {
+      float: right;
+    }
+  }
+}
+
+.hoverpointer:hover {
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

@@ -1,0 +1,215 @@
+* {
+  font-family: Roboto;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+div.header-wrapper {
+  height: 45px;
+  background-color: #cb3c3c;
+  border-bottom: 3px solid #b33030;
+  line-height: 45px;
+  color: white;
+  overflow: hidden;
+  user-select: none;
+}
+div.header-wrapper img.logo {
+  margin-left: 2px;
+  height: 45px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+div.header-wrapper img.logo:hover {
+  cursor: pointer;
+}
+div.header-wrapper span.label {
+  font-family: 'Roboto Condensed';
+  background-color: white;
+  font-weight: bold;
+  padding: 0px 6px;
+  width: 80px;
+  text-align: center;
+  color: #cb3c3c;
+  float: left;
+  display: block;
+  height: 45px;
+  line-height: 45px;
+}
+div.header-wrapper span.label:hover {
+  cursor: pointer;
+  background-color: #fbf1f1;
+}
+div.header-wrapper span.label:active {
+  background-color: #f1c9c9;
+}
+div.header-wrapper span.compose {
+  background-color: white;
+  color: #cb3c3c;
+  display: block;
+  text-align: center;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  font-weight: bold;
+  font-family: 'Overpass Mono';
+  border-left: 3px solid #972828;
+  border-bottom: 3px solid #972828;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+div.header-wrapper span.compose:hover {
+  cursor: pointer;
+}
+div.header-wrapper div.scroller-wrapper {
+  background-color: #b73131;
+  height: 45px;
+  margin-left: 0px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 10px;
+  border-left: 3px solid #a72d2d;
+  border-right: 3px solid #a72d2d;
+}
+div.header-wrapper div.scroller-panel {
+  height: 90px;
+  line-height: 45px;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  margin-top: 1px;
+}
+div.header-wrapper div.scroller-panel a {
+  font-family: 'Roboto Condensed';
+  background-color: white;
+  color: #cb3c3c;
+  padding: 5px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+div.header-wrapper div.scroller-panel a:hover {
+  background-color: #d35858;
+  color: white;
+}
+div.header-wrapper div.scroller-panel a.all {
+  background-color: #d66464;
+  color: white;
+}
+div.header-wrapper div.scroller-panel a.all:hover {
+  background-color: white;
+  color: #d35858;
+}
+@keyframes scroll-down {
+  100% {
+    transform: translateY(-45px);
+  }
+}
+@keyframes scroll-up {
+  from {
+    transform: translateY(-45px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+div.header-wrapper .scrolldown {
+  animation-name: scroll-down;
+}
+div.header-wrapper .scrollup {
+  animation-name: scroll-up;
+}
+div.postview {
+  padding-top: 5px;
+}
+div.post {
+  overflow: hidden;
+  height: 40px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  line-height: 40px;
+  font-size: 23px;
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+  margin-bottom: 3px;
+  background-color: white;
+}
+div.post span.title {
+  font-family: 'Roboto Condensed';
+  width: -220%;
+  display: inline-block;
+}
+div.post div.post-user {
+  font-weight: normal;
+  width: 160px;
+  height: 100%;
+  border-right: 4px solid #cb3c3c;
+  float: left;
+  margin-right: 8px;
+  line-height: 19px;
+  font-size: 14px;
+}
+div.post div.post-user img {
+  float: left;
+  height: 25px;
+  width: 25px;
+  margin-top: 7.5px;
+  margin-left: 7.5px;
+  margin-right: 40px;
+}
+div.post div.post-user div.user-info {
+  float: left;
+  text-align: right;
+}
+div.post div.post-user div.user-info span.date-posted {
+  color: #afafaf;
+}
+div.post div.post-status {
+  height: 100%;
+  width: 160px;
+  border-left: 4px solid #cb3c3c;
+  float: right;
+  padding-left: 15px;
+  font-size: 15px;
+}
+div.post div.post-status span {
+  vertical-align: middle;
+  margin-right: 15px;
+  display: inline-block;
+}
+div.post div.post-status span img {
+  height: 15px;
+  margin-right: 3px;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+div.post div.post-status span img.likes:hover {
+  cursor: pointer;
+}
+div.post div.post-status span.img {
+  float: left;
+}
+div.post div.post-status span.views {
+  float: right;
+}
+.hoverpointer:hover {
+  cursor: pointer;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
