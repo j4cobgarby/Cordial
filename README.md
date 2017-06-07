@@ -10,7 +10,7 @@ beta 1.3
 
  1. Download and install XAMPP from [here](https://www.apachefriends.org/index.html). Make sure to install the Apache webserver *and* the MySQL server. You may install any of the other modules XAMPP offers, but you don't need them for this. If you already have XAMPP installed but don't have the required modules installed, you can always install them from the XAMPP Control Panel.
  
- 2. Navigate to 'htdocs' the directory in which XAMPP is installed. On Windows, this is by default 'C:\xampp'. On MacOS, it seems that there is no *default* location, but I don't have a Mac to test it on.
+ 2. Navigate to 'htdocs', which is in the directory in which XAMPP is installed. On Windows, this is by default 'C:\xampp'. On MacOS, it seems that there is no *default* location, but I don't have a Mac to test it on.
  
  3. Clone the repository into 'htdocs'.
  
