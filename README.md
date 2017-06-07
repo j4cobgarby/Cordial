@@ -2,6 +2,8 @@ beta 1.5
 
 ![Cordial](cordial-onred.png)
 
+## The open source social network of the 22nd century, today!
+
 # How to use
 
 ## Locally (for development)
