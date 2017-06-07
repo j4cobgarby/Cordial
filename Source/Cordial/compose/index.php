@@ -43,7 +43,7 @@
     </div>
 
     <div class="compose-form-wrapper">
-      <form action="post.php" method="post">
+      <form action="sendpost.php" method="post">
 
          <h2>New post</h2>
 
