@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Compose post</title>
+    <title>Compose</title>
     <link rel="stylesheet" href="../styles/homepage.css">
     <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="../styles/post.css">
