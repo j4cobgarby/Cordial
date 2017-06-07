@@ -9,10 +9,7 @@
       content, likes, views, username, is_admin
       FROM `posts` NATURAL JOIN `users` ORDER BY post_id DESC";
 
-      $host_name  = "localhost";
-      $database   = "cordial";
-      $user_name  = "root";
-      $password   = "";
+      require 'creds.php';
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
@@ -42,7 +39,7 @@
   </head>
   <body>
     <div class="header-wrapper">
-      <img class="logo" src="assets/logobig-white.svg" onclick="location.href='/'" />
+      <img class="logo" src="assets/logobig-white.svg" onclick="location.href='?cat=all'" />
 
       <span onclick="togglescroll();position == 'up' ? this.innerHTML = 'Categories' : this.innerHTML = 'User';"
             class="label noselect">
@@ -51,16 +48,16 @@
 
       <div class="scroller-wrapper">
         <div id="panel" class="scroller-panel">
-          <a title="All" class="all" href="/"><b>all</b></a>
-          <a title="Software"    href="/?cat=swar">swar</a>
-          <a title="Hardware"    href="/?cat=hwar">hwar</a>
-          <a title="Game Dev"    href="/?cat=gdev">gdev</a>
-          <a title="Web Dev"     href="/?cat=wdev">wdev</a>
-          <a title="Memes"       href="/?cat=meme">meme</a>
-          <a title="Photography" href="/?cat=pics">pics</a>
-          <a title="Politics"    href="/?cat=pols">pols</a>
-          <a title="Random"      href="/?cat=rand">rand</a>
-          <a title="Meta"        href="/?cat=meta">meta</a>
+          <a title="All" class="all" href="?cat=all"><b>all</b></a>
+          <a title="Software"    href="?cat=swar">swar</a>
+          <a title="Hardware"    href="?cat=hwar">hwar</a>
+          <a title="Game Dev"    href="?cat=gdev">gdev</a>
+          <a title="Web Dev"     href="?cat=wdev">wdev</a>
+          <a title="Memes"       href="?cat=meme">meme</a>
+          <a title="Photography" href="?cat=pics">pics</a>
+          <a title="Politics"    href="?cat=pols">pols</a>
+          <a title="Random"      href="?cat=rand">rand</a>
+          <a title="Meta"        href="?cat=meta">meta</a>
 
           <br />
 
