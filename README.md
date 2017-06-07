@@ -14,7 +14,17 @@ Between then and now, I've changed the structure of the database at least 5 time
 
 Anyway..
 
-I got most of the inspiration for Cordial from a mix of Reddit, 4chan, and Twitter. I also drew all of the icons and assets myself, in case you were wondering. 
+I got most of the inspiration for Cordial from a mix of Reddit, 4chan, and Twitter. I also drew all of the icons and assets myself, in case you were wondering.
+
+## The awesome logo
+
+I came up with so many designs for the logo, I can't even remember a lot of them. The first design I can remember, in fact, I didn't design and instead one of my friends did. If you can imagine it, it was basically the letter 'C' in the font 'Lobster' at a slight tilt on top of the base of a glass. The idea was that the 'C' looked like the cup of the glass.
+
+Anyway, I decided not to use this logo now, since it just doesn't work well small, and is too intricate.
+
+I tried a new design - black block capitals, where each letter has a different part of the spectrum as its background colour. It was okay, but not quite what I wanted.
+
+Then I came back to the idea of [Cordial as being a kind of drink.](https://en.wikipedia.org/wiki/Cordial) I came up with the idea of having some kind of wavy pattern in the logo somewhere. I considered a few different designs, such as the word Cordial immersed in a wavy pool of blackness, and also the letters following a wavy curve, but settled on a design very similar to the current one - it was just the letter C, but filled up a bit with waves. This sort of worked, but just wasn't quite right. Quite soon after that, I came up with the final design. I was pretty pleased with this, since it looked good small (albeit much better bit,) and also was different to any other logo I've ever seen.
 
 # How to use
 
