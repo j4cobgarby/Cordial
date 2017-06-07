@@ -14,10 +14,7 @@
     );
   ';
 
-  $host_name  = "localhost";
-  $database   = "cordial";
-  $user_name  = "root";
-  $password   = "";
+  require '../creds.php';
 
   $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
