@@ -70,7 +70,7 @@
         </div>
       </div>
 
-      <span class="compose">+</span>
+      <span onclick="location.href='compose'" class="hoverpointer compose">+</span>
     </div>
 
     <div class="postview" id="postview">

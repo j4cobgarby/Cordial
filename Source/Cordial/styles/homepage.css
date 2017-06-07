@@ -62,9 +62,6 @@ div.header-wrapper span.compose {
   right: 0;
   top: 0;
 }
-div.header-wrapper span.compose:hover {
-  cursor: pointer;
-}
 div.header-wrapper div.scroller-wrapper {
   background-color: #b73131;
   height: 45px;

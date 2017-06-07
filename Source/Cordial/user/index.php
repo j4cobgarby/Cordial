@@ -34,7 +34,7 @@
   </head>
   <body>
     <div class="header-wrapper">
-      <img class="logo" src="../assets/logobig-white.svg" onclick="location.href='/Cordial/Source/Cordial'" />
+      <img class="logo" src="../assets/logobig-white.svg" onclick="location.href='../'" />
 
       <span onclick="togglescroll();position == 'up' ? this.innerHTML = 'Categories' : this.innerHTML = 'User';"
             class="label noselect">
@@ -43,16 +43,16 @@
 
       <div class="scroller-wrapper">
         <div id="panel" class="scroller-panel">
-          <a title="All" class="all" href="/Cordial/Source/Cordial"><b>all</b></a>
-          <a title="Software"    href="/Cordial/Source/Cordial/?cat=swar">swar</a>
-          <a title="Hardware"    href="/Cordial/Source/Cordial/?cat=hwar">hwar</a>
-          <a title="Game Dev"    href="/Cordial/Source/Cordial/?cat=gdev">gdev</a>
-          <a title="Web Dev"     href="/Cordial/Source/Cordial/?cat=wdev">wdev</a>
-          <a title="Memes"       href="/Cordial/Source/Cordial/?cat=meme">meme</a>
-          <a title="Photography" href="/Cordial/Source/Cordial/?cat=pics">pics</a>
-          <a title="Politics"    href="/Cordial/Source/Cordial/?cat=pols">pols</a>
-          <a title="Random"      href="/Cordial/Source/Cordial/?cat=rand">rand</a>
-          <a title="Meta"        href="/Cordial/Source/Cordial/?cat=meta">meta</a>
+          <a title="All" class="all" href="../?cat=all"><b>all</b></a>
+          <a title="Software"    href="../?cat=swar">swar</a>
+          <a title="Hardware"    href="../?cat=hwar">hwar</a>
+          <a title="Game Dev"    href="../?cat=gdev">gdev</a>
+          <a title="Web Dev"     href="../?cat=wdev">wdev</a>
+          <a title="Memes"       href="../?cat=meme">meme</a>
+          <a title="Photography" href="../?cat=pics">pics</a>
+          <a title="Politics"    href="../?cat=pols">pols</a>
+          <a title="Random"      href="../?cat=rand">rand</a>
+          <a title="Meta"        href="../?cat=meta">meta</a>
 
           <br />
 
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <span class="compose">+</span>
+      <span onclick="location.href='../compose'" class="compose hoverpointer">+</span>
     </div>
 
     <div class="user-panel">
