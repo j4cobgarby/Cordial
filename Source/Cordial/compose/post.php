@@ -6,7 +6,7 @@
     VALUES (
       NULL,
       1,
-      "6-7-2017",
+      "2017-6-7",
       "' .addslashes($_POST["category"]) .'",
       "' .addslashes($_POST["title"])    .'",
       "' .addslashes($_POST["content"])  .'",
