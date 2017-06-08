@@ -33,7 +33,7 @@ div.wrapper {
   overflow: hidden;
 
   width: 600px;
-  height: 520px;
+  height: 560px;
   background-color: white;
   margin: auto;
   margin-top: 160px;
@@ -85,5 +85,22 @@ form {
     background-color: #cb3c3c;
     border-radius: 5px;
     font-weight: bold;
+  }
+
+  input[type="submit"]:hover {
+    background-color: darken(#cb3c3c, 7%);
+    cursor: pointer;
+  }
+
+  span.error {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 12.5px 20px;
+    color: #f18831;
+    margin-top: 20px;
+    font-weight: bold;
+    border: 1px solid #f18831;
+    background-color: lighten(#f18831, 38%);
+    border-radius: 5px;
   }
 }

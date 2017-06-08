@@ -23,7 +23,7 @@ div.wrapper {
   border-radius: 7px;
   overflow: hidden;
   width: 600px;
-  height: 520px;
+  height: 560px;
   background-color: white;
   margin: auto;
   margin-top: 160px;
@@ -70,4 +70,19 @@ form input[type="submit"] {
   background-color: #cb3c3c;
   border-radius: 5px;
   font-weight: bold;
+}
+form input[type="submit"]:hover {
+  background-color: #b33030;
+  cursor: pointer;
+}
+form span.error {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 12.5px 20px;
+  color: #f18831;
+  margin-top: 20px;
+  font-weight: bold;
+  border: 1px solid #f18831;
+  background-color: #fdf1e6;
+  border-radius: 5px;
 }

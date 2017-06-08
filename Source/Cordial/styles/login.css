@@ -64,6 +64,10 @@ div.sidebar form input[type="submit"] {
   border-radius: 5px;
   font-weight: bold;
 }
+div.sidebar form input[type="submit"]:hover {
+  background-color: #b33030;
+  cursor: pointer;
+}
 div.sidebar form span.error {
   margin-left: 20px;
   padding: 12.5px 20px;
