@@ -8,3 +8,82 @@ html, body {
 * {
   font-family: Roboto;
 }
+
+@bgsize: 1024px;
+
+body {
+  background-image: url('../assets/tripattern.svg');
+  background-size: @bgsize;
+  //background-position: 0px 0px;
+
+  animation-name: movebg;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movebg {
+  100% {
+    background-position: @bgsize @bgsize;
+  }
+}
+
+div.wrapper {
+  border-radius: 7px;
+  overflow: hidden;
+
+  width: 600px;
+  height: 520px;
+  background-color: white;
+  margin: auto;
+  margin-top: 160px;
+
+  -webkit-box-shadow: 0px 0px 167px 13px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 167px 13px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 167px 13px rgba(0,0,0,0.5);
+}
+
+div.logo {
+  background-color: #cb3c3c;
+  width: 600px;
+  height: 80px;
+
+  img {
+    position: absolute;
+    display: block;
+    height: 80px;
+    margin: auto;
+    margin-left: 140px; // (600 - 320) / 2
+  }
+}
+
+form {
+  padding: 50px;
+
+  legend {
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid #6e6e6e;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  input[type="submit"] {
+    margin-top: 10px;
+    padding: 15px 50px;
+    border-style: none;
+    color: white;
+    background-color: #cb3c3c;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+}
