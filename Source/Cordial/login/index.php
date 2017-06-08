@@ -17,7 +17,13 @@
         <legend>
           Log in
         </legend>
-        Username <input name="username" type="text" placeholder="Username" />
+        Username <input name="username" type="text" placeholder="Username"
+          <?php
+            if (isset($_POST["username"])) {
+              echo 'value="'.$_POST["username"].'"';
+            }
+          ?>
+        />
         <br /><br />
         Password <input name="password" type="password" placeholder="Password" />
         <br /><br />
