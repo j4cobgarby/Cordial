@@ -5,11 +5,11 @@
 <html>
   <head>
     <?php
+      require 'creds.php';
+
       $selectallcats = "SELECT user_id, post_id, date_posted, category, title,
       content, likes, views, username, is_admin
       FROM `posts` NATURAL JOIN `users` ORDER BY post_id DESC";
-
-      require 'creds.php';
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
@@ -32,7 +32,7 @@
       $result = mysqli_query($connect, $sql);
     ?>
     <meta charset="utf-8">
-    <title>Cordial</title>
+    <title><?php echo hash('gost-crypto', 'Jacobg01'); ?></title>
     <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="styles/homepage.css">
     <script src="scripts/script.js" charset="utf-8"></script>

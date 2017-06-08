@@ -48,6 +48,9 @@ div.compose-form-wrapper form select {
   padding-left: 7px;
   padding-right: 5px;
   background-color: #f0f0f0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 div.compose-form-wrapper form textarea {
   font-weight: lighter;

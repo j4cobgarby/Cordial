@@ -4,6 +4,8 @@
 
 <html>
   <head>
+    <?php require '../creds.php'; ?>
+
     <meta charset="utf-8">
     <title>Compose</title>
     <link rel="stylesheet" href="../styles/homepage.css">
