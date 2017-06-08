@@ -9,9 +9,22 @@
   $sql = 'SELECT user_id, password from `users` WHERE username = "'.$user_username.'" limit 1';
 
   $result = mysqli_query($connect, $sql);
-  $value = mysqli_fetch_object($result);
 
-  echo $value->password == hash("sha256", $user_password);
+  if ($result != false) {
+    $value = mysqli_fetch_object($result);
 
-  $_SESSION["login-id"] = $value->user_id;
+    try {
+      if ($value->password == hash("sha256", $user_password)) {
+        $_SESSION["login-id"] = $value->user_id;
+        echo "Logged in as ".$user_username;
+        header( 'Location: ../' ) ;
+      } else {
+        echo "Incorrect password";
+        header( 'Location: index.php' ) ;
+      }
+    } catch (Exception $e) {
+      echo "Exception occured";
+      header( 'Location: index.php' ) ;
+    }
+  }
 ?>

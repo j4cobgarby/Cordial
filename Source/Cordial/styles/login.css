@@ -64,6 +64,13 @@ div.sidebar form input[type="submit"] {
   border-radius: 5px;
   font-weight: bold;
 }
+div.sidebar form span.error {
+  margin-left: 20px;
+  padding: 12.5px 20px;
+  color: #f18831;
+  border: 1px solid #f18831;
+  border-radius: 5px;
+}
 div.sidebar a {
   padding: 0 60px;
   text-decoration: none;
