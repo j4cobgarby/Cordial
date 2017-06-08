@@ -1,6 +1,28 @@
-![Cordial](cordial-onred.png)
+[![Cordial](cordial-onred.png)](http://cordial.jacobgarby.co.uk)
 
-**Note that bold fonts in Cordial look quite significantly better on browsers which aren't called Firefox, since it uses fonts directly from Google fonts, and when Firefox renders these in bold, it doesn't look so good. It's bareable, but I would suggest using Opera or Chrome**
+# History
+
+I first started developing Cordial, or at least something called Cordial, about 10 months ago, when I wasn't too great at web development and had no real concept of how I would actually make a social network. I attempted it nevertheless, and my attempt can be found at my repository *Cordial-old*.
+
+However a few weeks ago I bought a domain: https://jacobgarby.co.uk. This came with a nice 100GB of storage and, more importantly, 25 1GB databases! So I thought hey, why don't I use one of these to remake Cordial? So after making a design, I decided it wasn't very good, and designed another one. About 5 or 6 designs later, I'd came up with what the header would look like. The same goes for the other aspects.
+
+Anyway, after learning PHP to a reasonable degree and getting the hang of MySQL queries, I had a working version of Cordial. This was before it was on GitHub I believe. At this point, it read users and posts from a relational database I'd set up.
+
+Between then and now, I've changed the structure of the database at least 5 times.
+
+Anyway..
+
+I got most of the inspiration for Cordial from a mix of Reddit, 4chan, and Twitter. I also drew all of the icons and assets myself, in case you were wondering.
+
+## The awesome logo
+
+I came up with so many designs for the logo, I can't even remember a lot of them. The first design I can remember, in fact, I didn't design and instead one of my friends did. If you can imagine it, it was basically the letter 'C' in the font 'Lobster' at a slight tilt on top of the base of a glass. The idea was that the 'C' looked like the cup of the glass.
+
+Anyway, I decided not to use this logo now, since it just doesn't work well small, and is too intricate.
+
+I tried a new design - black block capitals, where each letter has a different part of the spectrum as its background colour. It was okay, but not quite what I wanted.
+
+Then I came back to the idea of [Cordial as being a kind of drink.](https://en.wikipedia.org/wiki/Cordial) I came up with the idea of having some kind of wavy pattern in the logo somewhere. I considered a few different designs, such as the word Cordial immersed in a wavy pool of blackness, and also the letters following a wavy curve, but settled on a design very similar to the current one - it was just the letter C, but filled up a bit with waves. This sort of worked, but just wasn't quite right. Quite soon after that, I came up with the final design. I was pretty pleased with this, since it looked good small (albeit much better bit,) and also was different to any other logo I've ever seen.
 
 # How to use
 
