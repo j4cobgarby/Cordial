@@ -100,6 +100,10 @@ div.header-wrapper div.scroller-panel a.all:hover {
   background-color: white;
   color: #d35858;
 }
+div.header-wrapper div.scroller-panel span.login-info {
+  margin-left: 10px;
+  font-family: 'Roboto Condensed';
+}
 @keyframes scroll-down {
   100% {
     transform: translateY(-45px);

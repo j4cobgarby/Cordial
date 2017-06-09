@@ -50,7 +50,7 @@ form legend {
   font-family: 'Roboto Condensed';
   font-weight: bold;
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 form input[type="text"],
 form input[type="password"] {
@@ -85,4 +85,11 @@ form span.error {
   border: 1px solid #f18831;
   background-color: #fdf1e6;
   border-radius: 5px;
+}
+span.signin {
+  color: #585858;
+  padding-left: 50px;
+}
+span.signin a {
+  color: #5056db;
 }

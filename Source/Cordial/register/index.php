@@ -16,7 +16,7 @@
       </div>
       <form autocomplete="off" method="post">
         <legend>
-          New user
+          Create account
         </legend>
         <input type="text" name="username" pattern="[A-Za-z0-9]{3,30}" title="An alphanumeric string between the lengths of 3 - 30 characters inclusive" placeholder="Choose a username"
           <?php
@@ -80,6 +80,8 @@
           }
         ?>
       </form>
+
+      <span class="signin">Or alternatively, sign in <a href="../login">here!</a></span>
     </div>
   </body>
 </html>

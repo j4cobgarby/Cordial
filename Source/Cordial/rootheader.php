@@ -24,7 +24,16 @@
         <br />
 
         <a href="login">sign in</a>
-        <a href="register">register</a>
+        <a href="register">register</a>';
+
+
+  if (isset($_SESSION["login-id"])) {
+    echo "<span class='login-info'>You're logged in as: <b>".$loggedin_username."</b></span>";
+  } else {
+    echo "<span class='login-info'>You're not logged in.</span>";
+  }
+
+  echo '
       </div>
     </div>
 
