@@ -19,43 +19,50 @@ body {
     background-position: 1024px 1024px;
   }
 }
-div.sidebar {
-  position: fixed;
-  right: 0;
-  height: 100%;
+div.wrapper {
+  border-radius: 7px;
+  overflow: hidden;
   width: 600px;
+  height: 560px;
   background-color: white;
-  -webkit-box-shadow: -80px 0px 196px 0px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: -80px 0px 196px 0px rgba(0, 0, 0, 0.35);
-  box-shadow: -80px 0px 196px 0px rgba(0, 0, 0, 0.35);
+  margin: auto;
+  margin-top: 160px;
+  -webkit-box-shadow: 0px 0px 167px 13px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 167px 13px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 167px 13px rgba(0, 0, 0, 0.5);
 }
-div.sidebar img {
+div.logo {
   background-color: #cb3c3c;
+  width: 600px;
+  height: 80px;
 }
-div.sidebar form {
-  box-sizing: border-box;
-  border-radius: 5px;
-  padding: 30px;
-  border: 1px solid #ccc;
-  margin: 50px;
-  width: 500px;
+div.logo img {
+  position: absolute;
+  display: block;
+  height: 80px;
+  margin: auto;
+  margin-left: 140px;
 }
-div.sidebar form legend {
+form {
+  padding: 50px;
+}
+form legend {
   font-family: 'Roboto Condensed';
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 30px;
 }
-div.sidebar form input[type="text"],
-div.sidebar form input[type="password"] {
-  width: 200px;
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
   border: 3px solid #6e6e6e;
-  margin-left: 50px;
   padding: 10px;
   font-weight: bold;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
-div.sidebar form input[type="submit"] {
+form input[type="submit"] {
   margin-top: 10px;
   padding: 15px 50px;
   border-style: none;
@@ -64,19 +71,18 @@ div.sidebar form input[type="submit"] {
   border-radius: 5px;
   font-weight: bold;
 }
-div.sidebar form input[type="submit"]:hover {
+form input[type="submit"]:hover {
   background-color: #b33030;
   cursor: pointer;
 }
-div.sidebar form span.error {
+form span.error {
+  display: inline-block;
   margin-left: 20px;
   padding: 12.5px 20px;
   color: #f18831;
+  margin-top: 20px;
+  font-weight: bold;
   border: 1px solid #f18831;
+  background-color: #fdf1e6;
   border-radius: 5px;
-}
-div.sidebar a {
-  padding: 0 60px;
-  text-decoration: none;
-  color: #5d5d5d;
 }
