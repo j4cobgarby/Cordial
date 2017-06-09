@@ -1,4 +1,6 @@
 <?php
+  // This file should be used to render the header of all files in the root directory of the website.
+
   echo '
   <div class="header-wrapper">
     <img class="logo" src="assets/logobig-white.svg" onclick="location.href=\'?cat=all\'" />
@@ -24,7 +26,8 @@
         <br />
 
         <a href="login">sign in</a>
-        <a href="register">register</a>';
+        <a href="register">register</a>
+        <a href="log_out">log out</a>';
 
 
   if (isset($_SESSION["login-id"])) {

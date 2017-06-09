@@ -1,4 +1,6 @@
 <?php
+  // This file should be used to render the header for all files NOT in the root directory.
+
   echo '
   <div class="header-wrapper">
     <img class="logo" src="../assets/logobig-white.svg" onclick="location.href=\'../\'" />
@@ -24,7 +26,8 @@
         <br />
 
         <a href="../login">sign in</a>
-        <a href="../register">register</a>';
+        <a href="../register">register</a>
+        <a href="../log_out">log out</a>';
 
 
   if (isset($_SESSION["login-id"])) {
