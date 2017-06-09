@@ -4,6 +4,12 @@
   $user_name  = "root";
   $password   = "";
 
+  function likePost($target_id) {
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $sql = 'UPDATE `posts` SET likes = likes + 1 WHERE post_id = '.$target_id;
+    mysqli_query($connect, $sql);
+  }
+
   // Start the session so I can use $_SESSION superglobal
   session_start();
 

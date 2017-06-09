@@ -140,8 +140,8 @@ div.post {
 }
 div.post span.title {
   font-family: 'Roboto Condensed';
-  width: -220%;
-  display: inline-block;
+  width: 100%;
+  display: block;
 }
 div.post div.post-user {
   font-weight: normal;
@@ -167,34 +167,6 @@ div.post div.post-user div.user-info {
 }
 div.post div.post-user div.user-info span.date-posted {
   color: #afafaf;
-}
-div.post div.post-status {
-  height: 100%;
-  width: 160px;
-  border-left: 4px solid #cb3c3c;
-  float: right;
-  padding-left: 15px;
-  font-size: 15px;
-}
-div.post div.post-status span {
-  vertical-align: middle;
-  margin-right: 15px;
-  display: inline-block;
-}
-div.post div.post-status span img {
-  height: 15px;
-  margin-right: 3px;
-  margin-left: 3px;
-  vertical-align: middle;
-}
-div.post div.post-status span img.likes:hover {
-  cursor: pointer;
-}
-div.post div.post-status span.img {
-  float: left;
-}
-div.post div.post-status span.views {
-  float: right;
 }
 .hoverpointer:hover {
   cursor: pointer;

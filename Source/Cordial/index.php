@@ -6,6 +6,7 @@
   <head>
     <?php
       require 'phpneed.php';
+      require 'rootlogincheck.php';
 
       $selectallcats = "SELECT user_id, post_id, date_posted, category, title,
       content, likes, views, username, is_admin
@@ -57,16 +58,6 @@
             $row["title"]
             .'
             </span>
-            <div class="post-status">
-              <span class="likes">
-                <img class="likes" src="assets/like-icon.png">
-                '.$row["likes"].'
-              </span>
-              <span class="views">
-                '.$row["views"].'
-                <img class="views" src="assets/views-icon.png" />
-              </span>
-            </div>
           </div>
           ';
   		  }

@@ -6,6 +6,7 @@
   <head>
     <?php
       require '../phpneed.php';
+      require '../sublogincheck.php';
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 

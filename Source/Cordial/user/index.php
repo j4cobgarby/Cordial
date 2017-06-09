@@ -6,6 +6,7 @@
   <head>
     <?php
       require '../phpneed.php';
+      require '../sublogincheck.php';
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
@@ -80,16 +81,6 @@
             $row["title"]
             .'
             </span>
-            <div class="post-status">
-              <span class="likes">
-                <img class="likes" src="../assets/like-icon.png">
-                '.$row["likes"].'
-              </span>
-              <span class="views">
-                '.$row["views"].'
-                <img class="views" src="../assets/views-icon.png" />
-              </span>
-            </div>
           </div>
           ';
   		  }
