@@ -25,13 +25,13 @@
 
         <br />
 
-        <a href="../login">sign in</a>
+        '.(isset($_SESSION["login-id"]) ? '<a href="../log_out">log out</a>' : '<a href="../login">sign in</a>').'
         <a href="../register">register</a>
-        <a href="../log_out">log out</a>';
+        <a href="#">search users</a>';
 
 
   if (isset($_SESSION["login-id"])) {
-    echo "<span class='login-info'>You're logged in as: <b>".$loggedin_username."</b></span>";
+    echo "<span class='login-info'><b>".$loggedin_username."</b>";
   } else {
     echo "<span class='login-info'>You're not logged in.</span>";
   }
