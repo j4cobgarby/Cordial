@@ -47,7 +47,7 @@
                 if ($value->password == hash("sha256", $user_password)) {
                   $_SESSION["login-id"] = $value->user_id;
                   echo "Logged in as ".$user_username;
-                  header( 'Location: ../' ) ;
+                  echo "<script>window.location.href='../'</script>";
                 } else {
                   echo "<span class='error'>Incorrect password</span>";
                 }

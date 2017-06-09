@@ -65,7 +65,7 @@
               );
               ';
               mysqli_query($connect, $sql);
-              header("Location: ../login");
+              echo "<script>window.location.href='../login'</script>";
               die();
             }
             elseif ($valid_password and !$valid_username) {

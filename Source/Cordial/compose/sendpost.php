@@ -20,5 +20,5 @@
 
   $result = mysqli_query($connect, $sql);
 
-  header( 'Location: ../' ) ;
+  echo "<script>window.location.href='../'</script>";
 ?>
