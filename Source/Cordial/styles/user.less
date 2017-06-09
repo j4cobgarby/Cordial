@@ -7,6 +7,18 @@ div.user-panel {
   padding-bottom: 50px;
   background-color: #f7f7f7;
 
+  img.edit-icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 13px;
+    top: 55px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
   div.user-panel-top {
     height: 40px;
     border-bottom: 1px solid #d9d9d9;
@@ -28,9 +40,20 @@ div.user-panel {
 
   div.bio {
     margin: 30px 20%;
-    margin-left: 40px;
-    border-left: 3px solid #6f6f6f;
+    margin-left: 25px;
+    //border-left: 3px solid #6f6f6f;
     padding: 5px 20px;
+  }
+
+  div.bio:before {
+    font-weight: bold;
+    content: 'bio:';
+    margin-right: 10px;
+    background-color: white;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    padding: 3px 6px;
+    border-radius: 5px;
   }
 
   div.user-panel-bottom {

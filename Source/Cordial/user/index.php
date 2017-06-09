@@ -38,7 +38,10 @@
         <span><?php echo 'Joined '.$date_joined; ?></span>
       </div>
       <div class="bio">
-        <?php echo $bio; ?>
+        <?php if ($user_id == $_SESSION["login-id"]) {
+          echo '<img onclick="location.href=\'../\'" class="edit-icon hoverpointer" src="../assets/pencil.svg" />';
+        } ?>
+        <?php echo $bio; ?><br />
       </div>
       <div class="user-panel-bottom">
         <span class="user-panel-bottom-likes">
