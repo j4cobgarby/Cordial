@@ -5,7 +5,7 @@
 <html>
   <head>
     <?php
-      require '../creds.php';
+      require '../phpneed.php';
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 

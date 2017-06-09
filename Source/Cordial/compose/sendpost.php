@@ -1,5 +1,5 @@
 <?php
-  require '../creds.php';
+  require '../phpneed.php';
 
   $sql = '
     INSERT INTO `posts`

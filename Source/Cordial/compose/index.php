@@ -4,7 +4,7 @@
 
 <html>
   <head>
-    <?php require '../creds.php'; ?>
+    <?php require '../phpneed.php'; ?>
 
     <meta charset="utf-8">
     <title>Compose</title>

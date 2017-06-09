@@ -5,7 +5,7 @@
 <html>
   <head>
     <?php
-      require 'creds.php';
+      require 'phpneed.php';
 
       $selectallcats = "SELECT user_id, post_id, date_posted, category, title,
       content, likes, views, username, is_admin
