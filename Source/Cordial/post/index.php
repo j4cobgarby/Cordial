@@ -7,6 +7,7 @@
     <?php
       require '../phpneed.php';
       require '../sublogincheck.php';
+      require '../parsedown-1.6.0/Parsedown.php';
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
@@ -48,10 +49,12 @@
         <span><?php echo $date_posted; ?></span>
       </div>
 
-      <h1><?php echo $title; ?></h1>
-      <p>
-        <?php echo $content; ?>
-      </p>
+      <h1 class="title"><?php echo $title; ?></h1>
+      <div class="content-wrapper">
+        <?php $Parsedown = new Parsedown();
+          echo $Parsedown->text($content);
+        ?>
+      </div>
       <div class="post-panel-bottom">
         <span class="post-panel-bottom-likes">
           <img src="../assets/like-icon.png" />

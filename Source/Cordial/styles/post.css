@@ -22,15 +22,15 @@ div.post-panel div.post-panel-top img {
   margin-left: 20px;
   height: 15px;
 }
-div.post-panel h1 {
+div.post-panel h1.title {
   font-family: 'Roboto Condensed';
   margin-left: 30px;
 }
-div.post-panel p {
+div.post-panel div.content-wrapper {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 30px;
+  padding: 5px 30px;
   margin: 0 70px;
   font-family: 'Roboto';
   font-size: 14pt;
