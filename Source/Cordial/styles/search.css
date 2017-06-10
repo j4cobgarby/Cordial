@@ -1,0 +1,29 @@
+div.search-wrapper {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+div.search-wrapper form {
+  text-align: center;
+  padding-top: 15px;
+}
+div.search-wrapper form input {
+  height: 30px;
+  border: none;
+}
+div.search-wrapper form input[type="text"] {
+  box-sizing: border-box;
+  border: 3px solid #6e6e6e;
+  padding-left: 6px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+div.search-wrapper form input[type="submit"] {
+  box-sizing: border-box;
+  border-style: none;
+  color: white;
+  background-color: #cb3c3c;
+  border-radius: 5px;
+  font-weight: bold;
+}
