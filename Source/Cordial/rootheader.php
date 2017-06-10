@@ -27,7 +27,7 @@
 
         '.(isset($_SESSION["login-id"]) ? '<a href="log_out">log out</a>' : '<a href="login">sign in</a>').'
         <a href="register">register</a>
-        <a href="#">search users</a>';
+        <a href="search">search users</a>';
 
   if (isset($_SESSION["login-id"])) {
     echo "<span class='login-info'><b>".$loggedin_username."</b>";
