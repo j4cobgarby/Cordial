@@ -68,7 +68,9 @@ Then I came back to the idea of [Cordial as being a kind of drink.](https://en.w
 
  - Cleaning up the .less files a bit
  
- - Being able to write posts
+ - Being able to edit your bio from the user page
+ 
+ - Being able to search for users
  
 # License
 
