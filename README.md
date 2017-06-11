@@ -62,11 +62,7 @@ Then I came back to the idea of [Cordial as being a kind of drink.](https://en.w
  
  3. Commit to it. Use the local development instructions above for testing, etc.
  
- 4. ~Twist it~
- 
- 5. ~Bop it~
- 
- 6. Push it!
+ 4. Push it!
  
 # Stuff that needs doing
 
