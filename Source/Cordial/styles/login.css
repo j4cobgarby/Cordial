@@ -75,8 +75,10 @@ div.sidebar form span.error {
   border: 1px solid #f18831;
   border-radius: 5px;
 }
-div.sidebar a {
-  padding: 0 60px;
-  text-decoration: none;
-  color: #5d5d5d;
+div.sidebar span.reg {
+  color: #585858;
+  padding-left: 50px;
+}
+div.sidebar span.reg a {
+  color: #5056db;
 }

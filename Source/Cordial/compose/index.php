@@ -28,13 +28,13 @@
          <input placeholder="Title" type="text" name="title" required /><br /><br />
 
          <span class="req">*</span>
-         <span>Content</span><br />
+         <span>Content <img class="md" src="../assets/md.png" /></span><br />
          <textarea placeholder="Content" name="content" required ></textarea><br /><br />
 
            <span class="req">*</span>
            <span>Category</span>
            <select name="category" required>
-             <option disabled selected value> -- Choose a category -- </option>
+             <option disabled selected value> - Choose a category - </option>
              <option value="swar">Software</option>
              <option value="hwar">Hardware</option>
              <option value="gdev">Game Dev</option>

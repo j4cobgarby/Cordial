@@ -58,8 +58,8 @@
           }
         ?>
       </form>
+      <span class="reg">Or if you don't have an account, register <a href="../register">here!</a></span>
 
-      <a href="../register">Or if you don't have an account, <b>register here!</b></a>
     </div>
   </body>
 </html>
