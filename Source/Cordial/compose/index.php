@@ -1,10 +1,12 @@
+<?php require '../phpneed.php'; ?>
+
 <!DOCTYPE html>
 
 <!-- COMPOSE -->
 
 <html>
   <head>
-    <?php require '../phpneed.php'; require '../sublogincheck.php'; ?>
+    <?php require '../sublogincheck.php'; ?>
 
     <meta charset="utf-8">
     <title>Compose</title>

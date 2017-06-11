@@ -1,8 +1,8 @@
+<?php require '../phpneed.php'; ?>
 <!DOCTYPE html>
 <html>
   <head>
     <?php
-      require '../phpneed.php';
       require '../sublogincheck.php';
     ?>
 

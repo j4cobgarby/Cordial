@@ -1,7 +1,7 @@
+<?php require '../phpneed.php'; ?>
 <!DOCTYPE html>
 <html>
   <head>
-    <?php require '../phpneed.php'; ?>
 
     <meta charset="utf-8">
     <title>Cordial - login</title>

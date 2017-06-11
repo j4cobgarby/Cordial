@@ -1,3 +1,5 @@
+<?php require '../phpneed.php'; ?>
+
 <!DOCTYPE php>
 
 <!-- POST -->
@@ -5,7 +7,6 @@
 <html>
   <head>
     <?php
-      require '../phpneed.php';
       require '../sublogincheck.php';
       require '../parsedown-1.6.0/Parsedown.php';
 
@@ -53,7 +54,7 @@
       <div class="content-wrapper">
         <?php
           $Parsedown = new Parsedown();
-          
+
           echo $Parsedown->text($content);
         ?>
       </div>

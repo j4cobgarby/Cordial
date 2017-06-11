@@ -1,3 +1,5 @@
+<?php require 'phpneed.php'; ?>
+
 <!DOCTYPE php>
 
 <!-- MAIN -->
@@ -5,7 +7,6 @@
 <html>
   <head>
     <?php
-      require 'phpneed.php';
       require 'rootlogincheck.php';
 
       $selectallcats = "SELECT user_id, post_id, date_posted, category, title,
