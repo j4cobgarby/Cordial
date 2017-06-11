@@ -60,6 +60,7 @@ div.compose-form-wrapper form select {
   -webkit-appearance: none;
 }
 div.compose-form-wrapper form textarea {
+  font-size: 11pt;
   font-weight: lighter;
   font-family: 'Overpass Mono';
   padding: 10px;

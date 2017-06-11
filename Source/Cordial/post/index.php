@@ -69,5 +69,40 @@
         </span>
       </div>
     </div>
+
+    <div class="comment-panel">
+      <?php
+        $sql = 'SELECT * FROM `comments` NATURAL JOIN `users` WHERE post_id = '.$_GET["id"];
+        $result = mysqli_query($connect, $sql);
+        $amount_comments = mysqli_num_rows($result);
+      ?>
+
+      <h2>Comments for <?php echo "<span class='accent'>#".$_GET["id"]."</span>" ?></h2>
+      <span class="count"><b><?php echo $amount_comments; ?></b>
+        <?php echo ($amount_comments == 1 ? "comment" : "comments") ?></span>
+      <div class="comments">
+        <?php
+          while ($row = mysqli_fetch_assoc($result)) {
+            $user_id = $row["user_id"];
+            $comment_id = $row["comment_id"];
+            $date_posted = $row["date_posted"];
+            $content = $row["content"];
+            $in_reply_to = $row["in_reply_to"];
+            $username = $row["username"];
+            $is_admin = $row["is_admin"];
+
+            echo '
+            <div class="comment">
+              <span class="id accent">#'.$comment_id.'<span class="reply">'.($in_reply_to != 0 ? ' >> #'.$in_reply_to.' ' : '').' /</span></span>
+              <span class="username">'.$username.' -</span>
+              <span class="content">
+                '.$content.'
+              </span>
+            </div>
+            ';
+          }
+        ?>
+      </div>
+    </div>
   </body>
 </html>
