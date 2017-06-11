@@ -51,7 +51,9 @@
 
       <h1 class="title"><?php echo $title; ?></h1>
       <div class="content-wrapper">
-        <?php $Parsedown = new Parsedown();
+        <?php
+          $Parsedown = new Parsedown();
+          
           echo $Parsedown->text($content);
         ?>
       </div>

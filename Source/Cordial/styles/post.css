@@ -30,11 +30,72 @@ div.post-panel div.content-wrapper {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 5px 30px;
+  padding: 40px 40px;
   margin: 0 70px;
   font-family: 'Roboto';
-  font-size: 14pt;
-  text-align: left;
+  font-size: 13pt;
+}
+div.post-panel div.content-wrapper ol {
+  counter-reset: item;
+  list-style: none;
+}
+div.post-panel div.content-wrapper ol li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+div.post-panel div.content-wrapper ol li:before {
+  margin-right: 10px;
+  content: counter(item) ' .';
+  font-weight: bold;
+}
+div.post-panel div.content-wrapper h1,
+div.post-panel div.content-wrapper h2,
+div.post-panel div.content-wrapper h3,
+div.post-panel div.content-wrapper h4,
+div.post-panel div.content-wrapper h5,
+div.post-panel div.content-wrapper h6 {
+  padding-bottom: 7px;
+  border-bottom: 3px solid #f1f1f1;
+}
+div.post-panel div.content-wrapper a {
+  color: #5789df;
+}
+div.post-panel div.content-wrapper pre {
+  font-family: 'Overpass Mono';
+  background-color: #f9f9f9;
+  padding: 15px;
+  font-size: 12pt;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+div.post-panel div.content-wrapper pre code {
+  font-family: inherit;
+}
+div.post-panel div.content-wrapper img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 9px;
+  max-width: 1100px;
+}
+div.post-panel div.content-wrapper hr {
+  margin: 20px 0px;
+  border: none;
+  border-top: 3px solid #e8e8e8;
+}
+div.post-panel div.content-wrapper table {
+  border-collapse: collapse;
+}
+div.post-panel div.content-wrapper th {
+  background-color: #f1f1f1;
+}
+div.post-panel div.content-wrapper th,
+div.post-panel div.content-wrapper td {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+div.post-panel div.content-wrapper tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
 }
 div.post-panel div.post-panel-bottom {
   position: absolute;
