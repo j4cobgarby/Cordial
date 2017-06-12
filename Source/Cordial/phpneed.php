@@ -6,7 +6,7 @@
     $database   = "cordial";
     $user_name  = "root";
     $password   = "";
-  } else {
+  } elseif ($releasetype == "SERVER") {
     $host_name  = "db684175309.db.1and1.com";
     $database   = "db684175309";
     $user_name  = "dbo684175309";
