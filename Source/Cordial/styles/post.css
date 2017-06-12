@@ -146,6 +146,14 @@ div.comment-panel {
   padding-bottom: 25px;
   border-bottom: 3px solid #ccc;
 }
+div.comment-panel span.nocomments {
+  color: #909090;
+  display: block;
+  font-weight: bold;
+  padding: 30px;
+  margin: auto;
+  margin-left: 20px;
+}
 div.comment-panel h2 {
   margin: 0 auto;
   padding: 10px;

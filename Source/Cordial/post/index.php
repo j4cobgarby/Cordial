@@ -88,6 +88,10 @@
 
       <div class="comments">
         <?php
+          if ($amount_comments == 0) {
+            echo "<span class='nocomments'>No comments found...</span>";
+          }
+
           while ($row = mysqli_fetch_assoc($result)) {
             $c_user_id = $row["user_id"];
             $c_comment_id = $row["comment_id"];
@@ -103,7 +107,7 @@
                 Reply
               </span>
               <span class="id accent">#'.$c_comment_id.'<span class="reply">'.($c_in_reply_to != 0 ? ' >> #'.$c_in_reply_to.' ' : '').' /</span></span>
-              <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">(OP)</span>' : '').'</span>
+              <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
               <span class="content">
                 '.$c_content.'
               </span>
