@@ -1,17 +1,8 @@
 <?php
-  $releasetype = "LOCAL";
-
-  if ($releasetype == "LOCAL") {
-    $host_name  = "localhost";
-    $database   = "cordial";
-    $user_name  = "root";
-    $password   = "";
-  } elseif ($releasetype == "SERVER") {
-    $host_name  = "db684175309.db.1and1.com";
-    $database   = "db684175309";
-    $user_name  = "dbo684175309";
-    $password   = "Jacobg@01";
-  }
+  $host_name  = "localhost";
+  $database   = "cordial";
+  $user_name  = "root";
+  $password   = "";
 
   function likePost($target_id) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
