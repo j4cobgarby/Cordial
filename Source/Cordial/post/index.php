@@ -72,7 +72,7 @@
 
     <div class="comment-panel">
       <?php
-        $sql = 'SELECT * FROM `comments` NATURAL JOIN `users` WHERE post_id = '.$_GET["id"];
+        $sql = 'SELECT * FROM `comments` NATURAL JOIN `users` WHERE post_id = '.$_GET["id"].' ORDER BY comment_id ASC';
         $result = mysqli_query($connect, $sql);
         $amount_comments = mysqli_num_rows($result);
       ?>
