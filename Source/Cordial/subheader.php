@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <span onclick="location.href=\'../compose\'" class="compose hoverpointer">+</span>
+    <span onclick="location.href=\'../compose\'" class="compose hoverpointer">compose +</span>
   </div>
   '
 ?>

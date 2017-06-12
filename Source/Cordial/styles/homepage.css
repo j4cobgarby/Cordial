@@ -51,16 +51,16 @@ div.header-wrapper span.compose {
   display: block;
   text-align: center;
   height: 45px;
-  width: 45px;
   line-height: 45px;
   font-weight: bold;
   font-family: 'Overpass Mono';
-  border-left: 1px solid #972828;
   border-bottom: 1px solid #972828;
   position: fixed;
   box-sizing: border-box;
   right: 0;
   top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 div.header-wrapper div.scroller-wrapper {
   background-color: #b73131;
