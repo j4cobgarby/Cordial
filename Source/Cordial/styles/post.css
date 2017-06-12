@@ -34,6 +34,12 @@ div.post-panel div.content-wrapper {
   font-family: 'Roboto';
   font-size: 13pt;
 }
+div.post-panel div.content-wrapper *:first-child {
+  margin-top: 0;
+}
+div.post-panel div.content-wrapper *:last-child {
+  margin-bottom: 0;
+}
 div.post-panel div.content-wrapper ol {
   counter-reset: item;
   list-style: none;
