@@ -8,7 +8,7 @@
     VALUES (
       NULL,
       '.$_SESSION["login-id"].',
-      "2017-6-7",
+      '.date("Y-m-d").',
       "' .addslashes($_POST["category"]) .'",
       "' .addslashes($_POST["title"])    .'",
       "' .addslashes($_POST["content"])  .'",

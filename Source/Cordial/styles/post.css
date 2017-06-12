@@ -1,5 +1,4 @@
 div.post-panel {
-  background-color: white;
   min-height: 200px;
   border-bottom: 3px solid #d9d9d9;
   position: relative;
@@ -84,7 +83,8 @@ div.post-panel div.content-wrapper hr {
   border-top: 3px solid #f8f8f8;
 }
 div.post-panel div.content-wrapper table {
-  border-collapse: collapse;
+  border: 1px solid #ccc;
+  border-spacing: 0px;
 }
 div.post-panel div.content-wrapper th {
   background-color: #f1f1f1;
@@ -101,47 +101,35 @@ div.post-panel div.post-panel-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 50px;
+  height: 40px;
   width: 100%;
   border-top: 1px solid #d9d9d9;
   background-color: white;
 }
 div.post-panel div.post-panel-bottom span.post-panel-bottom-likes {
-  position: absolute;
   display: inline-block;
   height: 100%;
   line-height: 50px;
+  margin-left: 30px;
 }
 div.post-panel div.post-panel-bottom span.post-panel-bottom-likes img {
-  position: absolute;
   top: 15px;
   left: 30px;
   height: 20px;
 }
-div.post-panel div.post-panel-bottom span.post-panel-bottom-likes span {
-  position: absolute;
-  left: 60px;
-}
 div.post-panel div.post-panel-bottom span.post-panel-bottom-views {
-  position: absolute;
   display: inline-block;
   height: 100%;
   line-height: 50px;
-  margin-left: 90px;
+  margin-left: 30px;
 }
 div.post-panel div.post-panel-bottom span.post-panel-bottom-views img {
-  position: absolute;
   top: 15px;
   left: 30px;
   height: 20px;
-}
-div.post-panel div.post-panel-bottom span.post-panel-bottom-views span {
-  position: absolute;
-  left: 75px;
 }
 .accent {
   color: #cb3c3c;
-  font-family: 'Overpass Mono';
   font-weight: bold;
 }
 div.comment-panel {
@@ -160,6 +148,13 @@ div.comment-panel span.count {
   padding: 10px 20px;
   color: #a4a4a4;
 }
+div.comment-panel span.newcommentbutton {
+  background-color: #f6f6f6;
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: #535353;
+  border: 1px solid #d9d9d9;
+}
 div.comment-panel div.comments {
   margin-top: 20px;
   background-color: #f8f8f8;
@@ -168,6 +163,13 @@ div.comment-panel div.comments {
   border-top: 3px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
+}
+div.comment-panel span.embed-newcomment {
+  display: inline-block;
+  height: 100%;
+  font-size: 12px;
+  color: #262626;
+  font-weight: bold;
 }
 div.comment-panel div.comment {
   box-sizing: border-box;
@@ -179,6 +181,7 @@ div.comment-panel div.comment {
   background-color: white;
   line-height: 30px;
   padding: 2px 30px;
+  padding-left: 10px;
 }
 div.comment-panel div.comment span {
   height: 30px;
@@ -190,4 +193,13 @@ div.comment-panel div.comment span.reply {
 }
 div.comment-panel div.comment span.username {
   color: #818181;
+}
+div.comment-panel div.comment span.op {
+  margin-left: 5px;
+  color: #303030;
+  font-weight: bold;
+  margin-right: 0;
+}
+div.comment-panel div.comment span.content {
+  margin-left: 20px;
 }
