@@ -41,19 +41,37 @@ div.user-panel {
   div.bio {
     margin: 30px 20%;
     margin-left: 25px;
-    //border-left: 3px solid #6f6f6f;
-    padding: 5px 20px;
-  }
+    padding: 0 20px;
 
-  div.bio:before {
-    font-weight: bold;
-    content: 'bio:';
-    margin-right: 10px;
-    background-color: white;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    padding: 3px 6px;
-    border-radius: 5px;
+    form {
+      margin-top: 20px;
+      margin-bottom: -15px;
+
+      textarea {
+        resize: vertical;
+        width: 500px;
+        height: 100px;
+        min-height: 46px;
+        max-height: 200px;
+
+        border: 3px solid #6e6e6e;
+        border-radius: 5px;
+        font-size: 12pt;
+        font-weight: lighter;
+        padding: 10px;
+      }
+
+      input[type='submit'] {
+        display: block;
+        padding: 15px 30px;
+        border-style: none;
+        margin-top: 15px;
+        color: white;
+        background-color: #cb3c3c;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    }
   }
 
   div.user-panel-bottom {

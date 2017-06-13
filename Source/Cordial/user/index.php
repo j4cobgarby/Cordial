@@ -40,10 +40,35 @@
         <span><?php echo 'Joined '.$date_joined; ?></span>
       </div>
       <div class="bio">
-        <?php if ($user_id == $_SESSION["login-id"]) {
-          echo '<img onclick="location.href=\'../\'" class="edit-icon hoverpointer" src="../assets/pencil.svg" />';
+        <?php if ($user_id == $_SESSION["login-id"] && !isset($_GET["edit_bio"])) {
+          echo '<img onclick="location.href=\'../user?id='.$user_id.'&edit_bio=1\'" class="edit-icon hoverpointer" src="../assets/pencil.svg" />';
         } ?>
-        <?php echo $bio; ?><br />
+        <?php
+          if (!isset($_GET["edit_bio"])) {
+            echo $bio;
+          } else { // Is set
+            if ($_GET["edit_bio"] == 1) {
+              echo '
+              <form method="get">
+                <textarea name="new_bio_text" placeholder="Write a cool new bio! Any programming languages you know, what you like doing, etc.." class="edit-bio"></textarea>
+                <input type="hidden" name="id" value="'.$user_id.'" />
+                <input type="submit" value="Change" />
+              </form>
+              ';
+            } else {
+                echo $bio;
+            }
+          }
+
+          if (isset($_GET["new_bio_text"])) {
+            if ($user_id == $_SESSION["login-id"]) {
+              $change_bio_sql = 'UPDATE `users` SET `bio` = \''.$_GET["new_bio_text"].'\' WHERE `users`.`user_id` = '.$user_id;
+              $result = mysqli_query($connect, $change_bio_sql);
+
+              echo '<script>window.location.href="../user/?id='.$user_id.'"</script>';
+            }
+          }
+        ?><br />
       </div>
       <div class="user-panel-bottom">
         <span class="user-panel-bottom-likes">
