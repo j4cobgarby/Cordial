@@ -5,7 +5,7 @@ div.search-wrapper {
   border-bottom: 1px solid #ccc;
 }
 div.search-wrapper form {
-  text-align: center;
+  margin-left: 20px;
   padding-top: 15px;
 }
 div.search-wrapper form input {
@@ -26,4 +26,46 @@ div.search-wrapper form input[type="submit"] {
   background-color: #cb3c3c;
   border-radius: 5px;
   font-weight: bold;
+}
+div.results {
+  width: 100%;
+}
+div.results div.result {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 23px;
+  margin-top: 8px;
+  margin-left: 2.38%;
+  margin-right: 2.38%;
+  background-color: white;
+  overflow: hidden;
+  width: 45%;
+}
+div.results div.result span {
+  margin-right: 30px;
+}
+div.results div.result span.username {
+  font-weight: bold;
+  margin-left: 10px;
+  font-family: 'Roboto Condensed';
+  width: 100%;
+  line-height: 40px;
+}
+div.results div.result span.username img {
+  display: inline-block;
+  height: 15px;
+}
+div.results div.result span.small {
+  float: right;
+  line-height: 40px;
+  font-size: 15px;
+}
+div.results div.result span.medium {
+  float: right;
+  line-height: 40px;
+  font-size: 18px;
 }

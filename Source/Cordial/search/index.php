@@ -23,15 +23,47 @@
       </form>
     </div>
 
-    <?php if (isset($_GET["q"])) {
-      $query = htmlspecialchars(addslashes($_GET["q"]));
+    <div class="results">
+      <?php if (isset($_GET["q"])) {
+        $query = htmlspecialchars(addslashes($_GET["q"]));
 
-      $connect = mysqli_connect($host_name, $user_name, $password, $database);
-      $sql = 'SELECT * FROM `users`';
+        $connect = mysqli_connect($host_name, $user_name, $password, $database);
+        $sql = 'SELECT * FROM `users`';
 
-      $result = mysqli_query($connect, $sql);
+        $result = mysqli_query($connect, $sql);
 
+        $diff_threshold = 8; // Maximum levenshtein distance between the query and
+                             // the username for it to be listed
 
-    } ?>
+        $cost_ins = 2;
+        $cost_rep = 1;
+        $cost_del = 2;
+
+        if ($query == "") {
+          while ($row = mysqli_fetch_assoc($result)) {
+            $sql_posts = 'SELECT * FROM `posts` WHERE `user_id` = '.$row["user_id"];
+            $posts_by_user = mysqli_query($connect, $sql_posts);
+            $amount_posts = mysqli_num_rows($posts_by_user);
+
+            $sql_comments = 'SELECT * FROM `comments` WHERE `user_id` = '.$row["user_id"];
+            $comments_by_user = mysqli_query($connect, $sql_comments);
+            $amount_comments = mysqli_num_rows($comments_by_user);
+
+            echo '
+            <div class="result hoverpointer" onclick="window.location.href=\'../user/?id='.$row["user_id"].'\'">
+              <span class="username">
+                '.$row["username"].'
+                <img src="../assets/admin-icon.png" />
+              </span>
+              <span class="medium">Joined <b>'.$row["date_joined"].'</b></span>
+              <span class="medium"><b>'.$amount_posts.'</b> posts | <b>'.$amount_comments.'</b> comments</span>
+            </div>
+            ';
+          }
+        } else {
+
+        }
+      } ?>
+    </div>
   </body>
 </html>
