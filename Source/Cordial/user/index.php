@@ -62,7 +62,9 @@
 
           if (isset($_GET["new_bio_text"])) {
             if ($user_id == $_SESSION["login-id"]) {
-              $change_bio_sql = 'UPDATE `users` SET `bio` = \''.$_GET["new_bio_text"].'\' WHERE `users`.`user_id` = '.$user_id;
+
+
+              $change_bio_sql = 'UPDATE `users` SET `bio` = \''.htmlspecialchars(addslashes($_GET["new_bio_text"])).'\' WHERE `users`.`user_id` = '.$user_id;
               $result = mysqli_query($connect, $change_bio_sql);
 
               echo '<script>window.location.href="../user/?id='.$user_id.'"</script>';
