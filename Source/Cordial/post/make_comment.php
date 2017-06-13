@@ -56,12 +56,12 @@
           Comment
         </legend>
         <textarea name="text" placeholder="What do you want to say?" required></textarea>
-        Commenting on: <input type="text" name="post_id" <?php
+        <input type="hidden" name="post_id" <?php
           if (isset($_GET["post_id"])) {
             echo 'value="'.$_GET["post_id"].'"';
           }
         ?>/><br />
-        Replying to: <input type="text" name="replyto" <?php
+        <input type="hidden" name="replyto" <?php
           if (isset($_GET["replyto"])) {
             echo 'value="'.$_GET["replyto"].'"';
           } else {
