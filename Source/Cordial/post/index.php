@@ -100,15 +100,19 @@
             $c_in_reply_to = $row["in_reply_to"];
             $c_username = $row["username"];
             $c_is_admin = $row["is_admin"];
+            $c_image_link = $row["image_link"];
 
             echo '
             <div class="comment">
-              <span onclick="window.location.href=\'make_comment.php?post_id='.$_GET["id"].'&replyto='.$c_comment_id.'\'" class="embed-newcomment hoverpointer">
-                Reply
+              <span class="info">
+                <span onclick="window.location.href=\'make_comment.php?post_id='.$_GET["id"].'&replyto='.$c_comment_id.'\'" class="embed-newcomment hoverpointer">
+                  Reply
+                </span>
+                <span class="id accent">#'.$c_comment_id.'<span class="reply">'.($c_in_reply_to != 0 ? ' >> #'.$c_in_reply_to.' ' : '').' /</span></span>
+                <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
               </span>
-              <span class="id accent">#'.$c_comment_id.'<span class="reply">'.($c_in_reply_to != 0 ? ' >> #'.$c_in_reply_to.' ' : '').' /</span></span>
-              <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
               <span class="content">
+                '.($c_image_link == NULL ? '' : '<img src="http://i1.kym-cdn.com/entries/icons/original/000/022/516/unnamed.png" />').'
                 '.$c_content.'
               </span>
             </div>

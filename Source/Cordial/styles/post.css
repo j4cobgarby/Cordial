@@ -198,10 +198,18 @@ div.comment-panel div.comment {
   padding: 2px 30px;
   padding-left: 10px;
 }
+div.comment-panel div.comment img {
+  margin: 10px 0;
+  margin-right: 20px;
+  vertical-align: bottom;
+}
 div.comment-panel div.comment span {
   height: 30px;
   line-height: 30px;
   margin-right: 10px;
+}
+div.comment-panel div.comment span.info {
+  vertical-align: top;
 }
 div.comment-panel div.comment span.reply {
   font-weight: normal;
@@ -211,10 +219,11 @@ div.comment-panel div.comment span.username {
 }
 div.comment-panel div.comment span.op {
   margin-left: 5px;
-  color: #303030;
+  color: #cb3c3c;
   font-weight: bold;
   margin-right: 0;
 }
 div.comment-panel div.comment span.content {
+  vertical-align: top;
   margin-left: 20px;
 }

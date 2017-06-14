@@ -64,6 +64,17 @@ div.comment-form-wrapper form textarea {
   border: 3px solid #6e6e6e;
   border-radius: 5px;
 }
+div.comment-form-wrapper form span.label {
+  margin-left: 25px;
+}
+div.comment-form-wrapper form input[type="text"] {
+  margin-top: 20px;
+  border: 3px solid #6e6e6e;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+  width: 349px;
+}
 div.comment-form-wrapper form input[type="submit"] {
   padding: 15px 30px;
   border-style: none;

@@ -56,6 +56,7 @@
           Comment
         </legend>
         <textarea name="text" placeholder="What do you want to say?" required></textarea>
+        <span class="label">Additionally, you can copy in an image URL</span><input type="text" name="image_link" placeholder="Optional" />
         <input type="hidden" name="post_id" <?php
           if (isset($_GET["post_id"])) {
             echo 'value="'.$_GET["post_id"].'"';
@@ -74,11 +75,28 @@
     <?php
       if (isset($_GET["text"])) {
         $connect = mysqli_connect($host_name, $user_name, $password, $database);
-        $sql = 'INSERT INTO `comments`
-          (`comment_id`, `date_posted`, `content`, `in_reply_to`, `user_id`, `post_id`)
-        VALUES (
-          NULL, \''.date("Y-m-d").'\', \''.$_GET["text"].'\', \''.$_GET["replyto"].'\', \''.$_SESSION["login-id"].'\', \''.$_GET["post_id"].'\'
-        )';
+        if ($_GET["image_link"] == '') {
+          $sql = 'INSERT INTO `comments`
+            (`comment_id`, `date_posted`, `content`, `in_reply_to`, `user_id`, `post_id`)
+          VALUES (
+            NULL, \''.date("Y-m-d").'\',
+            \''.$_GET["text"].'\',
+            \''.$_GET["replyto"].'\',
+            \''.$_SESSION["login-id"].'\',
+            \''.$_GET["post_id"].'\'
+          )';
+        } else {
+          $sql = 'INSERT INTO `comments`
+            (`comment_id`, `date_posted`, `content`, `image_link`, `in_reply_to`, `user_id`, `post_id`)
+          VALUES (
+            NULL, \''.date("Y-m-d").'\',
+            \''.$_GET["text"].'\',
+            \''.$_GET["image_link"].'\',
+            \''.$_GET["replyto"].'\',
+            \''.$_SESSION["login-id"].'\',
+            \''.$_GET["post_id"].'\'
+          )';
+        }
         $result = mysqli_query($connect, $sql);
         echo "<script>window.location.href='../post/?id=".$_GET["post_id"]."'</script>";
       }
