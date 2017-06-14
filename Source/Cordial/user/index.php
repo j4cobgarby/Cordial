@@ -102,7 +102,7 @@
               <div class="user-info">
                 <span class="date-posted">'.$row["date_posted"].'</span>
                 <br />
-                <span class="username">'.($row["is_admin"] == 1 ? '<b>' : '').$row["username"].($row["is_admin"] == 1 ? '</b>' : '').'</span>
+                <span class="username">'.$row["username"].'</span>
               </div>
             </div>
             <span class="title hoverpointer" onclick="location.href=\'../post?id='.$row["post_id"].'\'">'.

@@ -25,11 +25,11 @@
 
          <span class="req">*</span>
          <span>Title</span><br />
-         <input placeholder="Title" type="text" name="title" required /><br /><br />
+         <input placeholder="Title" maxlength="65" type="text" name="title" required /><br /><br />
 
          <span class="req">*</span>
          <span>Content <img class="md" src="../assets/md.png" /></span><br />
-         <textarea placeholder="Content" name="content" required ></textarea><br /><br />
+         <textarea maxlength="5500" placeholder="Content" name="content" required ></textarea><br /><br />
 
            <span class="req">*</span>
            <span>Category</span>

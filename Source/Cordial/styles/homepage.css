@@ -139,13 +139,18 @@ div.post {
   background-color: white;
 }
 div.post span.title {
+  margin-left: 300px;
   font-family: 'Roboto Condensed';
-  width: 100%;
+  width: 100% - 20px;
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 div.post div.post-user {
+  box-sizing: border-box;
   font-weight: normal;
-  width: 160px;
+  width: 300px;
   height: 100%;
   border-right: 4px solid #cb3c3c;
   float: left;
@@ -154,19 +159,23 @@ div.post div.post-user {
   font-size: 14px;
 }
 div.post div.post-user img {
-  float: left;
-  height: 25px;
-  width: 25px;
-  margin-top: 7.5px;
-  margin-left: 7.5px;
-  margin-right: 40px;
+  float: right;
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+  margin-right: 5px;
 }
 div.post div.post-user div.user-info {
-  float: left;
+  float: right;
   text-align: right;
+  margin-right: 5px;
 }
 div.post div.post-user div.user-info span.date-posted {
   color: #afafaf;
+}
+div.post div.post-user div.user-info span.username {
+  font-size: 12px;
+  font-family: 'Roboto Condensed' !important;
 }
 .hoverpointer:hover {
   cursor: pointer;

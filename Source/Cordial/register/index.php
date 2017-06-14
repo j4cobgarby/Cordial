@@ -19,7 +19,7 @@
         <legend>
           Create account
         </legend>
-        <input type="text" name="username" pattern="[A-Za-z0-9]{3,30}" title="An alphanumeric string between the lengths of 3 - 30 characters inclusive" placeholder="Choose a username"
+        <input type="text" name="username" pattern="[A-Za-z0-9]{3,25}" title="An alphanumeric string between the lengths of 3 - 30 characters inclusive" placeholder="Choose a username"
           <?php
             if (isset($_POST["username"])) {
               echo 'value="'.$_POST["username"].'"';
@@ -31,6 +31,7 @@
         <br />
         <input type="password" name="password-rep" pattern=".{6,50}" title="Between 6 and 50 characters in length inclusive" placeholder="Repeat your password" required />
         <br /><br />
+
         <input type="submit" value="Go!" />
 
         <?php
