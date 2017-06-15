@@ -41,8 +41,8 @@ div.results div.result {
   margin-top: 8px;
   margin-left: 2.38%;
   margin-right: 2.38%;
-  background-color: #f6f6f6;
-  overflow: hidden;
+  background-color: #f7f7f7;
+  text-overflow: ellipsis;
   width: 45%;
 }
 div.results div.result span {

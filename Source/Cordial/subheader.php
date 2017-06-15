@@ -26,9 +26,10 @@
 
         <br />
 
-        '.(isset($_SESSION["login-id"]) ? '<a href="../log_out">log out</a>' : '<a href="../login">sign in</a>').'
-        <a href="../register">register</a>
-        <a href="../search">search users</a>';
+        '.(isset($_SESSION["login-id"]) ? '<a href="../log_out">Log out</a>' : '<a href="../login">sign in</a>').'
+        <a href="../register">Register</a>
+        <a href="../user/?id='.$_SESSION["login-id"].'">You</a>
+        <a href="../search">Search users</a>';
 
 
   if (isset($_SESSION["login-id"])) {

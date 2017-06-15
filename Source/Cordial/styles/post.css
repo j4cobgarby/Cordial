@@ -89,7 +89,7 @@ div.post-panel div.content-wrapper a {
 }
 div.post-panel div.content-wrapper pre {
   font-family: 'Overpass Mono';
-  background-color: #fbfbfb;
+  background-color: #fafafa;
   padding: 15px;
   font-size: 12pt;
   border-radius: 3px;
@@ -101,21 +101,20 @@ div.post-panel div.content-wrapper pre code {
 div.post-panel div.content-wrapper img {
   display: block;
   margin: 0 auto;
-  width: 100%;
-  border-radius: 9px;
-  max-width: 1100px;
+  max-width: 1000;
+  border-radius: 4px;
 }
 div.post-panel div.content-wrapper hr {
   margin: 20px 0px;
   border: none;
-  border-top: 3px solid #f6f6f6;
+  border-top: 3px solid #f7f7f7;
 }
 div.post-panel div.content-wrapper table {
   border: 1px solid #ccc;
   border-spacing: 0px;
 }
 div.post-panel div.content-wrapper th {
-  background-color: #f6f6f6;
+  background-color: #f7f7f7;
 }
 div.post-panel div.content-wrapper th,
 div.post-panel div.content-wrapper td {
@@ -123,7 +122,7 @@ div.post-panel div.content-wrapper td {
   padding: 10px 15px;
 }
 div.post-panel div.content-wrapper tbody tr:nth-child(even) {
-  background-color: #f6f6f6;
+  background-color: #f7f7f7;
 }
 div.post-panel div.post-panel-bottom {
   position: absolute;
@@ -187,7 +186,7 @@ div.comment-panel span.count {
   color: #a8a8a8;
 }
 div.comment-panel span.newcommentbutton {
-  background-color: #f6f6f6;
+  background-color: #f7f7f7;
   padding: 4px 8px;
   border-radius: 5px;
   color: #3b3b3b;
@@ -198,7 +197,7 @@ div.comment-panel span.newcommentbutton:hover {
 }
 div.comment-panel div.comments {
   margin-top: 20px;
-  background-color: #f6f6f6;
+  background-color: #f7f7f7;
   width: 100%;
   min-height: 30px;
   border-top: 1px solid #ccc;

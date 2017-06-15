@@ -52,8 +52,8 @@
             echo '
             <div class="result hoverpointer" onclick="window.location.href=\'../user/?id='.$row["user_id"].'\'">
               <span class="username">
+                '.($row["is_admin"] == 1 ? '<img src="../assets/admin-icon.png" />' : '<img src="../assets/user-icon.png" />').'
                 '.$row["username"].'
-                <img src="../assets/admin-icon.png" />
               </span>
               <span class="medium">Joined <b>'.$row["date_joined"].'</b></span>
               <span class="medium"><b>'.$amount_posts.'</b> posts | <b>'.$amount_comments.'</b> comments</span>
