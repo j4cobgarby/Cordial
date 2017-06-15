@@ -17,11 +17,13 @@
         <a title="Hardware"    href="?cat=hwar">hwar</a>
         <a title="Game Dev"    href="?cat=gdev">gdev</a>
         <a title="Web Dev"     href="?cat=wdev">wdev</a>
+        <a title="Science"       href="?cat=sci">sci</a>
         <a title="Memes"       href="?cat=meme">meme</a>
-        <a title="Photography" href="?cat=pics">pics</a>
+        <a title="Pictures"    href="?cat=pics">pics</a>
         <a title="Politics"    href="?cat=pols">pols</a>
         <a title="Random"      href="?cat=rand">rand</a>
         <a title="Meta"        href="?cat=meta">meta</a>
+        <span class="category-show">'.(isset($_GET["cat"]) ? $category_expand[$_GET["cat"]] : "Showing all").'</span>
 
         <br />
 
@@ -36,9 +38,8 @@
   }
 
   echo '
-      </div>
+      </div>!
     </div>
-
     <span onclick="location.href=\'compose\'" class="hoverpointer compose">compose +</span>
   </div>
   ';

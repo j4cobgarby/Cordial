@@ -4,6 +4,21 @@
   $user_name  = "root";
   $password   = "";
 
+  $category_expand = array(
+    'swar' => 'Software',
+    'hwar' => 'Hardware',
+    'gdev' => 'Game Development',
+    'wdev' => 'Web Development',
+     'sci' => 'Science',
+    'meme' => 'Memes',
+    'pics' => 'Pictures',
+    'pols' => 'Politics',
+    'rand' => 'Random',
+    'meta' => 'Meta',
+
+    'all'  => 'Showing all'
+  );
+
   // Start the session so I can use $_SESSION superglobal
   session_start();
 
@@ -13,7 +28,7 @@
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
     $sql = 'SELECT * FROM users WHERE is_admin = 1 AND user_id = '.$_SESSION["login-id"].' LIMIT 1';
     $result = mysqli_query($connect, $sql);
-    
+
     return mysqli_num_rows($result);
   }
 

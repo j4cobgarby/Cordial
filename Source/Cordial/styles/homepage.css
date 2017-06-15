@@ -7,6 +7,10 @@ body {
   padding: 0;
   background-color: #fbfbfb;
 }
+span.category-show {
+  margin-left: 10px;
+  margin-right: 7px;
+}
 div.header-wrapper {
   height: 45px;
   background-color: #cb3c3c;
@@ -14,6 +18,7 @@ div.header-wrapper {
   color: white;
   overflow: hidden;
   user-select: none;
+  vertical-align: middle;
 }
 div.header-wrapper img.logo {
   margin-left: 2px;

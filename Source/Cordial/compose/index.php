@@ -39,6 +39,7 @@
              <option value="hwar">Hardware</option>
              <option value="gdev">Game Dev</option>
              <option value="wdev">Web Dev</option>
+             <option  value="sci">Science</option>
              <option value="meme">Memes</option>
              <option value="pics">Photography</option>
              <option value="pols">Politics</option>
