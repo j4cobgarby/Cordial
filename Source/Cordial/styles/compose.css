@@ -15,7 +15,7 @@ div.compose-form-wrapper form {
   padding-left: 120px;
 }
 div.compose-form-wrapper form h2 {
-  color: #292929;
+  color: #3b3b3b;
 }
 div.compose-form-wrapper form span.req {
   color: #cb3c3c;
@@ -53,7 +53,7 @@ div.compose-form-wrapper form select {
   padding: 10px;
   padding-left: 7px;
   padding-right: 5px;
-  background-color: #f4f4f4;
+  background-color: #f6f6f6;
   border-radius: 5px;
   appearance: none;
   -moz-appearance: none;

@@ -1,15 +1,16 @@
 // out: post.css
+@import "colours";
 
 div.post-panel {
   min-height: 200px;
-  border-bottom: 3px solid #d9d9d9;
+  border-bottom: 1px solid @border-main;
   position: relative;
   padding-bottom: 80px;
   background-color: #f7f7f7;
 
   div.post-panel-top {
     height: 40px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid @border-lighter;
     background-color: white;
 
     span {
@@ -33,7 +34,7 @@ div.post-panel {
 
   div.content-wrapper {
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid @border-main;
     border-radius: 4px;
     padding: 40px 40px;
     margin: 0 70px;
@@ -65,20 +66,20 @@ div.post-panel {
 
     h1, h2, h3, h4, h5, h6 {
       padding-bottom: 7px;
-      border-bottom: 3px solid #f1f1f1;
+      border-bottom: 3px solid @grey-6;
     }
 
     a {
-      color: #5789df;
+      color: @hyper-colour;
     }
 
     pre {
       font-family: 'Overpass Mono';
-      background-color: #f9f9f9;
+      background-color: @grey-8;
       padding: 15px;
       font-size: 12pt;
       border-radius: 3px;
-      border: 1px solid #ccc;
+      border: 1px solid @border-main;
 
       code {
         font-family: inherit;
@@ -96,25 +97,25 @@ div.post-panel {
     hr {
       margin: 20px 0px;
       border: none;
-      border-top: 3px solid #f8f8f8;
+      border-top: 3px solid @grey-7;
     }
 
     table {
-      border: 1px solid #ccc;
+      border: 1px solid @border-main;
       border-spacing: 0px;
     }
 
     th {
-      background-color: #f1f1f1;
+      background-color: @grey-7;
     }
 
     th, td {
-      border: 1px solid #ccc;
+      border: 1px solid @border-main;
       padding: 10px 15px;
     }
 
     tbody tr:nth-child(even) {
-      background-color: #f7f7f7;
+      background-color: @grey-7;
     }
   }
 
@@ -124,7 +125,7 @@ div.post-panel {
     left: 0;
     height: 40px;
     width: 100%;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid @border-lighter;
     background-color: white;
 
     span.post-panel-bottom-likes {
@@ -162,7 +163,7 @@ div.post-panel {
 }
 
 .accent {
-  color: #cb3c3c;
+  color: @link-colour;
   font-weight: bold;
 }
 
@@ -172,11 +173,12 @@ div.comment-panel {
   width: 100%;
   background-color: white;
   padding-bottom: 25px;
-  border-bottom: 3px solid #ccc;
+  border-bottom: 1px solid @border-lighter;
+  border-top: 1px solid @border-lighter;
   word-wrap: break-word;
 
   span.nocomments {
-    color: #909090;
+    color: @grey-2;
     display: block;
     font-weight: bold;
     padding: 30px;
@@ -191,24 +193,28 @@ div.comment-panel {
 
   span.count {
     padding: 10px 20px;
-    color: #a4a4a4;
+    color: @grey-3;
   }
 
   span.newcommentbutton {
-    background-color: #f6f6f6;
+    background-color: @grey-7;
     padding: 4px 8px;
     border-radius: 5px;
-    color: #535353;
-    border: 1px solid #d9d9d9;
+    color: @grey-1;
+    border: 1px solid @border-lighter;
+  }
+
+  span.newcommentbutton:hover {
+    background-color: @grey-6;
   }
 
   div.comments {
     margin-top: 20px;
-    background-color: #f8f8f8;
+    background-color: @grey-7;
     width: 100%;
     min-height: 30px;
-    border-top: 3px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid @border-main;
+    border-bottom: 1px solid @border-main;
     padding: 10px 0;
   }
 
@@ -216,14 +222,21 @@ div.comment-panel {
     display: inline-block;
     height: 100%;
     font-size: 12px;
-    color: #262626;
+    color: @grey-1;
     font-weight: bold;
+    padding: 0 8px;
+    border-radius: 3px;
+  }
+
+  span.embed-newcomment:hover {
+    background-color: @grey-2;
+    color: white;
   }
 
   div.comment {
     box-sizing: border-box;
-    border-top: 2px solid #dedede;
-    border-bottom: 2px solid #dedede;
+    border-top: 2px solid @grey-4;
+    border-bottom: 2px solid @grey-4;
     margin: 5px 0;
     width: 100%;
     min-height: 30px;
@@ -236,6 +249,8 @@ div.comment-panel {
       margin: 10px 0;
       margin-right: 20px;
       vertical-align: bottom;
+      max-width: 40%;
+      border-radius: 5px;
     }
 
     span {
@@ -253,12 +268,12 @@ div.comment-panel {
     }
 
     span.username {
-      color: #818181;
+      color: @grey-2;
     }
 
     span.op {
       margin-left: 5px;
-      color: #cb3c3c;
+      color: @op-colour;
       font-weight: bold;
       margin-right: 0;
     }

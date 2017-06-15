@@ -5,7 +5,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: #fbfbfb;
 }
 div.header-wrapper {
   height: 45px;
@@ -129,8 +129,8 @@ div.postview {
 div.post {
   overflow: hidden;
   height: 40px;
-  border-top: 1px solid #dbdbdb;
-  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
   line-height: 40px;
   font-size: 23px;
   font-family: 'Roboto Condensed';
@@ -171,7 +171,7 @@ div.post div.post-user div.user-info {
   margin-right: 5px;
 }
 div.post div.post-user div.user-info span.date-posted {
-  color: #afafaf;
+  color: #a8a8a8;
 }
 div.post div.post-user div.user-info span.username {
   font-size: 12px;

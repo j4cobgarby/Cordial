@@ -1,11 +1,12 @@
 // out: user.css
+@import "colours";
 
 div.user-panel {
   min-height: 80px;
-  border-bottom: 3px solid #d9d9d9;
+  border-bottom: 3px solid @border-lighter;
   position: relative;
   padding-bottom: 50px;
-  background-color: #f7f7f7;
+  background-color: @grey-7;
 
   img.edit-icon {
     position: absolute;
@@ -13,7 +14,7 @@ div.user-panel {
     height: 25px;
     right: 13px;
     top: 55px;
-    border: 1px solid #ccc;
+    border: 1px solid @border-main;
     padding: 5px;
     background-color: white;
     border-radius: 5px;
@@ -21,7 +22,7 @@ div.user-panel {
 
   div.user-panel-top {
     height: 40px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid @border-lighter;
     background-color: white;
 
     span {
@@ -54,7 +55,7 @@ div.user-panel {
         min-height: 46px;
         max-height: 200px;
 
-        border: 3px solid #6e6e6e;
+        border: 3px solid @grey-2;
         border-radius: 5px;
         font-size: 12pt;
         font-weight: lighter;
@@ -67,7 +68,7 @@ div.user-panel {
         border-style: none;
         margin-top: 15px;
         color: white;
-        background-color: #cb3c3c;
+        background-color: @main;
         border-radius: 5px;
         font-weight: bold;
       }
@@ -80,7 +81,7 @@ div.user-panel {
     left: 0;
     height: 50px;
     width: 100%;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid @border-lighter;
     background-color: white;
 
     span.user-panel-bottom-likes {

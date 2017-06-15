@@ -1,10 +1,11 @@
 // out: compose.css
+@import "colours";
 
 div.compose-form-wrapper {
   background-color: white;
   min-height: 500px;
   width: 900px;
-  border: 1px solid #ccc;
+  border: 1px solid @border-main;
   margin: auto;
   margin-top: 70px;
   border-radius: 6px;
@@ -19,11 +20,11 @@ div.compose-form-wrapper {
     padding-left: 120px;
 
     h2 {
-      color: #292929;
+      color: @grey-1;
     }
 
     span.req {
-      color: #cb3c3c;
+      color: @main;
       font-weight: bold;
     }
 
@@ -40,7 +41,7 @@ div.compose-form-wrapper {
     }
 
     input[type="text"] {
-      border: 3px solid #6e6e6e;
+      border: 3px solid @grey-2;
       width: 640px;
       padding: 10px;
       font-weight: bold;
@@ -52,7 +53,7 @@ div.compose-form-wrapper {
       padding: 15px 30px;
       border-style: none;
       color: white;
-      background-color: #cb3c3c;
+      background-color: @main;
       border-radius: 5px;
       font-weight: bold;
     }
@@ -63,7 +64,7 @@ div.compose-form-wrapper {
       padding: 10px;
       padding-left: 7px;
       padding-right: 5px;
-      background-color: #f4f4f4;
+      background-color: @grey-7;
       border-radius: 5px;
       appearance: none;
       -moz-appearance: none;
@@ -78,7 +79,7 @@ div.compose-form-wrapper {
       width: 640px;
       min-height: 200px;
       resize: vertical;
-      border: 3px solid #6e6e6e;
+      border: 3px solid @grey-2;
       border-radius: 5px;
     }
   }

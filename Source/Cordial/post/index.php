@@ -112,7 +112,7 @@
                 <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
               </span>
               <span class="content">
-                '.($c_image_link == NULL ? '' : '<img src="http://i1.kym-cdn.com/entries/icons/original/000/022/516/unnamed.png" />').'
+                '.($c_image_link == NULL ? '' : '<img src="'.$c_image_link.'" />').'
                 '.$c_content.'
               </span>
             </div>

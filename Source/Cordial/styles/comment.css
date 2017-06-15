@@ -1,5 +1,5 @@
 div.comment-form-wrapper {
-  background-color: #f7f7f7;
+  background-color: #f6f6f6;
   width: 100%;
   min-height: 150px;
   padding-bottom: 20px;
@@ -26,14 +26,14 @@ div.comment-form-wrapper div.info {
   margin: 20px auto;
   padding: 40px;
   border-radius: 6px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e7e7e7;
 }
 div.comment-form-wrapper div.info span.top-info {
   font-weight: bold;
 }
 div.comment-form-wrapper div.info span.comment-preview {
   display: inline-block;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e7e7e7;
   border-radius: 6px;
   margin-top: 30px;
   padding: 10px 13px;
@@ -44,7 +44,7 @@ div.comment-form-wrapper form {
   background-color: white;
   padding: 20px;
   border-radius: 6px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e7e7e7;
 }
 div.comment-form-wrapper form legend {
   font-family: 'Roboto Condensed';

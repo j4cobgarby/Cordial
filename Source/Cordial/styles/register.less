@@ -1,4 +1,5 @@
 // out: register.css
+@import "colours";
 
 html, body {
   margin: 0;
@@ -44,7 +45,7 @@ div.wrapper {
 }
 
 div.logo {
-  background-color: #cb3c3c;
+  background-color: @main;
   width: 600px;
   height: 80px;
 
@@ -70,7 +71,7 @@ form {
   input[type="text"], input[type="password"] {
     width: 100%;
     box-sizing: border-box;
-    border: 3px solid #6e6e6e;
+    border: 3px solid @grey-2;
     padding: 10px;
     font-weight: bold;
     border-radius: 5px;
@@ -82,13 +83,13 @@ form {
     padding: 15px 50px;
     border-style: none;
     color: white;
-    background-color: #cb3c3c;
+    background-color: @main;
     border-radius: 5px;
     font-weight: bold;
   }
 
   input[type="submit"]:hover {
-    background-color: darken(#cb3c3c, 7%);
+    background-color: darken(@main, 7%);
     cursor: pointer;
   }
 
@@ -96,24 +97,20 @@ form {
     display: inline-block;
     margin-left: 20px;
     padding: 12.5px 20px;
-    color: #f18831;
+    color: @error-colour;
     margin-top: 20px;
     font-weight: bold;
-    border: 1px solid #f18831;
-    background-color: lighten(#f18831, 38%);
+    border: 1px solid @error-colour;
+    background-color: lighten(@error-colour, 38%);
     border-radius: 5px;
-  }
-
-  div.g-recaptcha {
-    //margin-top: 15px;
   }
 }
 
 span.signin {
-  color: #585858;
+  color: @grey-2;
   padding-left: 50px;
 
   a {
-    color: #5056db;
+    color: @hyper-colour;
   }
 }

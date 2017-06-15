@@ -1,16 +1,14 @@
 // out: homepage.css
-
+@import "colours";
 
 * {
   font-family: Roboto;
 }
 
-@main: #cb3c3c;
-
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: @grey-8;
 }
 
 div.header-wrapper {
@@ -143,8 +141,8 @@ div.postview {
 div.post {
   overflow: hidden;
   height: 40px;
-  border-top: 1px solid #dbdbdb;
-  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid @border-lighter;
+  border-bottom: 1px solid @border-lighter;
   line-height: 40px;
   font-size: 23px;
   font-family: 'Roboto Condensed';
@@ -187,7 +185,7 @@ div.post {
       margin-right: 5px;
 
       span.date-posted {
-        color: #afafaf;
+        color: @grey-3;
       }
       span.username {
         font-size: 12px;

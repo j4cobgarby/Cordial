@@ -1,10 +1,11 @@
 // out: search.css
+@import "colours";
 
 div.search-wrapper {
   background-color: white;
   height: 60px;
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid @border-main;
 
   form {
     margin-left: 20px;
@@ -17,7 +18,7 @@ div.search-wrapper {
 
     input[type="text"] {
       box-sizing: border-box;
-      border: 3px solid #6e6e6e;
+      border: 3px solid @grey-2;
       padding-left: 6px;
       font-weight: bold;
       border-radius: 5px;
@@ -27,7 +28,7 @@ div.search-wrapper {
       box-sizing: border-box;
       border-style: none;
       color: white;
-      background-color: #cb3c3c;
+      background-color: @main;
       border-radius: 5px;
       font-weight: bold;
     }
@@ -41,7 +42,7 @@ div.results {
     box-sizing: border-box;
     display: inline-block;
     height: 40px;
-    border: 1px solid #dbdbdb;
+    border: 1px solid @border-lighter;
     border-radius: 6px;
     line-height: 40px;
     font-size: 23px;

@@ -1,4 +1,5 @@
 // out: login.css
+@import "colours";
 
 html, body {
   margin: 0;
@@ -40,14 +41,14 @@ div.sidebar {
   box-shadow: -80px 0px 196px 0px rgba(0,0,0,0.35);
 
   img {
-    background-color: #cb3c3c;
+    background-color: @main;
   }
 
   form {
     box-sizing: border-box;
     border-radius: 5px;
     padding: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid @border-main;
     margin: 50px;
     width: 500px;
 
@@ -60,7 +61,7 @@ div.sidebar {
 
     input[type="text"], input[type="password"] {
       width: 200px;
-      border: 3px solid #6e6e6e;
+      border: 3px solid @grey-2;
       margin-left: 50px;
       padding: 10px;
       font-weight: bold;
@@ -72,31 +73,31 @@ div.sidebar {
       padding: 15px 50px;
       border-style: none;
       color: white;
-      background-color: #cb3c3c;
+      background-color: @main;
       border-radius: 5px;
       font-weight: bold;
     }
 
     input[type="submit"]:hover {
-      background-color: darken(#cb3c3c, 7%);
+      background-color: darken(@main, 7%);
       cursor: pointer;
     }
 
     span.error {
       margin-left: 20px;
       padding: 12.5px 20px;
-      color: #f18831;
-      border: 1px solid #f18831;
+      color: @error-colour;
+      border: 1px solid @error-colour;
       border-radius: 5px;
     }
   }
 
   span.reg {
-    color: #585858;
+    color: @grey-2;
     padding-left: 50px;
 
     a {
-      color: #5056db;
+      color: @hyper-colour;
     }
   }
 }

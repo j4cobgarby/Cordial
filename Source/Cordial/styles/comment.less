@@ -1,11 +1,12 @@
 // out: comment.css
+@import "colours";
 
 div.comment-form-wrapper {
-  background-color: #f7f7f7;
+  background-color: @grey-7;
   width: 100%;
   min-height: 150px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid @border-main;
 
   span.title {
     font-family: 'Roboto Condensed';
@@ -16,7 +17,7 @@ div.comment-form-wrapper {
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid @border-main;
   }
 
   span.replywho {
@@ -30,7 +31,7 @@ div.comment-form-wrapper {
     margin: 20px auto;
     padding: 40px;
     border-radius: 6px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid @grey-5;
 
     span.top-info {
       font-weight: bold;
@@ -38,7 +39,7 @@ div.comment-form-wrapper {
 
     span.comment-preview {
       display: inline-block;
-      border: 1px solid #e6e6e6;
+      border: 1px solid @grey-5;
       border-radius: 6px;
       margin-top: 30px;
       padding: 10px 13px;
@@ -51,7 +52,7 @@ div.comment-form-wrapper {
     background-color: white;
     padding: 20px;
     border-radius: 6px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid @grey-5;
 
     legend {
       font-family: 'Roboto Condensed';
@@ -69,7 +70,7 @@ div.comment-form-wrapper {
       resize: none;
       width: 90%;
       height: 80px;
-      border: 3px solid #6e6e6e;
+      border: 3px solid @grey-2;
       border-radius: 5px;
     }
 
@@ -79,7 +80,7 @@ div.comment-form-wrapper {
 
     input[type="text"] {
       margin-top: 20px;
-      border: 3px solid #6e6e6e;
+      border: 3px solid @grey-2;
       padding: 10px;
       border-radius: 5px;
       margin-left: 15px;
@@ -90,7 +91,7 @@ div.comment-form-wrapper {
       padding: 15px 30px;
       border-style: none;
       color: white;
-      background-color: #cb3c3c;
+      background-color: @main;
       border-radius: 5px;
       font-weight: bold;
     }

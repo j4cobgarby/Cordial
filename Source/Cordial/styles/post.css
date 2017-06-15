@@ -1,6 +1,6 @@
 div.post-panel {
   min-height: 200px;
-  border-bottom: 3px solid #d9d9d9;
+  border-bottom: 1px solid #ccc;
   position: relative;
   padding-bottom: 80px;
   background-color: #f7f7f7;
@@ -60,14 +60,14 @@ div.post-panel div.content-wrapper h4,
 div.post-panel div.content-wrapper h5,
 div.post-panel div.content-wrapper h6 {
   padding-bottom: 7px;
-  border-bottom: 3px solid #f1f1f1;
+  border-bottom: 3px solid #f4f4f4;
 }
 div.post-panel div.content-wrapper a {
-  color: #5789df;
+  color: #5056db;
 }
 div.post-panel div.content-wrapper pre {
   font-family: 'Overpass Mono';
-  background-color: #f9f9f9;
+  background-color: #fbfbfb;
   padding: 15px;
   font-size: 12pt;
   border-radius: 3px;
@@ -86,14 +86,14 @@ div.post-panel div.content-wrapper img {
 div.post-panel div.content-wrapper hr {
   margin: 20px 0px;
   border: none;
-  border-top: 3px solid #f8f8f8;
+  border-top: 3px solid #f6f6f6;
 }
 div.post-panel div.content-wrapper table {
   border: 1px solid #ccc;
   border-spacing: 0px;
 }
 div.post-panel div.content-wrapper th {
-  background-color: #f1f1f1;
+  background-color: #f6f6f6;
 }
 div.post-panel div.content-wrapper th,
 div.post-panel div.content-wrapper td {
@@ -101,7 +101,7 @@ div.post-panel div.content-wrapper td {
   padding: 10px 15px;
 }
 div.post-panel div.content-wrapper tbody tr:nth-child(even) {
-  background-color: #f7f7f7;
+  background-color: #f6f6f6;
 }
 div.post-panel div.post-panel-bottom {
   position: absolute;
@@ -135,7 +135,7 @@ div.post-panel div.post-panel-bottom span.post-panel-bottom-views img {
   height: 20px;
 }
 .accent {
-  color: #cb3c3c;
+  color: #6acf13;
   font-weight: bold;
 }
 div.comment-panel {
@@ -144,11 +144,12 @@ div.comment-panel {
   width: 100%;
   background-color: white;
   padding-bottom: 25px;
-  border-bottom: 3px solid #ccc;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
   word-wrap: break-word;
 }
 div.comment-panel span.nocomments {
-  color: #909090;
+  color: #6e6e6e;
   display: block;
   font-weight: bold;
   padding: 30px;
@@ -161,21 +162,24 @@ div.comment-panel h2 {
 }
 div.comment-panel span.count {
   padding: 10px 20px;
-  color: #a4a4a4;
+  color: #a8a8a8;
 }
 div.comment-panel span.newcommentbutton {
   background-color: #f6f6f6;
   padding: 4px 8px;
   border-radius: 5px;
-  color: #535353;
+  color: #3b3b3b;
   border: 1px solid #d9d9d9;
+}
+div.comment-panel span.newcommentbutton:hover {
+  background-color: #f4f4f4;
 }
 div.comment-panel div.comments {
   margin-top: 20px;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
   width: 100%;
   min-height: 30px;
-  border-top: 3px solid #ccc;
+  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
 }
@@ -183,8 +187,14 @@ div.comment-panel span.embed-newcomment {
   display: inline-block;
   height: 100%;
   font-size: 12px;
-  color: #262626;
+  color: #3b3b3b;
   font-weight: bold;
+  padding: 0 8px;
+  border-radius: 3px;
+}
+div.comment-panel span.embed-newcomment:hover {
+  background-color: #6e6e6e;
+  color: white;
 }
 div.comment-panel div.comment {
   box-sizing: border-box;
@@ -202,6 +212,8 @@ div.comment-panel div.comment img {
   margin: 10px 0;
   margin-right: 20px;
   vertical-align: bottom;
+  max-width: 40%;
+  border-radius: 5px;
 }
 div.comment-panel div.comment span {
   height: 30px;
@@ -215,11 +227,11 @@ div.comment-panel div.comment span.reply {
   font-weight: normal;
 }
 div.comment-panel div.comment span.username {
-  color: #818181;
+  color: #6e6e6e;
 }
 div.comment-panel div.comment span.op {
   margin-left: 5px;
-  color: #cb3c3c;
+  color: #9b40ed;
   font-weight: bold;
   margin-right: 0;
 }
