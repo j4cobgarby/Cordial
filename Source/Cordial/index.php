@@ -11,7 +11,7 @@
 
       $selectallcats = "SELECT user_id, post_id, date_posted, category, title,
       content, likes, views, username, is_admin
-      FROM `posts` NATURAL JOIN `users` ORDER BY post_id DESC";
+      FROM `posts` NATURAL JOIN `users` ORDER BY post_id DESC LIMIT 500";
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 

@@ -36,7 +36,15 @@
 
     <div class="user-panel">
       <div class="user-panel-top">
-        <span><b><?php echo $username; ?> <img src="../assets/admin-icon.png" /></b></span>
+        <span><b><?php echo $username; ?>
+          <?php
+            if ($is_admin == 0) {
+              echo '<img src="../assets/user-icon.png" />';
+            } else {
+              echo '<img src="../assets/admin-icon.png" />';
+            }
+          ?>
+        </b></span>
         <span><?php echo 'Joined '.$date_joined; ?></span>
       </div>
       <div class="bio">
