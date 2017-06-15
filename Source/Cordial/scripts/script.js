@@ -21,3 +21,9 @@ function togglescroll() {
     scrollup();
   }
 }
+
+function flashId(id) {
+  var el = document.getElementById('comment-'+id);
+  el.classList.add("flash");
+  window.setTimeout(() => el.classList.remove("flash"), 1000)
+}

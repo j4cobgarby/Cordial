@@ -55,16 +55,17 @@ div.header-wrapper {
   }
 
   span.compose {
+    z-index: 1;
+    border-left: 1px solid darken(@main, 5%);
+    border-bottom: 1px solid darken(@main, 5%);
     background-color: white;
     color: @main;
     display: block;
     text-align: center;
     height: 45px;
-    //width: 45px;
     line-height: 45px;
     font-weight: bold;
     font-family: 'Overpass Mono';
-    border-bottom: 1px solid darken(@main, 14%);
     position: fixed;
     box-sizing: border-box;
     right: 0;
@@ -197,6 +198,10 @@ div.post {
 
 .hoverpointer:hover {
   cursor: pointer;
+}
+
+.hoverunderline:hover {
+  text-decoration: underline;
 }
 
 .noselect {

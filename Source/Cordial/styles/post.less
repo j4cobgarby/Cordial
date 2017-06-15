@@ -25,6 +25,32 @@ div.post-panel {
       margin-left: 20px;
       height: 15px;
     }
+
+    span.del-post {
+      font-size: 13px;
+      float: right;
+      font-weight: bold;
+      padding: 0px 10px;
+      margin: 0 3px;
+    }
+
+    span.del-post:hover {
+      color: white;
+      background-color: @delete-colour;
+    }
+
+    span.edit-post {
+      font-size: 13px;
+      float: right;
+      font-weight: bold;
+      padding: 0px 10px;
+      margin: 0 3px;
+    }
+
+    span.edit-post:hover {
+      color: white;
+      background-color: @edit-colour;
+    }
   }
 
   h1.title {
@@ -233,6 +259,25 @@ div.comment-panel {
     color: white;
   }
 
+  @keyframes flash {
+    0% {
+      background-color: @flash-colour;
+    }
+
+    50% {
+      background-color: @flash-colour;
+    }
+
+    100% {
+      background-color: white;
+    }
+  }
+
+  div.comment.flash {
+    animation-name: flash;
+    animation-duration: 1s;
+  }
+
   div.comment {
     box-sizing: border-box;
     border-top: 2px solid @grey-4;
@@ -250,7 +295,8 @@ div.comment-panel {
       margin-right: 20px;
       vertical-align: bottom;
       max-width: 40%;
-      border-radius: 5px;
+      max-height: 900px;
+      border-radius: 4px;
     }
 
     span {
@@ -263,7 +309,12 @@ div.comment-panel {
       vertical-align: top;
     }
 
+    span.id {
+      margin-right: 0px;
+    }
+
     span.reply {
+      z-index: 1;
       font-weight: normal;
     }
 

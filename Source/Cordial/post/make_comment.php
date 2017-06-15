@@ -80,7 +80,7 @@
             (`comment_id`, `date_posted`, `content`, `in_reply_to`, `user_id`, `post_id`)
           VALUES (
             NULL, \''.date("Y-m-d").'\',
-            \''.$_GET["text"].'\',
+            \''.htmlspecialchars(addslashes($_GET["text"])).'\',
             \''.$_GET["replyto"].'\',
             \''.$_SESSION["login-id"].'\',
             \''.$_GET["post_id"].'\'
@@ -90,8 +90,8 @@
             (`comment_id`, `date_posted`, `content`, `image_link`, `in_reply_to`, `user_id`, `post_id`)
           VALUES (
             NULL, \''.date("Y-m-d").'\',
-            \''.$_GET["text"].'\',
-            \''.$_GET["image_link"].'\',
+            \''.htmlspecialchars(addslashes($_GET["text"])).'\',
+            \''.htmlspecialchars(addslashes($_GET["image_link"])).'\',
             \''.$_GET["replyto"].'\',
             \''.$_SESSION["login-id"].'\',
             \''.$_GET["post_id"].'\'

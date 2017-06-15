@@ -46,6 +46,9 @@ div.header-wrapper span.label:active {
   background-color: #f1c9c9;
 }
 div.header-wrapper span.compose {
+  z-index: 1;
+  border-left: 1px solid #bb3232;
+  border-bottom: 1px solid #bb3232;
   background-color: white;
   color: #cb3c3c;
   display: block;
@@ -54,7 +57,6 @@ div.header-wrapper span.compose {
   line-height: 45px;
   font-weight: bold;
   font-family: 'Overpass Mono';
-  border-bottom: 1px solid #972828;
   position: fixed;
   box-sizing: border-box;
   right: 0;
@@ -179,6 +181,9 @@ div.post div.post-user div.user-info span.username {
 }
 .hoverpointer:hover {
   cursor: pointer;
+}
+.hoverunderline:hover {
+  text-decoration: underline;
 }
 .noselect {
   -webkit-touch-callout: none;

@@ -48,6 +48,21 @@
         <?php echo ($is_admin == 1 ? '<img src="../assets/admin-icon.png" />' : '<img src="../assets/user-icon.png" />') ?>
         <span class="hoverpointer" onclick="location.href='../user?id= <?php echo $user_id ?> '"><b><?php echo $username; ?></b></span>
         <span><?php echo $date_posted; ?></span>
+        <?php
+          if (isAdmin($host_name, $user_name, $password, $database)) {
+            echo '
+              <span class="del-post hoverpointer" onclick="window.location.href=\'delete_post.php/?id='.$_GET["id"].'\'">DELETE</span>
+              <span class="edit-post hoverpointer">EDIT</span>
+            ';
+          }
+          else if ($user_id == $_SESSION["login-id"]) {
+            // This is the user's post
+            echo '
+              <span class="del-post hoverpointer" onclick="window.location.href=\'delete_post.php/?id='.$_GET["id"].'\'">DELETE</span>
+              <span class="edit-post hoverpointer">EDIT</span>
+            ';
+          }
+        ?>
       </div>
 
       <h1 class="title"><?php echo $title; ?></h1>
@@ -103,16 +118,21 @@
             $c_image_link = $row["image_link"];
 
             echo '
-            <div class="comment">
+            <div class="comment" id="comment-'.$c_comment_id.'">
               <span class="info">
                 <span onclick="window.location.href=\'make_comment.php?post_id='.$_GET["id"].'&replyto='.$c_comment_id.'\'" class="embed-newcomment hoverpointer">
                   Reply
                 </span>
-                <span class="id accent">#'.$c_comment_id.'<span class="reply">'.($c_in_reply_to != 0 ? ' >> #'.$c_in_reply_to.' ' : '').' /</span></span>
+                <span class="id accent hoverpointer hoverunderline" onclick="flashId('.$c_comment_id.');window.location.href=\'#comment-'.$c_comment_id.'\'">
+                  #'.$c_comment_id.'
+                </span>
+                <span class="reply accent hoverpointer hoverunderline" onclick="flashId('.$c_in_reply_to.');window.location.href=\'#comment-'.$c_in_reply_to.'\'">'
+                  .($c_in_reply_to != 0 ? ' » #'.$c_in_reply_to.' ' : '').' /
+                </span>
                 <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
               </span>
               <span class="content">
-                '.($c_image_link == NULL ? '' : '<img src="'.$c_image_link.'" />').'
+                '.($c_image_link == NULL ? '' : '<img class="hoverpointer" onclick="window.location.href=\''.$c_image_link.'\'" src="'.$c_image_link.'" />').'
                 '.$c_content.'
               </span>
             </div>

@@ -4,14 +4,18 @@
   $user_name  = "root";
   $password   = "";
 
-  function likePost($target_id) {
-    $connect = mysqli_connect($host_name, $user_name, $password, $database);
-    $sql = 'UPDATE `posts` SET likes = likes + 1 WHERE post_id = '.$target_id;
-    mysqli_query($connect, $sql);
-  }
-
   // Start the session so I can use $_SESSION superglobal
   session_start();
+
+  // Returns true if the current user, denoted by $_SESSION["login-id"], is an
+  // admin.
+  function isAdmin($host_name, $user_name, $password, $database) {
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $sql = 'SELECT * FROM users WHERE is_admin = 1 AND user_id = '.$_SESSION["login-id"].' LIMIT 1';
+    $result = mysqli_query($connect, $sql);
+    
+    return mysqli_num_rows($result);
+  }
 
   if (isset($_SESSION["login-id"])) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);

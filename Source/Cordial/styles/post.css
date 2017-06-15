@@ -21,6 +21,28 @@ div.post-panel div.post-panel-top img {
   margin-left: 20px;
   height: 15px;
 }
+div.post-panel div.post-panel-top span.del-post {
+  font-size: 13px;
+  float: right;
+  font-weight: bold;
+  padding: 0px 10px;
+  margin: 0 3px;
+}
+div.post-panel div.post-panel-top span.del-post:hover {
+  color: white;
+  background-color: #f15b47;
+}
+div.post-panel div.post-panel-top span.edit-post {
+  font-size: 13px;
+  float: right;
+  font-weight: bold;
+  padding: 0px 10px;
+  margin: 0 3px;
+}
+div.post-panel div.post-panel-top span.edit-post:hover {
+  color: white;
+  background-color: #53dbae;
+}
 div.post-panel h1.title {
   font-family: 'Roboto Condensed';
   margin-left: 30px;
@@ -196,6 +218,21 @@ div.comment-panel span.embed-newcomment:hover {
   background-color: #6e6e6e;
   color: white;
 }
+@keyframes flash {
+  0% {
+    background-color: #fffedd;
+  }
+  50% {
+    background-color: #fffedd;
+  }
+  100% {
+    background-color: white;
+  }
+}
+div.comment-panel div.comment.flash {
+  animation-name: flash;
+  animation-duration: 1s;
+}
 div.comment-panel div.comment {
   box-sizing: border-box;
   border-top: 2px solid #dedede;
@@ -213,7 +250,8 @@ div.comment-panel div.comment img {
   margin-right: 20px;
   vertical-align: bottom;
   max-width: 40%;
-  border-radius: 5px;
+  max-height: 900px;
+  border-radius: 4px;
 }
 div.comment-panel div.comment span {
   height: 30px;
@@ -223,7 +261,11 @@ div.comment-panel div.comment span {
 div.comment-panel div.comment span.info {
   vertical-align: top;
 }
+div.comment-panel div.comment span.id {
+  margin-right: 0px;
+}
 div.comment-panel div.comment span.reply {
+  z-index: 1;
   font-weight: normal;
 }
 div.comment-panel div.comment span.username {
