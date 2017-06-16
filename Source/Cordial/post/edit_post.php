@@ -10,16 +10,16 @@
   $result = mysqli_query($connect, $sql);
 
   while ($row = mysqli_fetch_assoc($result)) {
-    $title      = $row["title"];
-    $date_posted = $row["date_posted"];
-    $category   = $row["category"];
-    $title      = $row["title"];
-    $content    = $row["content"];
-    $likes      = $row["likes"];
-    $views      = $row["views"];
-    $username   = $row["username"];
-    $is_admin   = $row["is_admin"];
-    $user_id    = $row["user_id"];
+    $title      = htmlspecialchars(addslashes($row["title"]));
+    $date_posted = htmlspecialchars(addslashes($row["date_posted"]));
+    $category   = htmlspecialchars(addslashes($row["category"]));
+    $title      = htmlspecialchars(addslashes($row["title"]));
+    $content    = htmlspecialchars(addslashes($row["content"]));
+    $likes      = htmlspecialchars(addslashes($row["likes"]));
+    $views      = htmlspecialchars(addslashes($row["views"]));
+    $username   = htmlspecialchars(addslashes($row["username"]));
+    $is_admin   = htmlspecialchars(addslashes($row["is_admin"]));
+    $user_id    = htmlspecialchars(addslashes($row["user_id"]));
   }
 
   if (isAdmin($host_name, $user_name, $password, $database)) {
@@ -79,17 +79,52 @@
       <form method="post">
         <input required type="text" name="title" placeholder="Write a new title!" value="<?php echo $title; ?>" />
         <div class="content-wrapper">
-          <textarea required name="content" class="mono" placeholder="Start this post again, if you want, but it looks like you're restarting from scratch.
-            Why not delete it and compose a brand new one?">
-            <?php echo $content; ?>
-          </textarea>
+          <textarea required name="content" class="mono"><?php echo $content; ?></textarea>
+          <input type="hidden" name="id" value=<?php echo '"'.$_GET["id"].'"' ?> />
           <input class="hoverpointer" type="submit" value="Update post" />
         </div>
       </form>
     </div>
     <?php
-      if (isset($_POST["title"]) && isset($_POST["content"])) {
-        
+      if (isset($_POST["id"]) && isset($_POST["title"]) && isset($_POST["content"])) {
+        $sql = "SELECT * FROM `posts` NATURAL JOIN `users` WHERE post_id = ".$_POST["id"];
+        $result = mysqli_query($connect, $sql);
+
+        while ($row = mysqli_fetch_assoc($result)) {
+          $title      = htmlspecialchars(addslashes($row["title"]));
+          $date_posted = htmlspecialchars(addslashes($row["date_posted"]));
+          $category   = htmlspecialchars(addslashes($row["category"]));
+          $title      = htmlspecialchars(addslashes($row["title"]));
+          $content    = htmlspecialchars(addslashes($row["content"]));
+          $likes      = htmlspecialchars(addslashes($row["likes"]));
+          $views      = htmlspecialchars(addslashes($row["views"]));
+          $username   = htmlspecialchars(addslashes($row["username"]));
+          $is_admin   = htmlspecialchars(addslashes($row["is_admin"]));
+          $user_id    = htmlspecialchars(addslashes($row["user_id"]));
+        }
+
+        $can_edit = false;
+
+        if (isAdmin($host_name, $user_name, $password, $database)) {
+          $can_edit = true;
+        }
+        else if ($user_id == $_SESSION["login-id"]) {
+          $can_edit = true;
+        }
+
+        $sql =
+         'UPDATE
+            `posts`
+          SET
+            `title` = "'.$_POST["title"].'",
+            `content` = "'.$_POST["content"].'"
+          WHERE
+            `posts`.`post_id` = '.$_POST["id"];
+
+        if ($can_edit == true) {
+          echo $sql;
+          $result = mysqli_query($connect, $sql);
+        }
       }
     ?>
   </body>
