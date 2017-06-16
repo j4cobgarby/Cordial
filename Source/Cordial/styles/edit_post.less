@@ -1,6 +1,6 @@
 // out: edit_post.css
 
-@import "../styles/colours";
+@import "colours";
 
 form {
   input[type="text"] {
@@ -23,7 +23,8 @@ form {
     min-height: 200px;
     height: 400px;
     resize: vertical;
-    border: none;
+    border: 1px solid @border-lighter;
+    border-radius: 6px
   }
 
   input[type="submit"] {

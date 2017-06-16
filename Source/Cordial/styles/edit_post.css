@@ -11,13 +11,14 @@ form input[type="text"] {
 form textarea {
   font-size: 11pt;
   font-weight: lighter;
-  font-family: 'Inconsolata';
+  font-family: 'Overpass Mono';
   padding: 10px;
   width: 100%;
   min-height: 200px;
   height: 400px;
   resize: vertical;
-  border: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
 }
 form input[type="submit"] {
   margin-top: 30px;

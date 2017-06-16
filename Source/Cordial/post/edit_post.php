@@ -79,7 +79,7 @@
       <form method="post">
         <input required type="text" name="title" placeholder="Write a new title!" value="<?php echo $title; ?>" />
         <div class="content-wrapper">
-          <textarea required name="content" class="mono"><?php echo $content; ?></textarea>
+          <textarea required name="content" class="mono"><?php echo stripslashes($content); ?></textarea>
           <input type="hidden" name="id" value=<?php echo '"'.$_GET["id"].'"' ?> />
           <input class="hoverpointer" type="submit" value="Update post" />
         </div>
@@ -116,17 +116,16 @@
          'UPDATE
             `posts`
           SET
-            `title` = "'.$_POST["title"].'",
-            `content` = "'.$_POST["content"].'"
+            `title` = "'.mysql_real_escape_string($_POST["title"]).'",
+            `content` = "'.mysql_real_escape_string($_POST["content"]).'"
           WHERE
             `posts`.`post_id` = '.$_POST["id"];
 
         if ($can_edit == true) {
           echo $sql;
           $result = mysqli_query($connect, $sql);
+          echo '<script>window.location.href="../post/?id='.$_POST["id"].'"</script>';
         }
-
-
       }
     ?>
   </body>
