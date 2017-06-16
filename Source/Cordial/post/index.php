@@ -52,14 +52,14 @@
           if (isAdmin($host_name, $user_name, $password, $database)) {
             echo '
               <span class="del-post hoverpointer" onclick="window.location.href=\'delete_post.php/?id='.$_GET["id"].'\'">DELETE</span>
-              <span class="edit-post hoverpointer">EDIT</span>
+              <span class="edit-post hoverpointer" onclick="window.location.href=\'edit_post.php?id='.$_GET["id"].'\'">EDIT</span>
             ';
           }
           else if ($user_id == $_SESSION["login-id"]) {
             // This is the user's post
             echo '
               <span class="del-post hoverpointer" onclick="window.location.href=\'delete_post.php/?id='.$_GET["id"].'\'">DELETE</span>
-              <span class="edit-post hoverpointer">EDIT</span>
+              <span class="edit-post hoverpointer" onclick="window.location.href=\'edit_post.php?id='.$_GET["id"].'\'">EDIT</span>
             ';
           }
         ?>
