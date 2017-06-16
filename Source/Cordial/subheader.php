@@ -42,7 +42,6 @@
       </div>
     </div>
 
-    <span onclick="location.href=\'https://github.com/j4cobgarby/Cordial/issues\'" class="hoverpointer github-link">Issues, suggestions, etc.</span>
     <span onclick="location.href=\'../compose\'" class="compose hoverpointer">compose +</span>
   </div>
   '

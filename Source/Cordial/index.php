@@ -35,7 +35,7 @@
     ?>
     <meta charset="utf-8">
     <title>Cordial</title>
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Roboto+Condensed" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="styles/homepage.css">
     <script src="scripts/script.js" charset="utf-8"></script>
   </head>
