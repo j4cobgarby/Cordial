@@ -125,6 +125,8 @@
           echo $sql;
           $result = mysqli_query($connect, $sql);
         }
+
+
       }
     ?>
   </body>

@@ -69,8 +69,7 @@
       <div class="content-wrapper">
         <?php
           $Parsedown = new Parsedown();
-
-          echo $Parsedown->text($content);
+          echo $Parsedown->text(htmlspecialchars($content));
         ?>
       </div>
       <div class="post-panel-bottom">
