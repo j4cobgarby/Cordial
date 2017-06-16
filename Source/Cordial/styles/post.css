@@ -88,12 +88,17 @@ div.post-panel div.content-wrapper a {
   color: #5056db;
 }
 div.post-panel div.content-wrapper pre {
-  font-family: 'Overpass Mono';
-  background-color: #fafafa;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-family: 'Inconsolata';
+  background-color: #f7f7f7;
+  color: #6e6e6e;
   padding: 15px;
-  font-size: 12pt;
-  border-radius: 3px;
+  font-size: 13pt;
+  border-radius: 6px;
   border: 1px solid #ccc;
+  max-width: 1000px;
+  margin: auto;
 }
 div.post-panel div.content-wrapper pre code {
   font-family: inherit;

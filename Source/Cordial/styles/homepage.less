@@ -38,7 +38,7 @@ div.header-wrapper {
   }
 
   span.label {
-    font-family: 'Roboto Condensed';
+    font-family: @sans-condensed;
     background-color: white;
     font-weight: bold;
     padding: 0px 6px;
@@ -60,6 +60,26 @@ div.header-wrapper {
     background-color: lighten(@main, 35%);
   }
 
+  span.github-link {
+    z-index: 1;
+    border-left: 1px solid darken(@main, 5%);
+    border-bottom: 1px solid darken(@main, 5%);
+    background-color: white;
+    color: @main;
+    display: block;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    font-family: @sans-condensed;
+    position: absolute;
+    box-sizing: border-box;
+    right: 120px;
+    top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   span.compose {
     z-index: 1;
     border-left: 1px solid darken(@main, 5%);
@@ -71,7 +91,7 @@ div.header-wrapper {
     height: 45px;
     line-height: 45px;
     font-weight: bold;
-    font-family: 'Overpass Mono';
+    font-family: @monospace;
     position: fixed;
     box-sizing: border-box;
     right: 0;
@@ -99,7 +119,7 @@ div.header-wrapper {
     margin-top: 1px;
 
     a {
-      font-family: 'Roboto Condensed';
+      font-family: @sans-condensed;
       background-color: white;
       color: @main;
       padding: 5px 8px;
@@ -125,7 +145,7 @@ div.header-wrapper {
 
     span.login-info {
       margin-left: 10px;
-      font-family: 'Roboto Condensed';
+      font-family: @sans-condensed;
     }
   }
 
@@ -152,14 +172,14 @@ div.post {
   border-bottom: 1px solid @border-lighter;
   line-height: 40px;
   font-size: 23px;
-  font-family: 'Roboto Condensed';
+  font-family: @sans-condensed;
   font-weight: bold;
   margin-bottom: 3px;
   background-color: white;
 
   span.title {
     margin-left: 300px;
-    font-family: 'Roboto Condensed';
+    font-family: @sans-condensed;
     width: ~'100% - 20px';
     display: block;
     white-space: nowrap;
@@ -196,7 +216,7 @@ div.post {
       }
       span.username {
         font-size: 12px;
-        font-family: 'Roboto Condensed' !important;
+        font-family: @sans-condensed !important;
       }
     }
   }

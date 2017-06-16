@@ -34,7 +34,7 @@
     <meta charset="utf-8">
     <title>Cordial - <?php echo $username." - ".$title?></title>
     <link rel="stylesheet" href="../styles/homepage.css">
-    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="../styles/post.css">
     <script src="../scripts/script.js" charset="utf-8"></script>
   </head>

@@ -53,7 +53,7 @@ div.compose-form-wrapper form select {
   padding: 10px;
   padding-left: 7px;
   padding-right: 5px;
-  background-color: #f6f6f6;
+  background-color: #f7f7f7;
   border-radius: 5px;
   appearance: none;
   -moz-appearance: none;
@@ -62,7 +62,7 @@ div.compose-form-wrapper form select {
 div.compose-form-wrapper form textarea {
   font-size: 11pt;
   font-weight: lighter;
-  font-family: 'Overpass Mono';
+  font-family: 'Inconsolata';
   padding: 10px;
   width: 640px;
   min-height: 200px;
