@@ -60,21 +60,6 @@
         <?php echo ($is_admin == 1 ? '<img src="../assets/admin-icon.png" />' : '<img src="../assets/user-icon.png" />') ?>
         <span class="hoverpointer" onclick="location.href='../user?id= <?php echo $user_id ?> '"><b><?php echo $username; ?></b></span>
         <span><?php echo $date_posted; ?></span>
-        <?php
-          if (isAdmin($host_name, $user_name, $password, $database)) {
-            echo '
-              <span class="del-post hoverpointer" onclick="window.location.href=\'delete_post.php/?id='.$_GET["id"].'\'">DELETE</span>
-              <span class="edit-post hoverpointer" onclick="window.location.href=\'edit_post.php/?id='.$_GET["id"].'\'">EDIT</span>
-            ';
-          }
-          else if ($user_id == $_SESSION["login-id"]) {
-            // This is the user's post
-            echo '
-              <span class="del-post hoverpointer" onclick="window.location.href=\'delete_post.php/?id='.$_GET["id"].'\'">DELETE</span>
-              <span class="edit-post hoverpointer" onclick="window.location.href=\'edit_post.php/?id='.$_GET["id"].'\'">EDIT</span>
-            ';
-          }
-        ?>
       </div>
       <form method="post">
         <input required type="text" name="title" placeholder="Write a new title!" value="<?php echo $title; ?>" />

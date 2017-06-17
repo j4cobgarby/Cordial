@@ -32,6 +32,11 @@
     return mysqli_num_rows($result);
   }
 
+  // Likes a post based on its post_id
+  function likePost($id, $host_name, $user_name, $password, $database) {
+    
+  }
+
   if (isset($_SESSION["login-id"])) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
