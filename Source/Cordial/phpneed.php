@@ -22,8 +22,8 @@
   // Start the session so I can use $_SESSION superglobal
   session_start();
 
-  // Returns true if the current user, denoted by $_SESSION["login-id"], is an
-  // admin.
+  // Returns 1 if the current user, denoted by $_SESSION["login-id"], is an
+  // admin. Otherwise, it returns 0.
   function isAdmin($host_name, $user_name, $password, $database) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
     $sql = 'SELECT * FROM users WHERE is_admin = 1 AND user_id = '.$_SESSION["login-id"].' LIMIT 1';
@@ -34,7 +34,9 @@
 
   // Likes a post based on its post_id
   function likePost($id, $host_name, $user_name, $password, $database) {
-    
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $sql = 'UPDATE posts SET likes = likes + 1 WHERE post_id = '.$id;
+    $result = mysqli_query($connect, $sql);
   }
 
   if (isset($_SESSION["login-id"])) {
