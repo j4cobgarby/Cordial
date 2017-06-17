@@ -37,6 +37,7 @@
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
     $sql = 'UPDATE posts SET likes = likes + 1 WHERE post_id = '.$id;
     $result = mysqli_query($connect, $sql);
+    echo "<script>window.location.href='../post/?id=".$id."'</script>";
   }
 
   if (isset($_SESSION["login-id"])) {

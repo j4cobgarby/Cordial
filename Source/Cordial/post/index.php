@@ -73,14 +73,17 @@
         ?>
       </div>
       <div class="post-panel-bottom">
-        <span class="post-panel-bottom-likes">
-          <img src="../assets/like-icon.png" />
-          <span><?php echo $likes; ?></span>
-        </span>
-        <span class="post-panel-bottom-views">
-          <img src="../assets/views-icon.png" />
-          <span><?php echo $views; ?></span>
-        </span>
+        <form method="post">
+          <input type="hidden" name="like" value="1" />
+          <input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
+          <input type="image" src="../assets/like-icon.svg" alt="submit" />
+        </form>
+        <span class="like-count"><?php echo $likes; ?></span>
+        <?php
+          if (isset($_POST["like"])) { if ($_POST["like"] == "1") {
+            likePost($_POST["id"], $host_name, $user_name, $password, $database);
+          }}
+        ?>
       </div>
     </div>
 

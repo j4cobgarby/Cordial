@@ -152,37 +152,21 @@ div.post-panel {
     width: 100%;
     border-top: 1px solid @border-lighter;
     background-color: white;
+    padding: 0 15px;
 
-    span.post-panel-bottom-likes {
-      display: inline-block;
-      height: 100%;
-      line-height: 50px;
-      margin-left: 30px;
-
-      img {
-        top: 15px;
-        left: 30px;
-        height: 20px;
-      }
-
-      span {
-      }
+    input[type="image"] {
+      position: absolute;
+      height: 25px;
+      top: 7.5px;
     }
 
-    span.post-panel-bottom-views {
-      display: inline-block;
-      height: 100%;
-      line-height: 50px;
-      margin-left: 30px;
-
-      img {
-        top: 15px;
-        left: 30px;
-        height: 20px;
-      }
-
-      span {
-      }
+    span.like-count {
+      position: absolute;
+      display: block;
+      height: 25px;
+      line-height: 25px;
+      top: 7.5px;
+      left: 45px;
     }
   }
 }
