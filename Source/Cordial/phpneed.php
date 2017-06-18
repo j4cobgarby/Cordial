@@ -32,6 +32,10 @@
     return mysqli_num_rows($result);
   }
 
+  // Returns true if the current user can like the post of the given $id, otherwise
+  // returns false.
+  // This is done based on the user_liked_posts table in the database, and checks
+  // if there is a record of this user already liking the post with post_id $id
   function canLike($id, $host_name, $user_name, $password, $database) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
     $check_liked = "SELECT * FROM user_liked_posts WHERE user_id = ".$_SESSION["login-id"]." AND post_id = ".$id;
