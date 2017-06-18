@@ -82,7 +82,7 @@
       </div>
       <div class="user-panel-bottom">
         <span class="user-panel-bottom-likes">
-          <img src="../assets/like-icon.png" />
+          <img src="../assets/like-icon.svg" />
           <span>
             <?php
               $sql = 'SELECT sum(likes) as total_likes FROM `posts` WHERE user_id = '.$user_id;

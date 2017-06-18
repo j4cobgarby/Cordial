@@ -76,7 +76,10 @@
         <form method="post">
           <input type="hidden" name="like" value="1" />
           <input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
-          <input type="image" src="../assets/like-icon.svg" alt="submit" />
+          <input type="image" src=
+            <?php
+              echo '"'.(canLike($_GET["id"], $host_name, $user_name, $password, $database) == true ? '../assets/like-icon-greyed.svg' : '../assets/like-icon.svg').'"' 
+            ?> alt="submit" />
         </form>
         <span class="like-count"><?php echo $likes; ?></span>
         <?php
