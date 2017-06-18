@@ -32,12 +32,24 @@
     return mysqli_num_rows($result);
   }
 
+  function canLike($id, $host_name, $user_name, $password, $database) {
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $check_liked = "SELECT * FROM user_liked_posts WHERE user_id = ".$_SESSION["login-id"]." AND post_id = ".$id;
+    $is_liked_result = mysqli_query($connect, $check_liked);
+    $can_like = (mysqli_num_rows($is_liked_result) == 0 ? true : false);
+    return $can_like;
+  }
+
   // Likes a post based on its post_id
   function likePost($id, $host_name, $user_name, $password, $database) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
-    $sql = 'UPDATE posts SET likes = likes + 1 WHERE post_id = '.$id;
-    $result = mysqli_query($connect, $sql);
-    echo "<script>window.location.href='../post/?id=".$id."'</script>";
+    if (canLike($id, $host_name, $user_name, $password, $database) == true) {
+      $sql = 'UPDATE posts SET likes = likes + 1 WHERE post_id = '.$id;
+      mysqli_query($connect, $sql);
+      $set_liked = 'INSERT INTO user_liked_posts (user_id, post_id) VALUES ('.$_SESSION["login-id"].', '.$id.')';
+      mysqli_query($connect, $set_liked);
+      echo "<script>window.location.href='../post/?id=".$id."'</script>";
+    }
   }
 
   if (isset($_SESSION["login-id"])) {
