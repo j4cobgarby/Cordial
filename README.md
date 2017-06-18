@@ -66,11 +66,13 @@ Then I came back to the idea of [Cordial as being a kind of drink.](https://en.w
  
 # Stuff that needs doing
 
- - Cleaning up the .less files a bit
+ - ~~Cleaning up the .less files a bit~~
  
- - Being able to edit your bio from the user page
+ - ~~Being able to edit your bio from the user page~~
  
  - Being able to search for users
+ 
+ - ~~Being able to like posts~~ **only once**
  
 # License
 
