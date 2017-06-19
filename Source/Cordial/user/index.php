@@ -58,7 +58,7 @@
             if ($_GET["edit_bio"] == 1) {
               echo '
               <form method="get">
-                <textarea name="new_bio_text" placeholder="Write a cool new bio! Any programming languages you know, what you like doing, etc.." class="edit-bio"></textarea>
+                <textarea name="new_bio_text" placeholder="Write a cool new bio! Any programming languages you know, what you like doing, etc.." class="edit-bio">'.$bio.'</textarea>
                 <input type="hidden" name="id" value="'.$user_id.'" />
                 <input type="submit" value="Change" />
               </form>
