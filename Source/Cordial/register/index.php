@@ -67,7 +67,15 @@
               );
               ';
               mysqli_query($connect, $sql);
-              echo "<script>window.location.href='../login'</script>";
+
+              $get_user_id = 'SELECT user_id, username FROM users WHERE username = "'.$user_username.'"';
+              echo $get_user_id;
+              $result = mysqli_query($connect, $get_user_id);
+              while ($row = mysqli_fetch_assoc($result)) {
+                $_SESSION["login-id"] = $row["user_id"];
+              }
+
+              echo "<script>window.location.href='../user/?id=".$_SESSION["login-id"]."'</script>";
               die();
             }
             elseif ($valid_password and !$valid_username) {
