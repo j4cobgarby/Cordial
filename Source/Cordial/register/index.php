@@ -63,7 +63,7 @@
                 `user_id`, `username`, `password`, `date_joined`, `is_admin`, `bio`
               )
               VALUES (
-                NULL, "'.$user_username.'", "'.hash('sha256', $user_password).'", "'.date("Y-m-d").'", "0", "This particular person hasn\'t written a bio! :("
+                NULL, "'.$user_username.'", "'.hash('sha256', $user_password).'", "'.date("Y-m-d").'", "0", "This particular person hasn\'t written a bio yet! :("
               );
               ';
               mysqli_query($connect, $sql);
