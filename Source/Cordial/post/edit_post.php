@@ -101,8 +101,8 @@
          'UPDATE
             `posts`
           SET
-            `title` = "'.mysql_real_escape_string($_POST["title"]).'",
-            `content` = "'.mysql_real_escape_string($_POST["content"]).'"
+            `title` = "'.mysqli_real_escape_string($connect, $_POST["title"]).'",
+            `content` = "'.mysqli_real_escape_string($connect, $_POST["content"]).'"
           WHERE
             `posts`.`post_id` = '.$_POST["id"];
 

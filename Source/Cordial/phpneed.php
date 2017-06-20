@@ -44,7 +44,7 @@
     return $can_like;
   }
 
-  // Likes a post based on its post_id
+  // Likes or unlikes a post based on if it's already liked
   function likePost($id, $host_name, $user_name, $password, $database) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
     if (canLike($id, $host_name, $user_name, $password, $database) == true) {
