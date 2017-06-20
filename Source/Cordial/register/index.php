@@ -32,6 +32,10 @@
         <input type="password" name="password-rep" pattern=".{6,50}" title="Between 6 and 50 characters in length inclusive" placeholder="Repeat your password" required />
         <br /><br />
 
+        <br />
+        <input type="text" name="beta-key" placeholder="What's the beta access key?" required />
+        <br />
+
         <input type="submit" value="Go!" />
 
         <?php
@@ -42,8 +46,13 @@
 
             $valid_username = False;
             $valid_password = False;
+            $valid_beta_key = False;
 
             $connect = mysqli_connect($host_name, $user_name, $password, $database);
+
+            $get_is_valid_key = "SELECT * FROM `beta_keys` WHERE value = '".$_POST["beta-key"]."'";
+            $result = mysqli_query($connect, $get_is_valid_key);
+            $valid_beta_key = (mysqli_num_rows($result) >= 1 ? True : False);
 
             $sql = 'SELECT user_id from `users` WHERE username = "'.$user_username.'" limit 1';
             $result = mysqli_query($connect, $sql);
@@ -56,7 +65,7 @@
               $valid_password = True;
             }
 
-            if ($valid_password and $valid_username) {
+            if ($valid_password and $valid_username and $valid_beta_key) {
               // Make the user
               $sql = '
               INSERT INTO `users` (
@@ -77,6 +86,9 @@
 
               echo "<script>window.location.href='../user/?id=".$_SESSION["login-id"]."'</script>";
               die();
+            }
+            elseif (!$valid_beta_key) {
+              echo "<br /><span class='error'>Invalid beta key</span>";
             }
             elseif ($valid_password and !$valid_username) {
               echo "<br /><span class='error'>Someone already goes by this name</span>";
