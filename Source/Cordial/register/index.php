@@ -50,10 +50,6 @@
 
             $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
-            $get_is_valid_key = "SELECT * FROM `beta_keys` WHERE value = '".$_POST["beta-key"]."'";
-            $result = mysqli_query($connect, $get_is_valid_key);
-            $valid_beta_key = (mysqli_num_rows($result) >= 1 ? True : False);
-
             $sql = 'SELECT user_id from `users` WHERE username = "'.$user_username.'" limit 1';
             $result = mysqli_query($connect, $sql);
 
@@ -63,6 +59,10 @@
 
             if ($user_password == $user_password_rep) {
               $valid_password = True;
+            }
+
+            if ($_POST["beta-key"] == $beta_key) {
+              $valid_beta_key = True;
             }
 
             if ($valid_password and $valid_username and $valid_beta_key) {
