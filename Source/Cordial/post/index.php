@@ -78,7 +78,7 @@
           <input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
           <input type="image" src=
             <?php
-              echo '"'.(canLike($_GET["id"], $host_name, $user_name, $password, $database) == true ? '../assets/like-icon-greyed.svg' : '../assets/like-icon.svg').'"' 
+              echo '"'.(canLike($_GET["id"], $host_name, $user_name, $password, $database) == true ? '../assets/like-icon-greyed.svg' : '../assets/like-icon.svg').'"'
             ?> alt="submit" />
         </form>
         <span class="like-count"><?php echo $likes; ?></span>
@@ -137,7 +137,7 @@
                 <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
               </span>
               <span class="content">
-                '.($c_image_link == NULL ? '' : '<img class="hoverpointer" onclick="window.location.href=\''.$c_image_link.'\'" src="'.$c_image_link.'" />').'
+                '.($c_image_link == NULL ? '' : '<img class="hoverpointer comment-img" onclick="window.location.href=\''.$c_image_link.'\'" src="'.$c_image_link.'" />').'
                 '.$c_content.'
               </span>
             </div>
