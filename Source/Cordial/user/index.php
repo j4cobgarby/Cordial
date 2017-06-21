@@ -56,7 +56,7 @@
             if ($bio != '') {
               echo $bio;
             } else {
-              echo '<i>This user has chosen to not write anything about themselves</i>';
+              echo '<i>This user has chosen to not write anything about themself</i>';
             }
           } else { // Is set
             if ($_GET["edit_bio"] == 1) {
