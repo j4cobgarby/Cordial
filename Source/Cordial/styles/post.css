@@ -17,6 +17,10 @@ div.post-panel div.post-panel-top span {
   margin-right: 10px;
   margin-left: 10px;
 }
+div.post-panel div.post-panel-top span.category {
+  margin-left: 20px;
+  font-weight: bold;
+}
 div.post-panel div.post-panel-top img {
   margin-left: 20px;
   height: 15px;
