@@ -15,22 +15,45 @@
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
-      if (!empty($_GET)) {
+      if (isset($_GET["cat"])) {
         $user_category = $_GET["cat"];
 
         if ($user_category == 'all') {
           $sql = $selectallcats;
         } else {
-          $sql = "SELECT user_id, post_id, date_posted, category, title, content,
-          likes, views, username, is_admin
-          FROM `posts` NATURAL JOIN `users` WHERE category = '".$user_category."'
+          $sql = "SELECT *
+          FROM `posts`
+          NATURAL JOIN `users`
+          WHERE category = '".$user_category."'
           ORDER BY post_id DESC";
         }
 
       } else {
+        $user_category = 'all';
         $sql = $selectallcats;
       }
 
+      if (isset($_GET["order"])) {
+        $order = $_GET["order"];
+
+        switch ($order) {
+          case 'date':
+            $sql = "SELECT * FROM `posts` NATURAL JOIN `users`".($user_category == 'all' ? '' : "WHERE category = '".$user_category."'")." ORDER BY date_posted DESC";
+            break;
+
+          case 'likes':
+            $sql = "SELECT * FROM `posts` NATURAL JOIN `users`".($user_category == 'all' ? '' : "WHERE category = '".$user_category."'")." ORDER BY likes DESC";
+            break;
+
+          case 'admin':
+            $sql = "SELECT * FROM `posts` NATURAL JOIN `users`".($user_category == 'all' ? '' : "WHERE category = '".$user_category."'")." ORDER BY is_admin DESC";
+            break;
+
+          default:
+            $sql = "SELECT * FROM `posts` NATURAL JOIN `users`".($user_category == 'all' ? '' : "WHERE category = '".$user_category."'")." ORDER BY post_id DESC";
+            break;
+        }
+      }
       $result = mysqli_query($connect, $sql);
     ?>
     <meta charset="utf-8">
@@ -41,6 +64,27 @@
   </head>
   <body>
     <?php require 'rootheader.php'; ?>
+
+    <ul class="navbar">
+      <li onclick='window.location.href="<?php
+        echo '?order=date';
+        if (isset($_GET["cat"])) {
+          echo '&cat='.$_GET["cat"];
+        }
+      ?>"'>Newest</li>
+      <li onclick='window.location.href="<?php
+        echo '?order=likes';
+        if (isset($_GET["cat"])) {
+          echo '&cat='.$_GET["cat"];
+        }
+      ?>"'>Most liked</li>
+      <li onclick='window.location.href="<?php
+        echo '?order=admin';
+        if (isset($_GET["cat"])) {
+          echo '&cat='.$_GET["cat"];
+        }
+      ?>"'>Admins first</li>
+    </ul>
 
     <div class="postview" id="postview">
       <?php

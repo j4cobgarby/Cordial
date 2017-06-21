@@ -130,6 +130,29 @@ div.header-wrapper .scrolldown {
 div.header-wrapper .scrollup {
   animation-name: scroll-up;
 }
+ul.navbar {
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  width: 100%;
+  display: block;
+  list-style-type: none;
+  height: 30px;
+  padding: 0 5px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+li {
+  cursor: pointer;
+  background-color: white;
+  float: right;
+  height: 100%;
+  display: inline-block;
+  line-height: 30px;
+  margin: 0 5px;
+  padding: 0 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
 div.postview {
   padding-top: 5px;
 }
