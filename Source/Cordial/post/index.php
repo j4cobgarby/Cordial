@@ -37,6 +37,7 @@
     <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="../styles/post.css">
     <script src="../scripts/script.js" charset="utf-8"></script>
+    <script src="post.js" charset="utf-8"></script>
   </head>
   <body>
     <?php require '../subheader.php'; ?>
@@ -73,20 +74,11 @@
         ?>
       </div>
       <div class="post-panel-bottom">
-        <form method="post">
-          <input type="hidden" name="like" value="1" />
-          <input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
-          <input type="image" src=
-            <?php
-              echo '"'.(canLike($_GET["id"], $host_name, $user_name, $password, $database) == true ? '../assets/like-icon-greyed.svg' : '../assets/like-icon.svg').'"'
-            ?> alt="submit" />
-        </form>
-        <span class="like-count"><?php echo $likes; ?></span>
-        <?php
-          if (isset($_POST["like"])) { if ($_POST["like"] == "1") {
-            likePost($_POST["id"], $host_name, $user_name, $password, $database);
-          }}
-        ?>
+        <input type="image" id="like-icon" src=
+          <?php
+            echo '"'.(canLike($_GET["id"], $host_name, $user_name, $password, $database) == true ? '../assets/like-icon-greyed.svg' : '../assets/like-icon.svg').'"'
+          ?> alt="submit" onclick=<?php echo '"tryLike('.$_GET["id"].')"' ?> />
+        <span class="like-count" id="like-count"><?php echo $likes; ?></span>
       </div>
     </div>
 
