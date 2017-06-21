@@ -179,6 +179,11 @@ div.post div.post-user div.user-info {
 }
 div.post div.post-user div.user-info span.date-posted {
   color: #a8a8a8;
+  font-family: 'Overpass Mono';
+}
+div.post div.post-user div.user-info span.date-posted span.category {
+  color: #6e6e6e;
+  font-family: 'Roboto';
 }
 div.post div.post-user div.user-info span.username {
   font-size: 13.5px;
