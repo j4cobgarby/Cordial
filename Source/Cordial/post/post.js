@@ -13,6 +13,8 @@ function tryLike(id) {
         likeIcon.src = '../assets/like-icon.svg';
       } else {
         // The post couldn't be liked
+        likeCount.innerHTML = parseInt(likeCount.innerHTML) - 1;
+        likeIcon.src = '../assets/like-icon-greyed.svg';
       }
     }
   };

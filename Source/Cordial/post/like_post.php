@@ -10,6 +10,12 @@
     mysqli_query($connect, $set_liked);
     echo "true";
   } else {
+
+    $sql = 'UPDATE posts SET likes = likes - 1 WHERE post_id = '.$id;
+    mysqli_query($connect, $sql);
+    $set_liked = 'DELETE FROM user_liked_posts WHERE post_id = '.$id.' AND user_id = '.$_SESSION["login-id"];
+    mysqli_query($connect, $set_liked);
+    
     echo "false";
   }
 ?>
