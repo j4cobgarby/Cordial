@@ -53,7 +53,11 @@
         } ?>
         <?php
           if (!isset($_GET["edit_bio"])) {
-            echo $bio;
+            if ($bio != '') {
+              echo $bio;
+            } else {
+              echo '<i>This user has chosen to not write anything about themselves</i>';
+            }
           } else { // Is set
             if ($_GET["edit_bio"] == 1) {
               echo '
