@@ -19,7 +19,7 @@
     'all'  => 'Showing all'
   );
 
-  $beta_key = '0ADD93FDB7B076F0B0A021DFF63597AA';
+  $beta_key = 'dev';
 
   // Start the session so I can use $_SESSION superglobal
   session_start();
