@@ -66,19 +66,19 @@
     <?php require 'rootheader.php'; ?>
 
     <ul class="navbar">
-      <li onclick='window.location.href="<?php
+      <li class='newest' onclick='window.location.href="<?php
         echo '?order=date';
         if (isset($_GET["cat"])) {
           echo '&cat='.$_GET["cat"];
         }
       ?>"'>Newest</li>
-      <li onclick='window.location.href="<?php
+      <li class='likes' onclick='window.location.href="<?php
         echo '?order=likes';
         if (isset($_GET["cat"])) {
           echo '&cat='.$_GET["cat"];
         }
       ?>"'>Most liked</li>
-      <li onclick='window.location.href="<?php
+      <li class='admin' onclick='window.location.href="<?php
         echo '?order=admin';
         if (isset($_GET["cat"])) {
           echo '&cat='.$_GET["cat"];
