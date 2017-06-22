@@ -42,8 +42,6 @@ div.header-wrapper span.label {
   display: block;
   height: 45px;
   line-height: 45px;
-  border-bottom-right-radius: 2.5px;
-  border-bottom-left-radius: 2.5px;
 }
 div.header-wrapper span.label:hover {
   cursor: pointer;
