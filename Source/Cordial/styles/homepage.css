@@ -42,6 +42,8 @@ div.header-wrapper span.label {
   display: block;
   height: 45px;
   line-height: 45px;
+  border-bottom-right-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
 }
 div.header-wrapper span.label:hover {
   cursor: pointer;
@@ -52,8 +54,6 @@ div.header-wrapper span.label:active {
 }
 div.header-wrapper span.compose {
   z-index: 1;
-  border-left: 1px solid #bb3232;
-  border-bottom: 1px solid #bb3232;
   background-color: white;
   color: #cb3c3c;
   display: block;
@@ -63,21 +63,20 @@ div.header-wrapper span.compose {
   font-weight: bold;
   font-family: 'Overpass Mono';
   position: fixed;
-  box-sizing: border-box;
   right: 0;
   top: 0;
   padding-left: 20px;
   padding-right: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom: 1px solid #cb3c3c;
+  border-left: 1px solid #cb3c3c;
 }
 div.header-wrapper div.scroller-wrapper {
-  background-color: #b73131;
   height: 45px;
   margin-left: 0px;
   overflow: hidden;
   display: inline-block;
   padding: 0 10px;
-  border-left: 3px solid #a72d2d;
-  border-right: 3px solid #a72d2d;
 }
 div.header-wrapper div.scroller-panel {
   height: 90px;
@@ -97,10 +96,6 @@ div.header-wrapper div.scroller-panel a {
 }
 div.header-wrapper div.scroller-panel a:hover {
   background-color: #d35858;
-  color: white;
-}
-div.header-wrapper div.scroller-panel a.all {
-  background-color: #d66464;
   color: white;
 }
 div.header-wrapper div.scroller-panel a.all:hover {

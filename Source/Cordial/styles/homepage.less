@@ -49,6 +49,8 @@ div.header-wrapper {
     display: block;
     height: 45px;
     line-height: 45px;
+    border-bottom-right-radius: 2.5px;
+    border-bottom-left-radius: 2.5px;
   }
 
   span.label:hover {
@@ -62,8 +64,6 @@ div.header-wrapper {
 
   span.compose {
     z-index: 1;
-    border-left: 1px solid darken(@main, 5%);
-    border-bottom: 1px solid darken(@main, 5%);
     background-color: white;
     color: @main;
     display: block;
@@ -73,22 +73,21 @@ div.header-wrapper {
     font-weight: bold;
     font-family: @monospace;
     position: fixed;
-    box-sizing: border-box;
     right: 0;
     top: 0;
     padding-left: 20px;
     padding-right: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom: 1px solid @main;
+    border-left: 1px solid @main;
   }
 
   div.scroller-wrapper {
-    background-color: darken(@main, 6%);
     height: 45px;
     margin-left: 0px;
     overflow: hidden;
     display: inline-block;
     padding: 0 10px;
-    border-left: 3px solid darken(@main, 10%);
-    border-right: 3px solid darken(@main, 10%);
   }
 
   div.scroller-panel {
@@ -110,11 +109,6 @@ div.header-wrapper {
 
     a:hover {
       background-color: lighten(@main, 7%);
-      color: white;
-    }
-
-    a.all {
-      background-color: lighten(@main, 10%);
       color: white;
     }
 
