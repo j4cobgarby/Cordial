@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2017 at 03:29 PM
+-- Generation Time: Jun 22, 2017 at 03:33 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -19,24 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `cordial`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `beta_keys`
---
-
-CREATE TABLE `beta_keys` (
-  `key_id` int(11) NOT NULL,
-  `value` tinytext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=armscii8;
-
---
--- Dumping data for table `beta_keys`
---
-
-INSERT INTO `beta_keys` (`key_id`, `value`) VALUES
-(1, '0477-c5c2-fff8-bd71-382a-86f5-adba-6d6c');
 
 -- --------------------------------------------------------
 
@@ -98,21 +80,25 @@ CREATE TABLE `posts` (
   `title` tinytext NOT NULL,
   `content` text NOT NULL,
   `likes` int(11) NOT NULL DEFAULT '0',
-  `views` int(11) NOT NULL DEFAULT '0'
+  `views` int(11) NOT NULL DEFAULT '0',
+  `pinned` tinyint(1) NOT NULL COMMENT 'pinned posts stick at the top of the post list'
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`post_id`, `user_id`, `date_posted`, `category`, `title`, `content`, `likes`, `views`) VALUES
-(24, 1, '2017-06-16', 'hwar', 'Kewl title', '```\r\ncodeTest();\r\n\r\nwhile (true) {\r\n  print(\"Cool\")\r\n}\r\n```\r\n\r\n```\r\nTestttt!!\r\n```', 1, 0),
-(25, 1, '2017-06-16', 'swar', 'code', 'well hello **right there** *boyo*\r\n```\r\ntest();\r\n```', 2, 0),
-(26, 1, '2017-06-18', 'swar', 'Test', 'test', 0, 0),
-(27, 1, '2017-06-18', 'gdev', 'ts', 'ttes', 1, 0),
-(28, 1, '2017-06-18', 'sci', 'ttt', 'tttt', 0, 0),
-(29, 1, '2017-06-18', 'sci', 'test', 'test', 0, 0),
-(30, 1, '2017-06-18', 'hwar', 'test', 'test', 2, 0);
+INSERT INTO `posts` (`post_id`, `user_id`, `date_posted`, `category`, `title`, `content`, `likes`, `views`, `pinned`) VALUES
+(24, 1, '2017-06-16', 'hwar', 'Kewl title', '```\r\ncodeTest();\r\n\r\nwhile (true) {\r\n  print(\"Cool\")\r\n}\r\n```\r\n\r\n```\r\nTestttt!!\r\n```\r\n\r\n# Hello, world!', 2, 0, 0),
+(25, 1, '2017-06-16', 'swar', 'code', 'well hello **right there** *boyo*\r\n```\r\ntest();\r\n```', 3, 0, 0),
+(26, 1, '2017-06-18', 'swar', 'Test', 'test', 1, 0, 0),
+(28, 1, '2017-06-18', 'sci', 'ttt', 'tttt', 1, 0, 0),
+(29, 1, '2017-06-18', 'sci', 'test', 'test', 0, 0, 0),
+(33, 1, '2017-06-21', 'wdev', 'test', 'new', 1, 0, 0),
+(34, 1, '2017-06-21', 'swar', 'dwdjiowad', 'awdwad', 2, 0, 0),
+(35, 1, '2017-06-21', 'meta', 'AJAX', 'AJAX', 0, 0, 0),
+(36, 7, '2017-06-21', 'swar', 'new', 'ddd', 0, 0, 0),
+(37, 1, '2017-06-22', 'meta', 'A pinned post', 'This is pinned to the top of the page', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -134,18 +120,20 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `date_joined`, `is_admin`, `bio`) VALUES
-(1, 'j4cobgarby', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-11', 1, 'The first/main developer of Cordial'),
-(2, 'user2', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-11', 0, 'This particular person hasn\'t written a bio! :('),
-(3, 'user3', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-11', 0, 'This particular person hasn\'t written a bio! :('),
-(4, 'user4', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-11', 0, 'This particular person hasn\'t written a bio! :('),
+(1, 'j4cobgarby', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-11', 1, 'The first/main developer of Cordial &lt;b&gt;Test&lt;/b&gt;'),
+(2, 'user2', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-11', 0, ''),
+(3, 'user3', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-11', 0, ''),
+(4, 'user4', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-11', 0, ''),
 (6, 'zacg', '9970626666560a32465d4ce10d28f3233365af833e15eed59884d9477862c379', '2017-06-14', 0, '** Hello, world **'),
 (7, 'jacoob', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-15', 0, 'j4cobgarby\'s secondary account'),
-(8, 'cordialmemesupplycrate', '9970626666560a32465d4ce10d28f3233365af833e15eed59884d9477862c379', '2017-06-15', 0, 'This particular person hasn\'t written a bio! :('),
-(9, 'WWWWWWWWWWWWWWWWWWWWWWWWW', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-18', 0, 'This particular person hasn\'t written a bio! :('),
-(10, 'newaccount', '9970626666560a32465d4ce10d28f3233365af833e15eed59884d9477862c379', '2017-06-19', 0, 'This particular person hasn\'t written a bio! :('),
-(11, '18jasdenifa', 'b7eeb5e5fd0dda8d4994e1291af18433987b73c5021cede4f35cdf8d9e66058a', '2017-06-19', 0, 'This particular person hasn\'t written a bio yet! :('),
-(26, 'aguy', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-20', 0, 'This particular person hasn\'t written a bio yet! :('),
-(27, 'testingpriv', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-20', 0, 'This particular person hasn\'t written a bio yet! :(');
+(8, 'cordialmemesupplycrate', '9970626666560a32465d4ce10d28f3233365af833e15eed59884d9477862c379', '2017-06-15', 0, ''),
+(9, 'WWWWWWWWWWWWWWWWWWWWWWWWW', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-18', 0, ''),
+(10, 'newaccount', '9970626666560a32465d4ce10d28f3233365af833e15eed59884d9477862c379', '2017-06-19', 0, ''),
+(11, '18jasdenifa', 'b7eeb5e5fd0dda8d4994e1291af18433987b73c5021cede4f35cdf8d9e66058a', '2017-06-19', 0, ''),
+(26, 'aguy', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-20', 0, ''),
+(27, 'testingpriv', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-20', 0, ''),
+(28, 'test', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-20', 0, ''),
+(29, 'testguy', '2b20198fafa67b9232800e2cfaefa7b3be61cfe2662281a1d0b004aca1291235', '2017-06-20', 0, '');
 
 -- --------------------------------------------------------
 
@@ -168,19 +156,20 @@ INSERT INTO `user_liked_posts` (`user_id`, `post_id`) VALUES
 (6, 30),
 (6, 25),
 (1, 30),
-(1, 24),
+(1, 27),
+(1, 33),
+(1, 34),
+(1, 28),
+(1, 26),
+(7, 25),
+(7, 24),
+(7, 34),
 (1, 25),
-(1, 27);
+(1, 24);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `beta_keys`
---
-ALTER TABLE `beta_keys`
-  ADD PRIMARY KEY (`key_id`);
 
 --
 -- Indexes for table `comments`
@@ -216,11 +205,6 @@ ALTER TABLE `user_liked_posts`
 --
 
 --
--- AUTO_INCREMENT for table `beta_keys`
---
-ALTER TABLE `beta_keys`
-  MODIFY `key_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
@@ -229,12 +213,12 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
