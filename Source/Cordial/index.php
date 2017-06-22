@@ -9,9 +9,8 @@
     <?php
       require 'rootlogincheck.php';
 
-      $selectallcats = "SELECT user_id, post_id, date_posted, category, title,
-      content, likes, views, username, is_admin
-      FROM `posts` NATURAL JOIN `users` ORDER BY post_id DESC LIMIT 500";
+      $selectallcats = "SELECT *
+      FROM `posts` NATURAL JOIN `users` WHERE pinned != 1 ORDER BY post_id DESC LIMIT 500";
 
       $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
@@ -24,7 +23,7 @@
           $sql = "SELECT *
           FROM `posts`
           NATURAL JOIN `users`
-          WHERE category = '".$user_category."'
+          WHERE pinned != 1 AND category = '".$user_category."'
           ORDER BY post_id DESC";
         }
 
@@ -38,22 +37,23 @@
 
         switch ($order) {
           case 'date':
-            $sql = "SELECT * FROM `posts` NATURAL JOIN `users`".($user_category == 'all' ? '' : "WHERE category = '".$user_category."'")." ORDER BY date_posted DESC";
+            $sql = "SELECT * FROM `posts` NATURAL JOIN `users` WHERE pinned != 1".($user_category == 'all' ? '' : " AND category = '".$user_category."'")." ORDER BY date_posted DESC";
             break;
 
           case 'likes':
-            $sql = "SELECT * FROM `posts` NATURAL JOIN `users`".($user_category == 'all' ? '' : "WHERE category = '".$user_category."'")." ORDER BY likes DESC";
+            $sql = "SELECT * FROM `posts` NATURAL JOIN `users` WHERE pinned != 1".($user_category == 'all' ? '' : " AND category = '".$user_category."'")." ORDER BY likes DESC";
             break;
 
           case 'admin':
-            $sql = "SELECT * FROM `posts` NATURAL JOIN `users`".($user_category == 'all' ? '' : "WHERE category = '".$user_category."'")." ORDER BY is_admin DESC";
+            $sql = "SELECT * FROM `posts` NATURAL JOIN `users` WHERE pinned != 1".($user_category == 'all' ? '' : " AND category = '".$user_category."'")." ORDER BY is_admin DESC";
             break;
 
           default:
-            $sql = "SELECT * FROM `posts` NATURAL JOIN `users`".($user_category == 'all' ? '' : "WHERE category = '".$user_category."'")." ORDER BY post_id DESC";
+            $sql = "SELECT * FROM `posts` NATURAL JOIN `users` WHERE pinned != 1".($user_category == 'all' ? '' : " AND category = '".$user_category."'")." ORDER BY post_id DESC";
             break;
         }
       }
+      echo $sql;
       $result = mysqli_query($connect, $sql);
     ?>
     <meta charset="utf-8">
@@ -107,6 +107,33 @@
     </ul>
 
     <div class="postview" id="postview">
+      <div class="postview-pinned">
+        <h5>PINNED</h5>
+        <!-- Get and render pinned posts -->
+        <?php
+          $pinned_sql = 'SELECT * FROM posts NATURAL JOIN users WHERE pinned = 1';
+          $pinned_result = mysqli_query($connect, $pinned_sql);
+          while ($row = mysqli_fetch_assoc($pinned_result)) {
+            echo '
+            <div class="post">
+              <div class="post-user hoverpointer" onclick="location.href=\'user?id='.$row["user_id"].'\'">
+                '.($row["is_admin"] == 1 ? '<img title="Admin" src="assets/admin-icon.png" />' : '<img title="User" src="assets/user-icon.png" />').'
+                <div class="user-info">
+                  <span class="date-posted"><span class="category">'.$category_expand[$row["category"]].'</span> | '.$row["date_posted"].'</span>
+                  <br />
+                  <span class="username">'.$row["username"].'</span>
+                </div>
+              </div>
+              <span class="title hoverpointer" onclick="location.href=\'post?id='.$row["post_id"].'\'">'.
+              $row["title"]
+              .'
+              </span>
+            </div>
+            ';
+          }
+        ?>
+      </div>
+      <h5>OTHER</h5>
       <?php
   		  while($row = mysqli_fetch_assoc($result)) {
           echo '
