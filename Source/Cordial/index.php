@@ -66,19 +66,39 @@
     <?php require 'rootheader.php'; ?>
 
     <ul class="navbar">
-      <li class='newest' onclick='window.location.href="<?php
+      <li class='newest <?php
+        if (isset($_GET["order"])) {
+          if ($_GET["order"] == 'date') {
+            echo 'selected';
+          }
+        } else {
+          echo 'selected';
+        }
+      ?>' onclick='window.location.href="<?php
         echo '?order=date';
         if (isset($_GET["cat"])) {
           echo '&cat='.$_GET["cat"];
         }
       ?>"'>Newest</li>
-      <li class='likes' onclick='window.location.href="<?php
+      <li class='likes <?php
+        if (isset($_GET["order"])) {
+          if ($_GET["order"] == 'likes') {
+            echo 'selected';
+          }
+        }
+      ?>' onclick='window.location.href="<?php
         echo '?order=likes';
         if (isset($_GET["cat"])) {
           echo '&cat='.$_GET["cat"];
         }
       ?>"'>Most liked</li>
-      <li class='admin' onclick='window.location.href="<?php
+      <li class='admin <?php
+        if (isset($_GET["order"])) {
+          if ($_GET["order"] == 'admin') {
+            echo 'selected';
+          }
+        }
+      ?>' onclick='window.location.href="<?php
         echo '?order=admin';
         if (isset($_GET["cat"])) {
           echo '&cat='.$_GET["cat"];

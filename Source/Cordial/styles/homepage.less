@@ -156,8 +156,16 @@ li {
   padding: 0 20px;
   box-sizing: border-box;
   text-align: center;
-  background-color: @main;
+  background-color: darken(@main, 6%);
   color: white;
+}
+
+li:hover {
+  background-color: darken(@main, 4%);
+}
+
+li.selected {
+  background-color: @main;
 }
 
 div.postview {

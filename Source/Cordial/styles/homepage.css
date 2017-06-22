@@ -145,8 +145,14 @@ li {
   padding: 0 20px;
   box-sizing: border-box;
   text-align: center;
-  background-color: #cb3c3c;
+  background-color: #b73131;
   color: white;
+}
+li:hover {
+  background-color: #c03333;
+}
+li.selected {
+  background-color: #cb3c3c;
 }
 div.postview {
   padding-top: 5px;
