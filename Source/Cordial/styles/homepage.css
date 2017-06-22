@@ -136,6 +136,7 @@ ul.navbar {
   padding: 0;
 }
 li {
+  box-shadow: inset 0px 19px 23px -23px rgba(0, 0, 0, 0.17);
   cursor: pointer;
   float: right;
   height: 100%;
@@ -146,13 +147,15 @@ li {
   box-sizing: border-box;
   text-align: center;
   background-color: #b73131;
-  color: white;
+  color: #f1c9c9;
 }
 li:hover {
   background-color: #c03333;
+  color: #fbf1f1;
 }
 li.selected {
   background-color: #cb3c3c;
+  color: white;
 }
 div.postview {
   padding-top: 5px;
