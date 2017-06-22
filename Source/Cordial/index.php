@@ -53,7 +53,6 @@
             break;
         }
       }
-      echo $sql;
       $result = mysqli_query($connect, $sql);
     ?>
     <meta charset="utf-8">
