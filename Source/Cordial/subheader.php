@@ -80,19 +80,19 @@
 
       switch ($row["type"]) {
         case 'reply':
-          echo "<span class='sender'>{$row['sender_username']}</span> replied to <span class='on-comment' onclick='window.location.href=\"../post/?id={$row['post_id']}\"'>your comment</span>";
+          echo "<span class='sender' onclick='window.location.href=\"../user/?id={$row['sender']}\"'>{$row['sender_username']}</span> replied to <span class='on-comment' onclick='window.location.href=\"../post/?id={$row['post_id']}\"'>your comment</span>";
           break;
 
         case 'comment':
-          echo "<span class='sender'>{$row['sender_username']}</span> commented on <span class='on-post' onclick='window.location.href=\"../post/?id={$row['post_id']}\"'>your post</span>";
+          echo "<span class='sender' onclick='window.location.href=\"../user/?id={$row['sender']}\"'>{$row['sender_username']}</span> commented on <span class='on-post' onclick='window.location.href=\"../post/?id={$row['post_id']}\"'>your post</span>";
           break;
 
         case 'mention':
-          echo "<span class='sender'>{$row['sender_username']}</span> mentioned you in <span class='on-comment' onclick='window.location.href=\"../post/?id={$row['post_id']}\"'>a comment</span>";
+          echo "<span class='sender' onclick='window.location.href=\"../user/?id={$row['sender']}\"'>{$row['sender_username']}</span> mentioned you in <span class='on-comment' onclick='window.location.href=\"../post/?id={$row['post_id']}\"'>a comment</span>";
           break;
 
         case 'like':
-          echo "<span class='sender'>{$row['sender_username']}</span> liked <span class='on-post' onclick='window.location.href=\"../post/?id={$row['post_id']}\"'>your post</span>";
+          echo "<span class='sender' onclick='window.location.href=\"../user/?id={$row['sender']}\"'>{$row['sender_username']}</span> liked <span class='on-post' onclick='window.location.href=\"../post/?id={$row['post_id']}\"'>your post</span>";
           break;
 
         default:
