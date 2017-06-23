@@ -48,7 +48,7 @@
       <div class="post-panel-top">
         <?php echo ($is_admin == 1 ? '<img src="../assets/admin-icon.png" />' : '<img src="../assets/user-icon.png" />') ?>
         <span class="hoverpointer" onclick="location.href='../user?id= <?php echo $user_id ?> '"><b><?php echo $username; ?></b></span>
-        <span><?php echo $date_posted.'<span class="category">'.$category_expand[$category].'</span>'; ?></span>
+        <span><?php echo dateReformat($date_posted).'<span class="category">'.$category_expand[$category].'</span>'; ?></span>
         <?php
           if (isAdmin($host_name, $user_name, $password, $database)) {
             echo '
