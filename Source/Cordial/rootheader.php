@@ -36,18 +36,21 @@
   } else {
     echo "<span class='login-info'>You're not logged in.</span>";
   }
-
-  echo '
-      </div>
-    </div>
-    <div class="notification-wrapper">
-      <span class="notification-count">';
-
-  echo '1';
-
-  echo '</span>
-    </div>
-    <span onclick="location.href=\'compose\'" class="hoverpointer compose">compose +</span>
-  </div>
-  ';
 ?>
+
+</div>
+  </div>
+  <div class="notification-wrapper" onclick="toggleVis('n-dropdown')">
+    <span class="notification-count">
+      <?php echo '1'; ?>
+    </span>
+  </div>
+  <span onclick="location.href=\'compose\'" class="hoverpointer compose">compose +</span>
+</div>
+
+<div id="n-dropdown" class="notification-dropdown">
+</div>
+
+<script>
+  document.body.addEventListener('click', hideDropdown, true);
+</script>
