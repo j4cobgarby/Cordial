@@ -56,18 +56,34 @@
 <div id="n-dropdown" class="notification-dropdown">
   <h3><?php echo $num_notifs; ?> NOTIFICATIONS</h3>
   <div class="notifications">
-    <div class="notification">
-      <span class="sender">username</span> commented on <span class="on-post">your post!</span>
-    </div>
-    <div class="notification">
-      <span class="sender">username</span> replied to <span class="on-comment">your comment!</span>
-    </div>
-    <div class="notification">
-      <span class="sender">username</span> mentioned you in <span class="on-comment">a comment!</span>
-    </div>
-    <div class="notification">
-      <span class="sender">username</span> liked <span class="on-post">your post!</span>
-    </div>
+    <?php
+    $sql = 'SELECT
+    u1.user_id AS sender,
+    u1.username AS sender_username,
+    u2.user_id AS recip,
+    u2.username AS recip_username,
+    notifications.type AS type,
+    notifications.date_sent AS date
+    FROM `notifications`
+
+    INNER JOIN users AS u1
+    ON notifications.sender_id = u1.user_id
+
+    INNER JOIN users AS u2
+    ON notifications.recipient_id = u2.user_id
+
+    WHERE u2.user_id = '.$_SESSION["login-id"].' ORDER BY notifications.date_sent DESC';
+
+    $all_notifs_full = mysqli_query($connect, $sql);
+
+    while ($row = mysqli_fetch_assoc($all_notifs_full)) {
+      echo '<div class="notification">';
+
+      echo $row["type"];
+
+      echo '</div>';
+    }
+    ?>
   </div>
 </div>
 
