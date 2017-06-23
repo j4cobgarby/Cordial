@@ -40,8 +40,8 @@
 
 </div>
   </div>
-  <div class="notification-wrapper" onclick="toggleVis('n-dropdown')">
-    <span class="notification-count">
+  <div class="notification-wrapper">
+    <span class="notification-count" onclick="toggleVis('n-dropdown')">
       <?php
         $sql = 'SELECT * FROM notifications WHERE recipient_id = '.$_SESSION["login-id"];
         $all_notifs = mysqli_query($connect, $sql);
