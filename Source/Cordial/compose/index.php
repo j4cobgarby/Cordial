@@ -54,9 +54,5 @@
          <input type="submit" value="Post!" />
       </form>
     </div>
-
-    <div class="compose-preview-wrapper">
-      <h2>Post preview</h2>
-    </div>
   </body>
 </html>
