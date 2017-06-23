@@ -58,12 +58,13 @@
   <div class="notifications">
     <?php
     $sql = 'SELECT
-    u1.user_id AS sender,
-    u1.username AS sender_username,
-    u2.user_id AS recip,
-    u2.username AS recip_username,
-    notifications.type AS type,
-    notifications.date_sent AS date
+	   u1.user_id AS sender,
+     u1.username AS sender_username,
+     u2.user_id AS recip,
+     u2.username AS recip_username,
+     p.post_id,
+     notifications.type AS type,
+     notifications.date_sent AS date
     FROM `notifications`
 
     INNER JOIN users AS u1
@@ -72,14 +73,38 @@
     INNER JOIN users AS u2
     ON notifications.recipient_id = u2.user_id
 
-    WHERE u2.user_id = '.$_SESSION["login-id"].' ORDER BY notifications.date_sent DESC';
+    INNER JOIN posts AS p
+    ON notifications.post_id = p.post_id
+
+    WHERE u2.user_id = '.$_SESSION["login-id"]
+    .' ORDER BY notifications.date_sent DESC';
 
     $all_notifs_full = mysqli_query($connect, $sql);
 
     while ($row = mysqli_fetch_assoc($all_notifs_full)) {
       echo '<div class="notification">';
 
-      echo $row["type"];
+      switch ($row["type"]) {
+        case 'reply':
+          echo "<span class='sender'>{$row['sender_username']}</span> replied to <span class='on-comment'>your comment</span>";
+          break;
+
+        case 'comment':
+          echo "<span class='sender'>{$row['sender_username']}</span> commented on <span class='on-post'>your post</span>";
+          break;
+
+        case 'mention':
+          echo "<span class='sender'>{$row['sender_username']}</span> mentioned you in <span class='on-comment'>a comment</span>";
+          break;
+
+        case 'like':
+          echo "<span class='sender'>{$row['sender_username']}</span> liked <span class='on-post'>your post</span>";
+          break;
+
+        default:
+          echo "Notification type not valid...";
+          break;
+      }
 
       echo '</div>';
     }
