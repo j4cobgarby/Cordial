@@ -133,6 +133,34 @@ div.header-wrapper {
   .scrollup   {animation-name: scroll-up;}
 }
 
+div.notification-wrapper {
+  background-color: white;
+  height: 45px;
+  min-width: 45px;
+  position: absolute;
+  top: 0;
+  left: 940px;
+  text-align: center;
+  padding-left: 3.25px;
+  padding-right: 3.25px;
+
+  cursor: pointer;
+
+  span.notification-count {
+    margin-top: 7.5px;
+    background-color: @main;
+    display: inline-block;
+    text-align: center;
+    height: 30px;
+    min-width: 30px;
+    box-sizing: border-box;
+    line-height: 30px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 ul.navbar {
   margin: 0 auto;
   background-color: @grey-7;

@@ -1,6 +1,5 @@
 <?php
   // This file should be used to render the header of all files in the root directory of the website.
-
   echo '
   <div class="header-wrapper">
     <img class="logo" src="assets/logobig-white.svg" onclick="location.href=\'?cat=all\'" />
@@ -39,7 +38,10 @@
   }
 
   echo '
-      </div>!
+      </div>
+    </div>
+    <div class="notification-wrapper">
+      <span class="notification-count">x</span>
     </div>
     <span onclick="location.href=\'compose\'" class="hoverpointer compose">compose +</span>
   </div>
