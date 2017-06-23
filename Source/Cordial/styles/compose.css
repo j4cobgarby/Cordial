@@ -7,47 +7,50 @@ div.compose-form-wrapper {
   margin-top: 70px;
   border-radius: 6px;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
   text-align: center;
 }
-div.compose-form-wrapper form {
+div.compose-form-wrapper form.makepost {
   text-align: left;
   padding-left: 120px;
+  padding-right: 120px;
 }
-div.compose-form-wrapper form h2 {
+div.compose-form-wrapper form.makepost h2 {
   color: #3b3b3b;
 }
-div.compose-form-wrapper form span.req {
+div.compose-form-wrapper form.makepost span.req {
   color: #cb3c3c;
   font-weight: bold;
 }
-div.compose-form-wrapper form span {
+div.compose-form-wrapper form.makepost span {
   display: inline-block;
   margin-bottom: 10px;
 }
-div.compose-form-wrapper form span img.md {
+div.compose-form-wrapper form.makepost span img.md {
   margin-left: 5px;
   vertical-align: middle;
   height: 23px;
   display: inline-block;
 }
-div.compose-form-wrapper form input[type="text"] {
+div.compose-form-wrapper form.makepost input[type="text"] {
   border: 3px solid #6e6e6e;
   width: 640px;
   padding: 10px;
   font-weight: bold;
   border-radius: 5px;
 }
-div.compose-form-wrapper form input[type="submit"] {
+div.compose-form-wrapper form.makepost input[type="submit"] {
   margin-top: 30px;
+  margin-right: 10px;
   padding: 15px 30px;
   border-style: none;
   color: white;
   background-color: #cb3c3c;
   border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
 }
-div.compose-form-wrapper form select {
+div.compose-form-wrapper form.makepost select {
   margin-left: 10px;
   border: none;
   padding: 10px;
@@ -59,7 +62,7 @@ div.compose-form-wrapper form select {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-div.compose-form-wrapper form textarea {
+div.compose-form-wrapper form.makepost textarea {
   font-size: 11pt;
   font-weight: lighter;
   font-family: 'Overpass Mono';
@@ -70,9 +73,16 @@ div.compose-form-wrapper form textarea {
   border: 3px solid #6e6e6e;
   border-radius: 5px;
 }
+form.preview-form input {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 7px 15px;
+  border: none;
+  cursor: pointer;
+}
 div.compose-preview-wrapper {
   background-color: white;
-  min-height: 500px;
+  min-height: 240px;
   width: 900px;
   border: 1px solid #ccc;
   margin: auto;
@@ -86,6 +96,91 @@ div.compose-preview-wrapper {
   padding-right: 120px;
   text-align: center;
 }
-div.compose-preview-wrapper h2 {
+div.compose-preview-wrapper h1 {
   text-align: left;
+}
+div.compose-preview-wrapper button {
+  cursor: pointer;
+  font-family: 'Roboto Condensed';
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  padding: 10px 20px;
+  border: 1px solid #d9d9d9;
+}
+div.compose-preview-wrapper hr {
+  margin: 30px 0;
+  border-style: none;
+  border-top: 1px solid #d9d9d9;
+}
+div.compose-preview-wrapper div#preview {
+  text-align: left;
+}
+div.compose-preview-wrapper div#preview span.nocontent {
+  color: #6e6e6e;
+  font-style: italic;
+}
+div.compose-preview-wrapper div#preview ol {
+  counter-reset: item;
+  list-style: none;
+}
+div.compose-preview-wrapper div#preview ol li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+div.compose-preview-wrapper div#preview ol li:before {
+  margin-right: 10px;
+  content: counter(item) ' .';
+  font-weight: bold;
+}
+div.compose-preview-wrapper div#preview h1,
+div.compose-preview-wrapper div#preview h2,
+div.compose-preview-wrapper div#preview h3,
+div.compose-preview-wrapper div#preview h4,
+div.compose-preview-wrapper div#preview h5,
+div.compose-preview-wrapper div#preview h6 {
+  padding-bottom: 7px;
+  border-bottom: 3px solid #f4f4f4;
+}
+div.compose-preview-wrapper div#preview a {
+  color: #5056db;
+}
+div.compose-preview-wrapper div#preview pre {
+  font-family: 'Overpass Mono';
+  background-color: #fafafa;
+  padding: 15px;
+  font-size: 12pt;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+div.compose-preview-wrapper div#preview pre code {
+  font-family: inherit;
+}
+div.compose-preview-wrapper div#preview img {
+  display: block;
+  margin: 0 auto;
+  max-width: 1000;
+  border-radius: 4px;
+}
+div.compose-preview-wrapper div#preview hr {
+  margin: 20px 0px;
+  border: none;
+  border-top: 3px solid #f7f7f7;
+}
+div.compose-preview-wrapper div#preview table {
+  border: 1px solid #ccc;
+  border-spacing: 0px;
+}
+div.compose-preview-wrapper div#preview th {
+  background-color: #f7f7f7;
+}
+div.compose-preview-wrapper div#preview th,
+div.compose-preview-wrapper div#preview td {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+div.compose-preview-wrapper div#preview tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
 }

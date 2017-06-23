@@ -11,13 +11,14 @@ div.compose-form-wrapper {
   border-radius: 6px;
 
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
 
   text-align: center;
 
-  form {
+  form.makepost {
     text-align: left;
     padding-left: 120px;
+    padding-right: 120px;
 
     h2 {
       color: @grey-1;
@@ -50,12 +51,14 @@ div.compose-form-wrapper {
 
     input[type="submit"] {
       margin-top: 30px;
+      margin-right: 10px;
       padding: 15px 30px;
       border-style: none;
       color: white;
       background-color: @main;
       border-radius: 5px;
       font-weight: bold;
+      cursor: pointer;
     }
 
     select {
@@ -85,9 +88,19 @@ div.compose-form-wrapper {
   }
 }
 
+form.preview-form {
+  input {
+    background-color: @grey-6;
+    border-radius: 4px;
+    padding: 7px 15px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
 div.compose-preview-wrapper {
   background-color: white;
-  min-height: 500px;
+  min-height: 240px;
   width: 900px;
   border: 1px solid @border-main;
   margin: auto;
@@ -103,7 +116,102 @@ div.compose-preview-wrapper {
 
   text-align: center;
 
-  h2 {
+  h1 {
     text-align: left;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: @sans-condensed;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    background-color: @grey-7;
+    border-radius: 7px;
+    padding: 10px 20px;
+    border: 1px solid @border-lighter;
+  }
+
+  hr {
+    margin: 30px 0;
+    border-style: none;
+    border-top: 1px solid @border-lighter;
+  }
+
+  div#preview {
+    text-align: left;
+
+    span.nocontent {
+      color: @grey-2;
+      font-style: italic;
+    }
+
+    ol {
+      counter-reset: item;
+      list-style: none;
+
+      li {
+        counter-increment: item;
+        margin-bottom: 5px;
+      }
+      li:before {
+        margin-right: 10px;
+        content: counter(item) ' .';
+        font-weight: bold;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      padding-bottom: 7px;
+      border-bottom: 3px solid @grey-6;
+    }
+
+    a {
+      color: @hyper-colour;
+    }
+
+    pre {
+      font-family: @monospace;
+      background-color: @grey-8;
+      padding: 15px;
+      font-size: 12pt;
+      border-radius: 3px;
+      border: 1px solid @border-main;
+
+      code {
+        font-family: inherit;
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 1000;
+      border-radius: 4px;
+    }
+
+    hr {
+      margin: 20px 0px;
+      border: none;
+      border-top: 3px solid @grey-7;
+    }
+
+    table {
+      border: 1px solid @border-main;
+      border-spacing: 0px;
+    }
+
+    th {
+      background-color: @grey-7;
+    }
+
+    th, td {
+      border: 1px solid @border-main;
+      padding: 10px 15px;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: @grey-7;
+    }
   }
 }
