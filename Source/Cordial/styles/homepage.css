@@ -249,6 +249,12 @@ div.postview-pinned {
 h5 {
   margin: -5px 0 15px 15px;
 }
+div.post:first-of-type {
+  border-bottom: 1px solid #d9d9d9;
+}
+div.post:last-of-type {
+  border-bottom: 1px solid #d9d9d9;
+}
 div.post {
   overflow: hidden;
   height: 40px;
