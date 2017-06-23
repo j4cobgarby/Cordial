@@ -62,9 +62,9 @@
      u1.username AS sender_username,
      u2.user_id AS recip,
      u2.username AS recip_username,
-     p.post_id,
+     p.post_id AS post_id,
      notifications.type AS type,
-     notifications.date_sent AS date
+     notifications.date_sent AS date_sent
     FROM `notifications`
 
     INNER JOIN users AS u1
@@ -86,19 +86,19 @@
 
       switch ($row["type"]) {
         case 'reply':
-          echo "<span class='sender'>{$row['sender_username']}</span> replied to <span class='on-comment'>your comment</span>";
+          echo "<span class='sender'>{$row['sender_username']}</span> replied to <span class='on-comment' onclick='window.location.href=\"post/?id={$row['post_id']}\"'>your comment</span>";
           break;
 
         case 'comment':
-          echo "<span class='sender'>{$row['sender_username']}</span> commented on <span class='on-post'>your post</span>";
+          echo "<span class='sender'>{$row['sender_username']}</span> commented on <span class='on-post' onclick='window.location.href=\"post/?id={$row['post_id']}\"'>your post</span>";
           break;
 
         case 'mention':
-          echo "<span class='sender'>{$row['sender_username']}</span> mentioned you in <span class='on-comment'>a comment</span>";
+          echo "<span class='sender'>{$row['sender_username']}</span> mentioned you in <span class='on-comment' onclick='window.location.href=\"post/?id={$row['post_id']}\"'>a comment</span>";
           break;
 
         case 'like':
-          echo "<span class='sender'>{$row['sender_username']}</span> liked <span class='on-post'>your post</span>";
+          echo "<span class='sender'>{$row['sender_username']}</span> liked <span class='on-post' onclick='window.location.href=\"post/?id={$row['post_id']}\"'>your post</span>";
           break;
 
         default:
