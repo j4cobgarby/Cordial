@@ -8,7 +8,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: @grey-6;
+  //background-color: @grey-6;
 }
 
 span.category-show {
@@ -160,14 +160,15 @@ div.notification-wrapper {
   }
 
   span.notification-count:hover {
-    animation-name: grow;
+    animation-name: hover;
     animation-duration: 0.2s;
     animation-fill-mode: both;
   }
 }
 
-@keyframes grow {
+@keyframes hover {
   100% {
+    /*
     margin-left: -30px;
     margin-right: -30px;
     width: 100%;
@@ -175,23 +176,62 @@ div.notification-wrapper {
     margin-top: 0;
     padding-top: 7.5px;
     border-radius: 0;
+    */
     background-color: white;
     color: @main;
   }
 }
 
 div.notification-dropdown {
+  padding-left: 20px;
+  padding-right: 20px;
   position: absolute;
-  width: 200px;
+  width: 260px;
   min-height: 400px;
+  max-height: 600px;
   background-color: white;
-  left: 865px;
+  left: 750px;
   border: 1px solid @border-lighter;
   border-top: none;
   box-shadow: 0px 11px 35px -8px rgba(0,0,0,0.42);
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   visibility: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  h3 {
+    text-align: center;
+  }
+
+  div.notification:first-child {
+    border-top: 1px solid @border-lighter;
+  }
+
+  div.notification {
+    border-bottom: 1px solid @border-lighter;
+    padding: 10px 0;
+    color: @grey-1;
+
+    span.sender {
+      cursor: pointer;
+      font-family: @sans-condensed;
+      color: @sender-colour;
+      text-decoration: underline;
+    }
+
+    span.on-post {
+      color: @on-post-colour;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    span.on-comment {
+      color: @on-comment-colour;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
 
 .visible {
@@ -254,13 +294,15 @@ h5 {
 div.post {
   overflow: hidden;
   height: 40px;
+  //border-top: 1px solid @border-lighter;
+  padding-bottom: 10px;
+  padding-top: 10px;
   border-top: 1px solid @border-lighter;
-  border-bottom: 1px solid @border-lighter;
   line-height: 40px;
   font-size: 23px;
   font-family: @sans-condensed;
   font-weight: bold;
-  margin-bottom: 3px;
+  //margin-bottom: 5px;
   background-color: white;
 
   span.title {

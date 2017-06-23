@@ -5,7 +5,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
 }
 span.category-show {
   margin-left: 10px;
@@ -149,12 +148,13 @@ div.notification-wrapper span.notification-count {
   padding-right: 10px;
 }
 div.notification-wrapper span.notification-count:hover {
-  animation-name: grow;
+  animation-name: hover;
   animation-duration: 0.2s;
   animation-fill-mode: both;
 }
-@keyframes grow {
+@keyframes hover {
   100% {
+    /*
     margin-left: -30px;
     margin-right: -30px;
     width: 100%;
@@ -162,22 +162,55 @@ div.notification-wrapper span.notification-count:hover {
     margin-top: 0;
     padding-top: 7.5px;
     border-radius: 0;
+    */
     background-color: white;
     color: #cb3c3c;
   }
 }
 div.notification-dropdown {
+  padding-left: 20px;
+  padding-right: 20px;
   position: absolute;
-  width: 200px;
+  width: 260px;
   min-height: 400px;
+  max-height: 600px;
   background-color: white;
-  left: 865px;
+  left: 750px;
   border: 1px solid #d9d9d9;
   border-top: none;
   box-shadow: 0px 11px 35px -8px rgba(0, 0, 0, 0.42);
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   visibility: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+div.notification-dropdown h3 {
+  text-align: center;
+}
+div.notification-dropdown div.notification:first-child {
+  border-top: 1px solid #d9d9d9;
+}
+div.notification-dropdown div.notification {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 10px 0;
+  color: #3b3b3b;
+}
+div.notification-dropdown div.notification span.sender {
+  cursor: pointer;
+  font-family: 'Roboto Condensed';
+  color: #8e52ff;
+  text-decoration: underline;
+}
+div.notification-dropdown div.notification span.on-post {
+  color: #ff3b8b;
+  text-decoration: underline;
+  cursor: pointer;
+}
+div.notification-dropdown div.notification span.on-comment {
+  color: #6acf13;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .visible {
   visibility: visible !important;
@@ -230,13 +263,13 @@ h5 {
 div.post {
   overflow: hidden;
   height: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
   line-height: 40px;
   font-size: 23px;
   font-family: 'Roboto Condensed';
   font-weight: bold;
-  margin-bottom: 3px;
   background-color: white;
 }
 div.post span.title {

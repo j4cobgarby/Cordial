@@ -42,13 +42,33 @@
   </div>
   <div class="notification-wrapper" onclick="toggleVis('n-dropdown')">
     <span class="notification-count">
-      <?php echo '1'; ?>
+      <?php
+        $sql = 'SELECT * FROM notifications WHERE recipient_id = '.$_SESSION["login-id"];
+        $all_notifs = mysqli_query($connect, $sql);
+        $num_notifs = mysqli_num_rows($all_notifs);
+        echo $num_notifs;
+      ?>
     </span>
   </div>
   <span onclick="location.href=\'compose\'" class="hoverpointer compose">compose +</span>
 </div>
 
 <div id="n-dropdown" class="notification-dropdown">
+  <h3><?php echo $num_notifs; ?> NOTIFICATIONS</h3>
+  <div class="notifications">
+    <div class="notification">
+      <span class="sender">username</span> commented on <span class="on-post">your post!</span>
+    </div>
+    <div class="notification">
+      <span class="sender">username</span> replied to <span class="on-comment">your comment!</span>
+    </div>
+    <div class="notification">
+      <span class="sender">username</span> mentioned you in <span class="on-comment">a comment!</span>
+    </div>
+    <div class="notification">
+      <span class="sender">username</span> liked <span class="on-post">your post!</span>
+    </div>
+  </div>
 </div>
 
 <script>
