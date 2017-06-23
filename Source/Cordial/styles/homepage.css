@@ -5,7 +5,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
 }
 span.category-show {
   margin-left: 10px;
@@ -123,6 +122,91 @@ div.header-wrapper .scrolldown {
 div.header-wrapper .scrollup {
   animation-name: scroll-up;
 }
+div.notification-wrapper {
+  background-color: #cb3c3c;
+  height: 45px;
+  min-width: 50px;
+  position: absolute;
+  top: 0;
+  left: 940px;
+  text-align: center;
+  padding-left: 3.25px;
+  padding-right: 3.25px;
+}
+div.notification-wrapper span.notification-count {
+  cursor: pointer;
+  margin-top: 7.5px;
+  background-color: white;
+  color: #cb3c3c;
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  min-width: 30px;
+  box-sizing: border-box;
+  line-height: 30px;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition-duration: 0.3s;
+}
+div.notification-wrapper span.notification-count:hover {
+  border-radius: 0;
+  margin-top: 0;
+  height: 100%;
+  line-height: 45px;
+  min-width: 50px;
+  font-size: 25px;
+  font-weight: bold;
+}
+div.notification-dropdown {
+  z-index: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  width: 260px;
+  min-height: 400px;
+  max-height: 600px;
+  background-color: white;
+  left: 750px;
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  box-shadow: 0px 11px 35px -8px rgba(0, 0, 0, 0.42);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  visibility: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+div.notification-dropdown h3 {
+  text-align: center;
+}
+div.notification-dropdown div.notification:first-child {
+  border-top: 1px solid #d9d9d9;
+}
+div.notification-dropdown div.notification {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 10px 0;
+  color: #3b3b3b;
+}
+div.notification-dropdown div.notification span.sender {
+  cursor: pointer;
+  font-family: 'Roboto Condensed';
+  color: #8e52ff;
+  text-decoration: underline;
+}
+div.notification-dropdown div.notification span.on-post {
+  color: #ff3b8b;
+  text-decoration: underline;
+  cursor: pointer;
+}
+div.notification-dropdown div.notification span.on-comment {
+  color: #6acf13;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.visible {
+  visibility: visible !important;
+}
 ul.navbar {
   margin: 0 auto;
   background-color: #f7f7f7;
@@ -171,13 +255,13 @@ h5 {
 div.post {
   overflow: hidden;
   height: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
   line-height: 40px;
   font-size: 23px;
   font-family: 'Roboto Condensed';
   font-weight: bold;
-  margin-bottom: 3px;
   background-color: white;
 }
 div.post span.title {
@@ -189,12 +273,14 @@ div.post span.title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+div.post div.post-user.userpage {
+  line-height: 40px;
+}
 div.post div.post-user {
   box-sizing: border-box;
   font-weight: normal;
-  width: 300px;
+  width: 310px;
   height: 100%;
-  border-right: 4px solid #cb3c3c;
   float: left;
   margin-right: 8px;
   line-height: 19px;
@@ -206,6 +292,7 @@ div.post div.post-user img {
   width: 20px;
   margin-top: 10px;
   margin-right: 5px;
+  margin-left: 10px;
 }
 div.post div.post-user div.user-info {
   float: right;

@@ -118,7 +118,7 @@
               <div class="post-user hoverpointer" onclick="location.href=\'user?id='.$row["user_id"].'\'">
                 '.($row["is_admin"] == 1 ? '<img title="Admin" src="assets/admin-icon.png" />' : '<img title="User" src="assets/user-icon.png" />').'
                 <div class="user-info">
-                  <span class="date-posted"><span class="category">'.$category_expand[$row["category"]].'</span> | '.$row["date_posted"].'</span>
+                  <span class="date-posted"><span class="category">'.$category_expand[$row["category"]].'</span> '.$row["date_posted"].'</span>
                   <br />
                   <span class="username">'.$row["username"].'</span>
                 </div>
@@ -140,7 +140,7 @@
             <div class="post-user hoverpointer" onclick="location.href=\'user?id='.$row["user_id"].'\'">
               '.($row["is_admin"] == 1 ? '<img title="Admin" src="assets/admin-icon.png" />' : '<img title="User" src="assets/user-icon.png" />').'
               <div class="user-info">
-                <span class="date-posted"><span class="category">'.$category_expand[$row["category"]].'</span> | '.$row["date_posted"].'</span>
+                <span class="date-posted"><span class="category">'.$category_expand[$row["category"]].'</span> '.dateReformat($row["date_posted"]).'</span>
                 <br />
                 <span class="username">'.$row["username"].'</span>
               </div>

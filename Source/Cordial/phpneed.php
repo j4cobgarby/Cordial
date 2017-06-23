@@ -46,6 +46,10 @@
     return $can_like;
   }
 
+  function dateReformat($dateString) {
+    return date_format(date_create_from_format('Y-m-d', $dateString), 'd/m/Y');
+  }
+
   // Likes or unlikes a post based on if it's already liked
   function likePost($id, $host_name, $user_name, $password, $database) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
