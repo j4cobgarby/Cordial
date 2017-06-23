@@ -16,7 +16,7 @@
         <a title="Hardware"    href="?cat=hwar">hwar</a>
         <a title="Game Dev"    href="?cat=gdev">gdev</a>
         <a title="Web Dev"     href="?cat=wdev">wdev</a>
-        <a title="Science"       href="?cat=sci">sci</a>
+        <a title="Science"     href="?cat=sci">sci</a>
         <a title="Memes"       href="?cat=meme">meme</a>
         <a title="Pictures"    href="?cat=pics">pics</a>
         <a title="Politics"    href="?cat=pols">pols</a>
