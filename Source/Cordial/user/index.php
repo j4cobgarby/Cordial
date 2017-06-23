@@ -109,12 +109,11 @@
   		  while($row = mysqli_fetch_assoc($result)) {
           echo '
           <div class="post">
-            <div class="post-user hoverpointer" onclick="location.href=\'../user?id='.$row["user_id"].'\'">
+            <div class="post-user userpage hoverpointer" onclick="location.href=\'../user?id='.$row["user_id"].'\'">
               '.($row["is_admin"] == 1 ? '<img title="Admin" src="../assets/admin-icon.png" />' : '<img title="User" src="../assets/user-icon.png" />').'
               <div class="user-info">
-                <span class="date-posted">'.$row["date_posted"].'</span>
+                <span class="date-posted"><span class="category">'.$category_expand[$row["category"]].'</span> '.dateReformat($row["date_posted"]).'</span>
                 <br />
-                <span class="username">'.$row["username"].'</span>
               </div>
             </div>
             <span class="title hoverpointer" onclick="location.href=\'../post?id='.$row["post_id"].'\'">'.

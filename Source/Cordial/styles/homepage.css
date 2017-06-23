@@ -273,6 +273,9 @@ div.post span.title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+div.post div.post-user.userpage {
+  line-height: 40px;
+}
 div.post div.post-user {
   box-sizing: border-box;
   font-weight: normal;
