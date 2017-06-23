@@ -53,7 +53,7 @@ div.compose-form-wrapper form select {
   padding: 10px;
   padding-left: 7px;
   padding-right: 5px;
-  background-color: #f7f7f7;
+  background-color: #f4f4f4;
   border-radius: 5px;
   appearance: none;
   -moz-appearance: none;
@@ -69,4 +69,23 @@ div.compose-form-wrapper form textarea {
   resize: vertical;
   border: 3px solid #6e6e6e;
   border-radius: 5px;
+}
+div.compose-preview-wrapper {
+  background-color: white;
+  min-height: 500px;
+  width: 900px;
+  border: 1px solid #ccc;
+  margin: auto;
+  margin-top: 70px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  margin-bottom: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  text-align: center;
+}
+div.compose-preview-wrapper h2 {
+  text-align: left;
 }
