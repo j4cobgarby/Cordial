@@ -41,7 +41,11 @@
       </div>
     </div>
     <div class="notification-wrapper">
-      <span class="notification-count">x</span>
+      <span class="notification-count">';
+
+  echo '1';
+
+  echo '</span>
     </div>
     <span onclick="location.href=\'compose\'" class="hoverpointer compose">compose +</span>
   </div>
