@@ -133,7 +133,7 @@ ul.navbar {
   border-bottom: 1px solid #d9d9d9;
   padding: 0;
 }
-li {
+ul.navbar li {
   box-shadow: inset 0px 19px 23px -23px rgba(0, 0, 0, 0.17);
   cursor: pointer;
   float: right;
@@ -147,11 +147,11 @@ li {
   background-color: #b73131;
   color: #f1c9c9;
 }
-li:hover {
+ul.navbar li:hover {
   background-color: #c03333;
   color: #fbf1f1;
 }
-li.selected {
+ul.navbar li.selected {
   background-color: #cb3c3c;
   color: white;
 }
