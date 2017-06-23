@@ -246,11 +246,8 @@ div.postview-pinned {
   width: 100%;
   margin: 15px 0 20px 0;
 }
-div.postview-pinned h5 {
-  margin: -5px 0 15px 5px;
-}
 h5 {
-  margin: -5px 0 15px 5px;
+  margin: -5px 0 15px 15px;
 }
 div.post {
   overflow: hidden;
