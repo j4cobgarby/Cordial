@@ -45,7 +45,7 @@
             }
           ?>
         </b></span>
-        <span><?php echo 'Joined '.$date_joined; ?></span>
+        <span><?php echo 'Joined '.dateReformat($date_joined); ?></span>
       </div>
       <div class="bio">
         <?php if ($user_id == $_SESSION["login-id"] && !isset($_GET["edit_bio"])) {
