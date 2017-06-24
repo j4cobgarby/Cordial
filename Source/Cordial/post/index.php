@@ -130,7 +130,7 @@
               </span>
               <span class="content">
                 '.($c_image_link == NULL ? '' : '<img class="hoverpointer comment-img" onclick="window.location.href=\''.$c_image_link.'\'" src="'.$c_image_link.'" />').'
-                '.$c_content.'
+                '.tryPutSpanAroundMentionedUser($c_content).'
               </span>
             </div>
             ';
