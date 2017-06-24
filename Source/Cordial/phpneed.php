@@ -91,7 +91,7 @@
     preg_match('/@([^ ]+)/', $str, $matches);
     return str_replace($matches[0], '<span class="mentioned" onclick="window.location.href=\'../user/?id='.getTaggedUserIDFromString($str).'\'">'.$matches[0].'</span>', $str);
   }
-
+  
   function tryPutSpanAroundMentionedUser($str) {
     if (doesStringMentionUser($str)) {
       return putSpanAroundMentionedUser($str);
