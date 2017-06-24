@@ -272,6 +272,10 @@ div.comment-panel div.comment span.reply {
 }
 div.comment-panel div.comment span.username {
   color: #6e6e6e;
+  cursor: pointer;
+}
+div.comment-panel div.comment span.username:hover {
+  text-decoration: underline;
 }
 div.comment-panel div.comment span.op {
   margin-left: 5px;
