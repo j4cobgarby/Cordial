@@ -50,7 +50,7 @@
       ?>
     </span>
   </div>
-  <span onclick="location.href=\'compose\'" class="hoverpointer compose">compose +</span>
+  <span onclick="location.href='compose'" class="hoverpointer compose">compose +</span>
 </div>
 
 <div id="n-dropdown" class="notification-dropdown">
