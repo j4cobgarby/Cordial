@@ -120,10 +120,10 @@
                 <span onclick="window.location.href=\'make_comment.php?post_id='.$_GET["id"].'&replyto='.$c_comment_id.'\'" class="embed-newcomment hoverpointer">
                   Reply
                 </span>
-                <span class="id accent hoverpointer hoverunderline" onclick="flashId('.$c_comment_id.');window.location.href=\'#comment-'.$c_comment_id.'\'">
+                <span class="id accent hoverpointer hoverunderline" onclick="window.location.href=\'#comment-'.$c_comment_id.'\'">
                   #'.$c_comment_id.'
                 </span>
-                <span class="reply accent hoverpointer hoverunderline" onclick="flashId('.$c_in_reply_to.');window.location.href=\'#comment-'.$c_in_reply_to.'\'">'
+                <span class="reply accent hoverpointer hoverunderline" onclick="window.location.href=\'#comment-'.$c_in_reply_to.'\'">'
                   .($c_in_reply_to != 0 ? ' » #'.$c_in_reply_to.' ' : '').' /
                 </span>
                 <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
