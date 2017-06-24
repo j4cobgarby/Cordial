@@ -66,6 +66,27 @@
     mysqli_query($connect, $sql);
   }
 
+  function doesStringMentionUser($str) {
+    preg_match('/@([^ ]+)/', $str, $matches);
+    return sizeof($matches) != 0;
+  }
+
+  function getTaggedUserFromString($str) {
+    preg_match('/@([^ ]+)/', $str, $matches);
+    return $matches[1];
+  }
+
+  function getTaggedUserIDFromString($str) {
+    global $host_name, $user_name, $password, $database;
+    $username = getTaggedUserFromString($str);
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $sql = 'SELECT user_id FROM users WHERE username = "'.$username.'"';
+    $result = mysqli_query($connect, $sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+      return $row["user_id"];
+    }
+  }
+
   if (isset($_SESSION["login-id"])) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
