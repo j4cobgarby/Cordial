@@ -74,6 +74,16 @@
     </div>
     <?php
       if (isset($_GET["text"])) {
+        // Check if they're mentioning anyone in the comment
+        if (doesStringMentionUser($_GET["text"])) {
+          $tagged_user = getTaggedUserFromString($_GET["text"]);
+          $tagged_id   = getTaggedUserIDFromString($_GET["text"]);
+
+          if ($_SESSION["login-id"] != $tagged_id) {
+            sendNotification($_SESSION["login-id"], $tagged_id, 'mention', $_GET["post_id"]);
+          }
+        }
+
         $connect = mysqli_connect($host_name, $user_name, $password, $database);
         if ($_GET["image_link"] == '') {
           $sql = 'INSERT INTO `comments`
