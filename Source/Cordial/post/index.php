@@ -126,7 +126,7 @@
                 <span class="reply accent hoverpointer hoverunderline" onclick="window.location.href=\'#comment-'.$c_in_reply_to.'\'">'
                   .($c_in_reply_to != 0 ? ' » #'.$c_in_reply_to.' ' : '').' /
                 </span>
-                <span class="username">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
+                <span class="username" onclick="window.location.href=\'../user/?id='.$user_id.'\'">'.$c_username.($c_user_id == $user_id ? '<span class="op">OP</span>' : '').'</span>
               </span>
               <span class="content">
                 '.($c_image_link == NULL ? '' : '<img class="hoverpointer comment-img" onclick="window.location.href=\''.$c_image_link.'\'" src="'.$c_image_link.'" />').'
