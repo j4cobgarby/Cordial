@@ -1,4 +1,4 @@
-<?php require '../phpneed.php'; ?>
+<?php require '../phpneed.php'; removeNotificationsForUserOnPost($_GET["id"]); ?>
 
 <!DOCTYPE php>
 
