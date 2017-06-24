@@ -59,6 +59,13 @@
     mysqli_query($connect, $sql);
   }
 
+  function removeNotificationsForUserOnPost($post_id) {
+    global $host_name, $user_name, $password, $database;
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $sql = "DELETE FROM notifications WHERE post_id = ".$post_id." AND recipient_id = ".$_SESSION["login-id"];
+    mysqli_query($connect, $sql);
+  }
+
   if (isset($_SESSION["login-id"])) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
 
