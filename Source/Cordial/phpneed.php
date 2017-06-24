@@ -87,6 +87,19 @@
     }
   }
 
+  function putSpanAroundMentionedUser($str) {
+    preg_match('/@([^ ]+)/', $str, $matches);
+    return str_replace($matches[0], '<span class="mentioned" onclick="window.location.href=\'../user/?id='.getTaggedUserIDFromString($str).'\'">'.$matches[0].'</span>', $str);
+  }
+
+  function tryPutSpanAroundMentionedUser($str) {
+    if (doesStringMentionUser($str)) {
+      return putSpanAroundMentionedUser($str);
+    } else {
+      return $str;
+    }
+  }
+
   if (isset($_SESSION["login-id"])) {
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
 

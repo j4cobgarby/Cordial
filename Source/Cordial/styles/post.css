@@ -253,6 +253,13 @@ div.comment-panel div.comment span {
   line-height: 30px;
   margin-right: 10px;
 }
+div.comment-panel div.comment span.mentioned {
+  height: auto;
+  line-height: auto;
+  margin-right: auto;
+  font-weight: bold;
+  cursor: pointer;
+}
 div.comment-panel div.comment span.info {
   vertical-align: top;
 }
