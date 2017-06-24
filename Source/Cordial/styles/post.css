@@ -224,7 +224,7 @@ div.comment-panel span.embed-newcomment:hover {
     background-color: white;
   }
 }
-div.comment-panel div.comment.flash {
+div.comment-panel div.comment:target {
   animation-name: flash;
   animation-duration: 1s;
 }
