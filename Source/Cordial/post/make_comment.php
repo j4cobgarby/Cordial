@@ -103,13 +103,13 @@
         if (isset($_GET["replyto"])) {
           if ($_GET["replyto"] != 0) {
             // Reply notification
-            $get_recip = 'SELECT user_id FROM posts WHERE post_id = '.$_GET["post_id"];
+            $get_recip = 'SELECT user_id FROM comments WHERE comment_id = '.$_GET["replyto"];
             $recip_result = mysqli_query($connect, $get_recip);
             while ($row = mysqli_fetch_assoc($recip_result)) {
               $recip_id = $row["user_id"];
             }
 
-            sendNotification($_SESSION["login-id"], $recip_id, 'reply', $_GET["post_id"]);
+            if ($recip_id != $_SESSION["login-id"]) sendNotification($_SESSION["login-id"], $recip_id, 'reply', $_GET["post_id"]);
           } else {
             // Comment notification
             $get_recip = 'SELECT user_id FROM posts WHERE post_id = '.$_GET["post_id"];
@@ -118,7 +118,7 @@
               $recip_id = $row["user_id"];
             }
 
-            sendNotification($_SESSION["login-id"], $recip_id, 'comment', $_GET["post_id"]);
+            if ($recip_id != $_SESSION["login-id"]) sendNotification($_SESSION["login-id"], $recip_id, 'comment', $_GET["post_id"]);
           }
         } else {
           // Comment notification
@@ -128,7 +128,7 @@
             $recip_id = $row["user_id"];
           }
 
-          sendNotification($_SESSION["login-id"], $recip_id, 'comment', $_GET["post_id"]);
+          if ($recip_id != $_SESSION["login-id"]) sendNotification($_SESSION["login-id"], $recip_id, 'comment', $_GET["post_id"]);
         }
 
         echo "<script>window.location.href='../post/?id=".$_GET["post_id"]."'</script>";

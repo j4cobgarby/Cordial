@@ -14,8 +14,8 @@
     while ($row = mysqli_fetch_assoc($recip_result)) {
       $recip_id = $row["user_id"];
     }
-    sendNotification($_SESSION["login-id"], $recip_id, 'like', $id);
-
+    if ($recip_id != $_SESSION["login-id"]) {sendNotification($_SESSION["login-id"], $recip_id, 'like', $id);}
+    
     echo "true";
   } else {
 
