@@ -50,16 +50,13 @@
     return date_format(date_create_from_format('Y-m-d', $dateString), 'd/m/Y');
   }
 
-  // Likes or unlikes a post based on if it's already liked
-  function likePost($id, $host_name, $user_name, $password, $database) {
+  function sendNotification($sender_id, $recipient_id, $type, $post_id) {
+    global $host_name, $user_name, $password, $database;
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
-    if (canLike($id, $host_name, $user_name, $password, $database) == true) {
-      $sql = 'UPDATE posts SET likes = likes + 1 WHERE post_id = '.$id;
-      mysqli_query($connect, $sql);
-      $set_liked = 'INSERT INTO user_liked_posts (user_id, post_id) VALUES ('.$_SESSION["login-id"].', '.$id.')';
-      mysqli_query($connect, $set_liked);
-      echo "<script>window.location.href='../post/?id=".$id."'</script>";
-    }
+    $sql = "INSERT INTO notifications (notification_id, sender_id, recipient_id, date_sent, type, post_id)
+      VALUES (NULL, {$sender_id}, {$recipient_id}, '".date("Y-m-d")."', '{$type}', {$post_id})";
+    //echo $sql;
+    mysqli_query($connect, $sql);
   }
 
   if (isset($_SESSION["login-id"])) {

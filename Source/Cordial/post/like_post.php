@@ -8,6 +8,14 @@
     mysqli_query($connect, $sql);
     $set_liked = 'INSERT INTO user_liked_posts (user_id, post_id) VALUES ('.$_SESSION["login-id"].', '.$id.')';
     mysqli_query($connect, $set_liked);
+
+    $get_recip = 'SELECT user_id FROM posts WHERE post_id = '.$id;
+    $recip_result = mysqli_query($connect, $get_recip);
+    while ($row = mysqli_fetch_assoc($recip_result)) {
+      $recip_id = $row["user_id"];
+    }
+    if ($recip_id != $_SESSION["login-id"]) {sendNotification($_SESSION["login-id"], $recip_id, 'like', $id);}
+    
     echo "true";
   } else {
 
@@ -15,7 +23,7 @@
     mysqli_query($connect, $sql);
     $set_liked = 'DELETE FROM user_liked_posts WHERE post_id = '.$id.' AND user_id = '.$_SESSION["login-id"];
     mysqli_query($connect, $set_liked);
-    
+
     echo "false";
   }
 ?>
