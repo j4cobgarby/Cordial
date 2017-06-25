@@ -28,7 +28,7 @@
         $query = htmlspecialchars(addslashes($_GET["q"]));
 
         $connect = mysqli_connect($host_name, $user_name, $password, $database);
-        $sql = 'SELECT * FROM `users`';
+        $sql = 'SELECT * FROM `users` ORDER BY date_joined DESC, user_id DESC';
 
         $result = mysqli_query($connect, $sql);
 
@@ -55,6 +55,7 @@
                 '.($row["is_admin"] == 1 ? '<img src="../assets/admin-icon.png" />' : '<img src="../assets/user-icon.png" />').'
                 '.$row["username"].'
               </span>
+              <br />
               <span class="medium">Joined <b>'.$row["date_joined"].'</b></span>
               <span class="medium"><b>'.$amount_posts.'</b> posts | <b>'.$amount_comments.'</b> comments</span>
             </div>

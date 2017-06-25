@@ -41,7 +41,7 @@ div.results {
   div.result {
     box-sizing: border-box;
     display: inline-block;
-    height: 40px;
+    height: 100px;
     border: 1px solid @border-lighter;
     border-radius: 6px;
     line-height: 40px;
@@ -55,14 +55,20 @@ div.results {
 
     span {
       margin-right: 30px;
+      display: inline-block;
+      height: 40px;
     }
 
     span.username {
       font-weight: bold;
       margin-left: 10px;
       font-family: @sans-condensed;
-      width: 100%;
+      max-width: 90%;
       line-height: 40px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      word-break: break-all;
 
       img {
         display: inline-block;
@@ -70,13 +76,8 @@ div.results {
       }
     }
 
-    span.small {
-      float: right;
-      line-height: 40px;
-      font-size: 15px;
-    }
-
     span.medium {
+      color: @grey-2;
       float: right;
       line-height: 40px;
       font-size: 18px;
