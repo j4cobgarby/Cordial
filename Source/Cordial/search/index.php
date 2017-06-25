@@ -34,7 +34,7 @@
         $query = htmlspecialchars(addslashes($_GET["q"]));
 
         $connect = mysqli_connect($host_name, $user_name, $password, $database);
-        $sql = 'SELECT * FROM `users` ORDER BY date_joined DESC, user_id DESC';
+        $sql = 'SELECT * FROM `users` ORDER BY username';
 
         $result = mysqli_query($connect, $sql);
 
