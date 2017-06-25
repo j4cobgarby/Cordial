@@ -88,3 +88,6 @@ div.user-panel div.user-panel-bottom span.user-panel-bottom-likes span {
   position: absolute;
   left: 60px;
 }
+div.post:first-of-type {
+  border-bottom: none !important;
+}
