@@ -71,6 +71,22 @@
     return sizeof($matches) != 0;
   }
 
+  function doesStringMentionRealUser($str) {
+    preg_match('/@([^ ]+)/', $str, $matches);
+    if (sizeof($matches) != 0) {
+      return doesUserExist($matches[1]);
+    } else {
+      return false;
+    }
+  }
+
+  function doesUserExist($name) {
+    global $host_name, $user_name, $password, $database;
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $sql = "SELECT * FROM users WHERE username = '{$name}'";
+    return mysqli_num_rows(mysqli_query($connect, $sql));
+  }
+
   function getTaggedUserFromString($str) {
     preg_match('/@([^ ]+)/', $str, $matches);
     return $matches[1];
@@ -91,9 +107,9 @@
     preg_match('/@([^ ]+)/', $str, $matches);
     return str_replace($matches[0], '<span class="mentioned" onclick="window.location.href=\'../user/?id='.getTaggedUserIDFromString($str).'\'">'.$matches[0].'</span>', $str);
   }
-  
+
   function tryPutSpanAroundMentionedUser($str) {
-    if (doesStringMentionUser($str)) {
+    if (doesStringMentionRealUser($str)) {
       return putSpanAroundMentionedUser($str);
     } else {
       return $str;
