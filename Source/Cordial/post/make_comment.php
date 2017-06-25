@@ -55,6 +55,9 @@
         <legend>
           Comment
         </legend>
+        <span class="help">You can tag people in posts by writing '@their_username' (without the quotes.) Make sure there's a space afterwards, otherwise it won't work!</span>
+        <br>
+        <span class="help">Unlike in posts, Markdown is <b>not</b> supported.</span>
         <textarea name="text" placeholder="What do you want to say?" required></textarea>
         <span class="label">Additionally, you can copy in an image URL</span><input type="text" name="image_link" placeholder="Optional" />
         <input type="hidden" name="post_id" <?php
