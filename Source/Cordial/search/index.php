@@ -30,20 +30,21 @@
     </div>
 
     <div class="results">
-      <?php if (isset($_GET["q"])) {
+      <?php
+      $connect = mysqli_connect($host_name, $user_name, $password, $database);
+      $sql = 'SELECT * FROM `users` ORDER BY username';
+
+      $result = mysqli_query($connect, $sql);
+
+      $diff_threshold = 8; // Maximum levenshtein distance between the query and
+                           // the username for it to be listed
+
+      $cost_ins = 1;
+      $cost_rep = 2;
+      $cost_del = 1;
+
+      if (isset($_GET["q"])) {
         $query = htmlspecialchars(addslashes($_GET["q"]));
-
-        $connect = mysqli_connect($host_name, $user_name, $password, $database);
-        $sql = 'SELECT * FROM `users` ORDER BY username';
-
-        $result = mysqli_query($connect, $sql);
-
-        $diff_threshold = 8; // Maximum levenshtein distance between the query and
-                             // the username for it to be listed
-
-        $cost_ins = 1;
-        $cost_rep = 2;
-        $cost_del = 1;
 
         if ($query == "") {
           while ($row = mysqli_fetch_assoc($result)) {
@@ -107,6 +108,28 @@
               }
             }
           }
+        }
+      } else {
+        while ($row = mysqli_fetch_assoc($result)) {
+          $sql_posts = 'SELECT * FROM `posts` WHERE `user_id` = '.$row["user_id"];
+          $posts_by_user = mysqli_query($connect, $sql_posts);
+          $amount_posts = mysqli_num_rows($posts_by_user);
+
+          $sql_comments = 'SELECT * FROM `comments` WHERE `user_id` = '.$row["user_id"];
+          $comments_by_user = mysqli_query($connect, $sql_comments);
+          $amount_comments = mysqli_num_rows($comments_by_user);
+
+          echo '
+          <div class="result hoverpointer" onclick="window.location.href=\'../user/?id='.$row["user_id"].'\'">
+            <span class="username">
+              '.($row["is_admin"] == 1 ? '<img src="../assets/admin-icon.png" />' : '<img src="../assets/user-icon.png" />').'
+              '.$row["username"].'
+            </span>
+            <br />
+            <span class="medium">Joined <b>'.$row["date_joined"].'</b></span>
+            <span class="medium"><b>'.$amount_posts.'</b> posts | <b>'.$amount_comments.'</b> comments</span>
+          </div>
+          ';
         }
       } ?>
     </div>
