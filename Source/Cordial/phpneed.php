@@ -83,7 +83,7 @@
   function doesUserExist($name) {
     global $host_name, $user_name, $password, $database;
     $connect = mysqli_connect($host_name, $user_name, $password, $database);
-    $sql = "SELECT * FROM users WHERE username = $name";
+    $sql = "SELECT * FROM users WHERE username = '{$name}'";
     return mysqli_num_rows(mysqli_query($connect, $sql));
   }
 
@@ -109,7 +109,7 @@
   }
 
   function tryPutSpanAroundMentionedUser($str) {
-    if (doesStringMentionUser($str)) {
+    if (doesStringMentionRealUser($str)) {
       return putSpanAroundMentionedUser($str);
     } else {
       return $str;
