@@ -41,9 +41,9 @@
         $diff_threshold = 8; // Maximum levenshtein distance between the query and
                              // the username for it to be listed
 
-        $cost_ins = 2;
-        $cost_rep = 1;
-        $cost_del = 2;
+        $cost_ins = 1;
+        $cost_rep = 2;
+        $cost_del = 1;
 
         if ($query == "") {
           while ($row = mysqli_fetch_assoc($result)) {
