@@ -76,6 +76,7 @@
             $distances[$row["user_id"]] = levenshtein($row["username"], $query, $cost_ins, $cost_rep, $cost_del);
           }
 
+          // Sort array by values in ascending order
           asort($distances);
 
           foreach ($distances as $user_id => $distance) {
