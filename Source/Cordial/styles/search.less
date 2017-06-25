@@ -41,28 +41,32 @@ div.results {
   div.result {
     box-sizing: border-box;
     display: inline-block;
-    height: 40px;
-    border: 1px solid @border-lighter;
-    border-radius: 6px;
+    height: 100px;
+    border-bottom: 1px solid @border-lighter;
     line-height: 40px;
     font-size: 23px;
-    margin-top: 8px;
+    margin-top: 30px;
     margin-left: 2.38%;
     margin-right: 2.38%;
-    background-color: @grey-7;
     text-overflow: ellipsis;
     width: 45%;
 
     span {
       margin-right: 30px;
+      display: inline-block;
+      height: 40px;
     }
 
     span.username {
       font-weight: bold;
       margin-left: 10px;
       font-family: @sans-condensed;
-      width: 100%;
+      max-width: 90%;
       line-height: 40px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      word-break: break-all;
 
       img {
         display: inline-block;
@@ -70,13 +74,8 @@ div.results {
       }
     }
 
-    span.small {
-      float: right;
-      line-height: 40px;
-      font-size: 15px;
-    }
-
     span.medium {
+      color: @grey-2;
       float: right;
       line-height: 40px;
       font-size: 18px;
