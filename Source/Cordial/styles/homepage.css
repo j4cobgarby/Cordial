@@ -80,6 +80,7 @@ div.header-wrapper div.scroller-panel {
   line-height: 45px;
   animation-fill-mode: forwards;
   animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.38, 1.03, 0.32, 1.6);
   margin-top: 1px;
 }
 div.header-wrapper div.scroller-panel a {
