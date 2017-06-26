@@ -88,16 +88,16 @@
               die();
             }
             elseif (!$valid_beta_key) {
-              echo "<br /><span class='error'>Invalid beta key</span>";
+              echo "<span class='error'>Invalid beta key</span>";
             }
             elseif ($valid_password and !$valid_username) {
-              echo "<br /><span class='error'>Someone already goes by this name</span>";
+              echo "<span class='error'>Someone already goes by this name</span>";
             }
             elseif (!$valid_password and $valid_username) {
-              echo "<br /><span class='error'>The passwords must match</span>";
+              echo "<span class='error'>The passwords must match</span>";
             }
             else {
-              echo "<br /><span class='error'>The passwords don't match and this user already exists</span>";
+              echo "<span class='error'>The passwords don't match and this user already exists</span>";
             }
           }
         ?>
