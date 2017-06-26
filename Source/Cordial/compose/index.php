@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../styles/compose.css">
     <script src="../scripts/script.js" charset="utf-8"></script>
     <script src="../showdown.min.js" charset="utf-8"></script>
+    <script src="../showdown-table.min.js" charset="utf-8"></script>
   </head>
   <body>
     <?php require '../subheader.php'; ?>
@@ -63,7 +64,7 @@
         The Markdown preview will be here
       </div>
       <script>
-        var converter = new showdown.Converter();
+        var converter = new showdown.Converter({extensions: ['table']});
         setInterval(function() {
           if (document.getElementById('content').value != '') {
             document.getElementById('preview').innerHTML = converter.makeHtml(document.getElementById('content').value);

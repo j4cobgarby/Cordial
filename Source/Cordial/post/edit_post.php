@@ -49,6 +49,8 @@
     <link rel="stylesheet" href="../styles/post.css">
     <link rel="stylesheet" href="../styles/edit_post.css">
     <script src="../scripts/script.js" charset="utf-8"></script>
+    <script src="../showdown.min.js" charset="utf-8"></script>
+    <script src="../showdown-table.min.js" charset="utf-8"></script>
   </head>
   <body>
     <?php require '../subheader.php'; ?>
