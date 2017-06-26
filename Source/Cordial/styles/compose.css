@@ -65,7 +65,7 @@ div.compose-form-wrapper form.makepost select {
 div.compose-form-wrapper form.makepost textarea {
   font-size: 11pt;
   font-weight: lighter;
-  font-family: 'Overpass Mono';
+  font-family: 'Inconsolata';
   padding: 10px;
   width: 640px;
   min-height: 200px;
@@ -148,7 +148,7 @@ div.compose-preview-wrapper div#preview a {
   color: #5056db;
 }
 div.compose-preview-wrapper div#preview pre {
-  font-family: 'Overpass Mono';
+  font-family: 'Inconsolata';
   background-color: #fafafa;
   padding: 15px;
   font-size: 12pt;
