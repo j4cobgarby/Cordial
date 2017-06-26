@@ -4,7 +4,7 @@
 
 I first started developing Cordial, or at least something called Cordial, about 10 months ago, when I wasn't too great at web development and had no real concept of how I would actually make a social network. I attempted it nevertheless, and my attempt can be found at my repository *Cordial-old*.
 
-However a few weeks ago I bought a domain: https://jacobgarby.co.uk. This came with a hefty 100GB of storage and, more importantly, 25 1GB databases! So I thought hey, why don't I use one of these to remake Cordial? So after making a design, I decided it wasn't very good, and designed another one. About 5 or 6 designs later, I'd came up with what the header would look like. The same goes for the other aspects.
+However a few weeks ago I bought a domain: http://jacobgarby.co.uk. This came with a hefty 100GB of storage and, more importantly, 25 1GB databases! So I thought hey, why don't I use one of these to remake Cordial? So after making a design, I decided it wasn't very good, and designed another one. About 5 or 6 designs later, I'd came up with what the header would look like. The same goes for the other aspects.
 
 Anyway, after learning PHP to a reasonable degree and getting the hang of MySQL queries, I had a working version of Cordial. This was before it was on GitHub I believe. At this point, it read users and posts from a relational database I'd set up.
 
