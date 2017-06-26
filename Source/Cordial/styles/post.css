@@ -273,6 +273,26 @@ div.comment-panel div.comment span.reply {
   z-index: 1;
   font-weight: normal;
 }
+div.comment-panel div.comment span.like-img-wrapper {
+  vertical-align: middle;
+  display: inline-block;
+  height: 20px;
+  margin-right: 0;
+}
+div.comment-panel div.comment img.like-img {
+  cursor: pointer;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+div.comment-panel div.comment span.like-count-wrapper {
+  vertical-align: middle;
+  display: inline-block;
+  height: 25px;
+  font-size: 15px;
+  line-height: 25px;
+}
 div.comment-panel div.comment span.username {
   color: #6e6e6e;
   cursor: pointer;

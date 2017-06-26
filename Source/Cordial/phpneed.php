@@ -46,6 +46,13 @@
     return $can_like;
   }
 
+  function canLikeComment($id) {
+    global $host_name, $user_name, $password, $database;
+    $connect = mysqli_connect($host_name, $user_name, $password, $database);
+    $check_liked = "SELECT * FROM user_liked_comments WHERE user_id = {$_SESSION["login-id"]} AND comment_id = {$id}";
+    return (mysqli_num_rows(mysqli_query($connect, $check_liked)) == 0 ? true: false);
+  }
+
   function dateReformat($dateString) {
     return date_format(date_create_from_format('Y-m-d', $dateString), 'd/m/Y');
   }
