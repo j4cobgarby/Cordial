@@ -120,6 +120,12 @@
                 <span onclick="window.location.href=\'make_comment.php?post_id='.$_GET["id"].'&replyto='.$c_comment_id.'\'" class="embed-newcomment hoverpointer">
                   Reply
                 </span>
+                <span class="like-img-wrapper">
+                  <img class="like-img" src="../assets/like-icon.svg" />
+                </span>
+                <span class="like-count-wrapper">
+                  1
+                </span>
                 <span class="id accent hoverpointer hoverunderline" onclick="window.location.href=\'#comment-'.$c_comment_id.'\'">
                   #'.$c_comment_id.'
                 </span>
