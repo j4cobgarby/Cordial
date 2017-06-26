@@ -98,15 +98,22 @@ div.post-panel div.content-wrapper a:hover {
 div.post-panel div.content-wrapper pre {
   font-family: 'Overpass Mono';
   background-color: #fafafa;
-  padding: 15px;
   font-size: 12pt;
-  border-radius: 3px;
+  border-radius: 6px;
   border: 1px solid #ccc;
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow: hidden;
 }
 div.post-panel div.content-wrapper pre code {
-  font-family: inherit;
+  overflow: hidden;
+  font-family: 'Overpass Mono';
+  padding: 30px 40px;
+}
+div.post-panel div.content-wrapper pre code span {
+  margin: 0;
+  padding: 0;
+  font-family: 'Overpass Mono';
 }
 div.post-panel div.content-wrapper img {
   display: block;
@@ -382,7 +389,6 @@ div.compose-preview-wrapper div#preview a {
 div.compose-preview-wrapper div#preview pre {
   font-family: 'Overpass Mono';
   background-color: #fafafa;
-  padding: 15px;
   font-size: 12pt;
   border-radius: 3px;
   border: 1px solid #ccc;
