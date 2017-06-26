@@ -115,5 +115,22 @@
         }
       }
     ?>
+    <div class="compose-preview-wrapper">
+      <h1>Markdown Preview</h1>
+      <hr>
+      <div id="preview">
+        The Markdown preview will be here
+      </div>
+      <script>
+        var converter = new showdown.Converter({extensions: ['table']});
+        setInterval(function() {
+          if (document.getElementById('content').value != '') {
+            document.getElementById('preview').innerHTML = converter.makeHtml(document.getElementById('content').value);
+          } else {
+            document.getElementById('preview').innerHTML = '<span class="nocontent">Your post will be previewed here, so that if you choose to use Markdown you don\'t have to worry whether or not it\'ll look how you expect.</span>';
+          }
+        }, 20);
+      </script>
+    </div>
   </body>
 </html>
