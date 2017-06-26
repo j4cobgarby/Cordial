@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2017 at 05:08 PM
+-- Generation Time: Jun 26, 2017 at 04:30 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -33,7 +33,8 @@ CREATE TABLE `comments` (
   `image_link` tinytext COMMENT 'NULL for no image, otherwise, a valid image URL must be specified',
   `in_reply_to` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `post_id` int(11) NOT NULL
+  `post_id` int(11) NOT NULL,
+  `likes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8;
 
 -- --------------------------------------------------------
@@ -46,7 +47,9 @@ CREATE TABLE `notifications` (
   `notification_id` int(11) NOT NULL,
   `sender_id` int(11) NOT NULL,
   `recipient_id` int(11) NOT NULL,
-  `date_sent` date NOT NULL
+  `date_sent` date NOT NULL,
+  `type` set('reply','comment','mention','like') NOT NULL,
+  `post_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8;
 
 -- --------------------------------------------------------
@@ -85,6 +88,17 @@ CREATE TABLE `users` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `user_liked_comments`
+--
+
+CREATE TABLE `user_liked_comments` (
+  `user_id` int(11) NOT NULL,
+  `comment_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=armscii8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_liked_posts`
 --
 
@@ -111,8 +125,9 @@ ALTER TABLE `comments`
 --
 ALTER TABLE `notifications`
   ADD PRIMARY KEY (`notification_id`),
-  ADD UNIQUE KEY `SENDER` (`sender_id`) USING BTREE,
-  ADD UNIQUE KEY `RECIPIENT` (`recipient_id`);
+  ADD KEY `RECIPIENT` (`recipient_id`) USING BTREE,
+  ADD KEY `SENDER` (`sender_id`) USING BTREE,
+  ADD KEY `POST` (`post_id`) USING BTREE;
 
 --
 -- Indexes for table `posts`
@@ -126,6 +141,13 @@ ALTER TABLE `posts`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `user_liked_comments`
+--
+ALTER TABLE `user_liked_comments`
+  ADD KEY `USER` (`user_id`),
+  ADD KEY `COMMENT` (`comment_id`);
 
 --
 -- Indexes for table `user_liked_posts`
@@ -142,22 +164,22 @@ ALTER TABLE `user_liked_posts`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
