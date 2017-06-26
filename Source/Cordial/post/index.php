@@ -121,10 +121,10 @@
                 <span onclick="window.location.href=\'make_comment.php?post_id='.$_GET["id"].'&replyto='.$c_comment_id.'\'" class="embed-newcomment hoverpointer">
                   Reply
                 </span>
-                <span class="like-img-wrapper">
-                  <img class="like-img" src="../assets/like-icon.svg" />
+                <span class="like-img-wrapper" onclick="tryLikeComment('.$c_comment_id.')">
+                  <img class="like-img" id="like-img-'.$c_comment_id.'" src="../assets/'.(canLikeComment($c_comment_id) ? 'like-icon-greyed.svg' : 'like-icon.svg').'" />
                 </span>
-                <span class="like-count-wrapper">
+                <span class="like-count-wrapper" id="like-count-'.$c_comment_id.'">
                   '.$c_likes.'
                 </span>
                 <span class="id accent hoverpointer hoverunderline" onclick="window.location.href=\'#comment-'.$c_comment_id.'\'">
