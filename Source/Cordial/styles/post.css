@@ -98,13 +98,15 @@ div.post-panel div.content-wrapper a:hover {
 div.post-panel div.content-wrapper pre {
   font-family: 'Overpass Mono';
   background-color: #fafafa;
-  font-size: 11pt;
-  border-radius: 3px;
+  font-size: 12pt;
+  border-radius: 6px;
   border: 1px solid #ccc;
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow: hidden;
 }
 div.post-panel div.content-wrapper pre code {
+  overflow: hidden;
   font-family: 'Overpass Mono';
   padding: 30px 40px;
 }

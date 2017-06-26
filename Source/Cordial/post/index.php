@@ -40,7 +40,7 @@
     <script src="post.js" charset="utf-8"></script>
     <script src="../showdown.min.js" charset="utf-8"></script>
     <script src="../showdown-table.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-forest-light.min.css">
+    <link rel="stylesheet" href="../syntax/cordial-syntax.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
