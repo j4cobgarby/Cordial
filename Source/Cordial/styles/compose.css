@@ -154,6 +154,8 @@ div.compose-preview-wrapper div#preview pre {
   font-size: 12pt;
   border-radius: 3px;
   border: 1px solid #ccc;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 div.compose-preview-wrapper div#preview pre code {
   font-family: inherit;

@@ -102,6 +102,8 @@ div.post-panel div.content-wrapper pre {
   font-size: 12pt;
   border-radius: 3px;
   border: 1px solid #ccc;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 div.post-panel div.content-wrapper pre code {
   font-family: inherit;
@@ -384,6 +386,8 @@ div.compose-preview-wrapper div#preview pre {
   font-size: 12pt;
   border-radius: 3px;
   border: 1px solid #ccc;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 div.compose-preview-wrapper div#preview pre code {
   font-family: inherit;
