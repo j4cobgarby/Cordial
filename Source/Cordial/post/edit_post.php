@@ -49,6 +49,8 @@
     <link rel="stylesheet" href="../styles/post.css">
     <link rel="stylesheet" href="../styles/edit_post.css">
     <script src="../scripts/script.js" charset="utf-8"></script>
+    <script src="../showdown.min.js" charset="utf-8"></script>
+    <script src="../showdown-table.min.js" charset="utf-8"></script>
   </head>
   <body>
     <?php require '../subheader.php'; ?>
@@ -64,7 +66,7 @@
       <form method="post">
         <input required type="text" name="title" placeholder="Write a new title!" value="<?php echo $title; ?>" />
         <div class="content-wrapper">
-          <textarea required name="content" class="mono"><?php echo htmlspecialchars_decode(stripslashes($content)); ?></textarea>
+          <textarea required name="content" id="content" class="mono"><?php echo htmlspecialchars_decode(stripslashes($content)); ?></textarea>
           <input type="hidden" name="id" value=<?php echo '"'.$_GET["id"].'"' ?> />
           <input class="hoverpointer" type="submit" value="Update post" />
         </div>
@@ -113,5 +115,22 @@
         }
       }
     ?>
+    <div class="compose-preview-wrapper">
+      <h1>Markdown Preview</h1>
+      <hr>
+      <div id="preview">
+        The Markdown preview will be here
+      </div>
+      <script>
+        var converter = new showdown.Converter({extensions: ['table']});
+        setInterval(function() {
+          if (document.getElementById('content').value != '') {
+            document.getElementById('preview').innerHTML = converter.makeHtml(document.getElementById('content').value);
+          } else {
+            document.getElementById('preview').innerHTML = '<span class="nocontent">Your post will be previewed here, so that if you choose to use Markdown you don\'t have to worry whether or not it\'ll look how you expect.</span>';
+          }
+        }, 20);
+      </script>
+    </div>
   </body>
 </html>
