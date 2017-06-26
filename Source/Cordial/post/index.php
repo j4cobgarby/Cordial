@@ -38,6 +38,9 @@
     <link rel="stylesheet" href="../styles/post.css">
     <script src="../scripts/script.js" charset="utf-8"></script>
     <script src="post.js" charset="utf-8"></script>
+    <script src="../showdown.min.js" charset="utf-8"></script>
+    <script src="../showdown-table.min.js" charset="utf-8"></script>
+    <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
   </head>
   <body>
     <?php require '../subheader.php'; ?>
@@ -67,7 +70,7 @@
       </div>
 
       <h1 class="title"><?php echo $title; ?></h1>
-      <div class="content-wrapper">
+      <div class="content-wrapper" id="content-wrapper">
         <?php
           $Parsedown = new Parsedown();
           echo $Parsedown->text(htmlspecialchars_decode($content));
