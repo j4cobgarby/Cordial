@@ -66,7 +66,7 @@
       <form method="post">
         <input required type="text" name="title" placeholder="Write a new title!" value="<?php echo $title; ?>" />
         <div class="content-wrapper">
-          <textarea required name="content" class="mono"><?php echo htmlspecialchars_decode(stripslashes($content)); ?></textarea>
+          <textarea required name="content" id="content" class="mono"><?php echo htmlspecialchars_decode(stripslashes($content)); ?></textarea>
           <input type="hidden" name="id" value=<?php echo '"'.$_GET["id"].'"' ?> />
           <input class="hoverpointer" type="submit" value="Update post" />
         </div>
