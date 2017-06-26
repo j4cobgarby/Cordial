@@ -113,6 +113,7 @@
             $c_username = $row["username"];
             $c_is_admin = $row["is_admin"];
             $c_image_link = $row["image_link"];
+            $c_likes = $row["likes"];
 
             echo '
             <div class="comment" id="comment-'.$c_comment_id.'">
@@ -124,7 +125,7 @@
                   <img class="like-img" src="../assets/like-icon.svg" />
                 </span>
                 <span class="like-count-wrapper">
-                  1
+                  '.$c_likes.'
                 </span>
                 <span class="id accent hoverpointer hoverunderline" onclick="window.location.href=\'#comment-'.$c_comment_id.'\'">
                   #'.$c_comment_id.'
