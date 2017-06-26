@@ -112,15 +112,21 @@ div.post-panel {
     pre {
       font-family: @monospace;
       background-color: @grey-8;
-      padding: 15px;
-      font-size: 12pt;
+      font-size: 11pt;
       border-radius: 3px;
       border: 1px solid @border-main;
       white-space: pre-wrap;
       word-wrap: break-word;
 
       code {
-        font-family: inherit;
+        font-family: @monospace;
+        padding: 30px 40px;
+
+        span {
+          margin: 0;
+          padding: 0;
+          font-family: @monospace;
+        }
       }
     }
 
@@ -441,7 +447,6 @@ div.compose-preview-wrapper {
     pre {
       font-family: @monospace;
       background-color: @grey-8;
-      padding: 15px;
       font-size: 12pt;
       border-radius: 3px;
       border: 1px solid @border-main;
