@@ -1,5 +1,11 @@
 [![Cordial](cordial-onred.png)](http://cordial.jacobgarby.co.uk)
 
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/uses-html.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com)
+
 # History
 
 I first started developing Cordial, or at least something called Cordial, about 10 months ago, when I wasn't too great at web development and had no real concept of how I would actually make a social network. I attempted it nevertheless, and my attempt can be found at my repository *Cordial-old*.
