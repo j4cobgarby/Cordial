@@ -1,5 +1,7 @@
 [![Cordial](cordial-onred.png)](http://cordial.jacobgarby.co.uk)
 
+![](http://forthebadge.com/images/badges/built-with-love.svg)
+
 # History
 
 I first started developing Cordial, or at least something called Cordial, about 10 months ago, when I wasn't too great at web development and had no real concept of how I would actually make a social network. I attempted it nevertheless, and my attempt can be found at my repository *Cordial-old*.
