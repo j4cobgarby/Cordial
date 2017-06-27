@@ -1,4 +1,4 @@
-[![Cordial](cordial-onred.png)](http://cordial.jacobgarby.co.uk)
+[![Cordial](https://github.com/j4cobgarby/Cordial/blob/master/cordial-onred.png)](http://cordial.jacobgarby.co.uk)
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/uses-html.svg)](http://forthebadge.com)
