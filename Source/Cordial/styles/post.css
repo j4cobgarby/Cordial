@@ -242,8 +242,8 @@ div.comment-panel div.comment:target {
 }
 div.comment-panel div.comment {
   box-sizing: border-box;
-  border-top: 2px solid #dedede;
-  border-bottom: 2px solid #dedede;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
   margin: 5px 0;
   width: 100%;
   min-height: 30px;
