@@ -57,7 +57,11 @@
             if ($bio != '') {
               echo $bio;
             } else {
-              echo '<i>This user has chosen to not write anything about themself</i>';
+              if ($user_id == $_SESSION["login-id"]) {
+                echo "<i>You haven't set a bio yet. Bios are a good way of letting people know a bit about you.<br />To set one, click <b>EDIT</b> to the right hand side of this page!</i>";
+              } else {
+                echo '<i>This user has chosen to not write anything about themself.</i>';
+              }
             }
           } else { // Is set
             if ($_GET["edit_bio"] == 1) {
