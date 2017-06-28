@@ -5,14 +5,11 @@ div.user-panel {
   padding-bottom: 50px;
   background-color: #f7f7f7;
 }
-div.user-panel img.edit-icon {
+div.user-panel span.bio-edit {
+  padding: 10px 20px;
   position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 13px;
-  top: 55px;
-  padding: 5px;
-  border-radius: 5px;
+  right: 50px;
+  background-color: #53dbae;
 }
 div.user-panel div.user-panel-top {
   height: 40px;
@@ -32,6 +29,7 @@ div.user-panel div.user-panel-top span img {
 }
 div.user-panel div.bio {
   margin: 30px 20%;
+  margin-right: 10px;
   margin-left: 25px;
   padding: 0 20px;
 }
