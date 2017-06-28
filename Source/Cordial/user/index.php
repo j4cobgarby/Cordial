@@ -47,16 +47,21 @@
         </b></span>
         <span><?php echo 'Joined '.dateReformat($date_joined); ?></span>
       </div>
+      <?php if ($user_id == $_SESSION["login-id"] && !isset($_GET["edit_bio"])) {
+        echo '<span class="bio-edit" onclick="location.href=\'../user?id='.$user_id.'&edit_bio=1\'">EDIT</span>';
+      } ?>
       <div class="bio">
-        <?php if ($user_id == $_SESSION["login-id"] && !isset($_GET["edit_bio"])) {
-          echo '<img onclick="location.href=\'../user?id='.$user_id.'&edit_bio=1\'" class="edit-icon hoverpointer" src="../assets/pencil.svg" />';
-        } ?>
+
         <?php
           if (!isset($_GET["edit_bio"])) {
             if ($bio != '') {
               echo $bio;
             } else {
-              echo '<i>This user has chosen to not write anything about themself</i>';
+              if ($user_id == $_SESSION["login-id"]) {
+                echo "<i>You haven't set a bio yet. Bios are a good way of letting people know a bit about you.<br />To set one, click <b>EDIT</b> to the right hand side of this page!</i>";
+              } else {
+                echo '<i>This user has chosen to not write anything about themself.</i>';
+              }
             }
           } else { // Is set
             if ($_GET["edit_bio"] == 1) {

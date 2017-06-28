@@ -8,14 +8,19 @@ div.user-panel {
   padding-bottom: 50px;
   background-color: @grey-7;
 
-  img.edit-icon {
+  span.bio-edit {
+    //float: right;
+    padding: 10px 20px;
     position: absolute;
-    width: 20px;
-    height: 20px;
-    right: 13px;
-    top: 55px;
-    padding: 5px;
-    border-radius: 5px;
+    right: 0;
+    font-weight: bold;
+    transition-duration: 0.1s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @edit-colour;
+      color: white;
+    }
   }
 
   div.user-panel-top {
@@ -39,6 +44,7 @@ div.user-panel {
 
   div.bio {
     margin: 30px 20%;
+    margin-right: 10px;
     margin-left: 25px;
     padding: 0 20px;
 
