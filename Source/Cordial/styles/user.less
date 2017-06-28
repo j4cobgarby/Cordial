@@ -12,8 +12,15 @@ div.user-panel {
     //float: right;
     padding: 10px 20px;
     position: absolute;
-    right: 50px;
-    background-color: @edit-colour;
+    right: 0;
+    font-weight: bold;
+    transition-duration: 0.1s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @edit-colour;
+      color: white;
+    }
   }
 
   div.user-panel-top {

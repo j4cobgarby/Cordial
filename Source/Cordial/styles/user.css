@@ -8,8 +8,14 @@ div.user-panel {
 div.user-panel span.bio-edit {
   padding: 10px 20px;
   position: absolute;
-  right: 50px;
+  right: 0;
+  font-weight: bold;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+div.user-panel span.bio-edit:hover {
   background-color: #53dbae;
+  color: white;
 }
 div.user-panel div.user-panel-top {
   height: 40px;
