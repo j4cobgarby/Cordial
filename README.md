@@ -5,6 +5,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com)
+https://d16zszyyqlzz6z.cloudfront.net/images/stamps/stamp-173x38-f087cb4d.gif
 
 # Status
 
