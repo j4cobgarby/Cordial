@@ -10,6 +10,7 @@
 
 # Status
 
+**Development finished (for now!)**
 Usable; all main features work. Now the priority is to fix many, many small bugs.
 
 # History
