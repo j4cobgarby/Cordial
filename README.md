@@ -10,7 +10,7 @@
 
 # Status
 
-**Development finished (for now!)**
+**Development finished (for now!) as I've started working on a brand new redesign - I haven't forgotten about Cordial entirely!**
 Usable; all main features work. Now the priority is to fix many, many small bugs.
 
 # History
